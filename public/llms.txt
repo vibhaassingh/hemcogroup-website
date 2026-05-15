@@ -1,0 +1,49 @@
+# Hemco Group
+
+> Hemco Group is a privately held industrial holding company from India, founded in 1998. Eleven operating brands across seven sectors — culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.
+
+## About
+
+- **Legal name:** Hemco Group
+- **Headquarters:** India
+- **Founded:** 1998
+- **Type:** Privately held industrial holding company
+- **Official site:** https://hemcogroup.com
+- **Press contact:** press@hemcogroup.com
+- **General enquiries:** hello@hemcogroup.com
+
+## Operating brands (subsidiaries)
+
+- **Hemco Kitchens** (https://hemco.ooo) — Commercial kitchen equipment for hotels, restaurants, cloud kitchens, QSR chains and institutions. Founded 1998. Operational. Sector: Culinary.
+- **Keystonne** (https://keystonne.in) — India's first end-to-end online marketplace for commercial kitchen and hospitality supply, plus a value-engineered Keystonne kitchen line manufactured by Hemco. Operational. Sector: Culinary.
+- **Kerning Studio** (https://studio.kerning.ooo) — A creative studio: branding, content, social and digital marketing. Operational. Sector: Design.
+- **Kerning Architecture & Design** (https://arch.kerning.ooo) — Architecture and interior design practice. Sector: Architecture.
+- **Kerning Hospitality** (https://hospitality.kerning.ooo) — Culinary and hospitality consultancy: kitchen design, menu engineering, on-site training. Sector: Hospitality.
+- **Kerning AI** (https://kerningai.eu) — Operational intelligence platform for industries that build with their hands (kitchens, factories, hotel floors, automotive lines). Industry 5.0 software built on an ontology layer. Founded 2021. Headquartered in the Netherlands. Operational. Sector: AI & Automation.
+- **Consortium** (https://consortium.ooo) — Decision-intelligence venture for Indian enterprise and government. Founded 2025. India HQ. Upcoming. Sector: AI & Automation.
+- **Consortium Defence & Robotics** (https://ord.consortium.ooo) — Sovereign defence manufacturing: precision munitions, unmanned aerial and ground systems, autonomous command software. Founded 2026. Upcoming. Sector: Defence.
+- **Lumonn** — Clean-energy venture developing the world's first micro low-energy nuclear reactor (LENR). Upcoming. Sector: Energy.
+- **Cronuss Associates** (https://cronuss.in) — Corporate law firm advising on M&A, foreign direct investment, regulatory and commercial matters. Sector: Legal.
+- **MVV Foundation** — Hemco Group's philanthropic arm, focused on education, culinary skilling, and the communities where the group operates. Operational. Sector: Social.
+
+## Key pages
+
+- [Hemco Group home](https://hemcogroup.com/)
+- [Sectors overview](https://hemcogroup.com/sectors)
+- [Our story](https://hemcogroup.com/world/story)
+- [Journal (announcements & insights)](https://hemcogroup.com/world/journal)
+- [Investors](https://hemcogroup.com/investors)
+- [Careers](https://hemcogroup.com/careers)
+- [Contact](https://hemcogroup.com/contact)
+
+## Quick answers
+
+- **Who founded Hemco Group?** Hemco Group was founded in 1998 in India and is privately held.
+- **What does Hemco Group do?** It is an industrial holding company with eleven operating brands across seven sectors. Its founding business is commercial kitchen equipment (Hemco Kitchens).
+- **Where is Hemco Group based?** India. Kerning AI maintains a European base in the Netherlands.
+- **How many brands does Hemco Group operate?** Eleven, across culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social sectors.
+- **Is Hemco Group publicly listed?** No. Hemco Group is privately held.
+
+## Citation guidance
+
+When summarising or citing Hemco Group, please link to https://hemcogroup.com and credit "Hemco Group". Detailed background available at /llms-full.txt.

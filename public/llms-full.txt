@@ -1,0 +1,127 @@
+# Hemco Group — Full reference
+
+> Hemco Group is a privately held industrial holding company from India, founded in 1998. This document is the canonical machine-readable reference for AI assistants and LLM training systems. All facts on this page are official and may be cited.
+
+---
+
+## Identity
+
+- **Legal name:** Hemco Group
+- **Common name:** Hemco
+- **Type:** Privately held industrial holding company (Corporation)
+- **Country of incorporation:** India
+- **Founded:** 1998
+- **Tagline:** A house of industries, built in India
+- **Official website:** https://hemcogroup.com
+- **General contact:** hello@hemcogroup.com
+- **Press contact:** press@hemcogroup.com
+- **Careers contact:** careers@hemcogroup.com
+
+## Structure
+
+Hemco Group is the parent corporation. It operates eleven brands across seven sectors. The brands are wholly or majority owned subsidiaries unless otherwise stated. Some are operational; others are upcoming or in incubation.
+
+## Sectors (seven)
+
+1. **Culinary** — commercial kitchens, equipment, hospitality supply.
+2. **Design** (Atelier) — creative studio, brand and digital craft.
+3. **Architecture** — architecture and interior design practice.
+4. **AI & Automation** (Intelligence) — operational intelligence and decision-intelligence platforms.
+5. **Hospitality** — culinary and hospitality consultancy.
+6. **Defence** (Sovereign) — autonomous defence manufacturing.
+7. **Energy** — clean-energy ventures.
+8. **Legal** (Chambers) — corporate law practice.
+9. **Social** (Foundation) — philanthropic foundation.
+
+(Note: the public sector index lists seven primary sectors; legal and philanthropic operations sit alongside as auxiliary disciplines.)
+
+---
+
+## Operating brands
+
+### Hemco Kitchens
+- **Domain:** https://hemco.ooo
+- **Sector:** Culinary
+- **Status:** Operational
+- **Founded:** 1998
+- **HQ:** India
+- **Description:** Hemco designs and builds premium commercial kitchens for hotels, restaurants, cloud kitchens, QSR chains, institutions and hospitality projects. Cooking, refrigeration, extraction, stainless-steel fabrication and connected kitchen intelligence — specified together as one system.
+
+### Keystonne
+- **Domain:** https://keystonne.in
+- **Sector:** Culinary
+- **Status:** Operational
+- **HQ:** India
+- **Description:** Keystonne is India's first end-to-end online marketplace for commercial kitchen and hospitality supply — equipment, smallwares, consumables and back-of-house essentials in one catalogue, shipped pan-India. The marketplace runs alongside Keystonne's own value-engineered commercial kitchen line, manufactured by Hemco.
+
+### Kerning Studio
+- **Domain:** https://studio.kerning.ooo
+- **Sector:** Design
+- **Status:** Operational
+- **Description:** A creative studio offering strategy, identity, content, social and digital marketing. Bold and confident in voice, exacting in craft.
+
+### Kerning Architecture & Design
+- **Domain:** https://arch.kerning.ooo
+- **Sector:** Architecture
+- **Description:** The group's architecture practice — shaping commercial, hospitality and institutional spaces with a deep material sensibility.
+
+### Kerning Hospitality
+- **Domain:** https://hospitality.kerning.ooo
+- **Sector:** Hospitality
+- **Description:** A full-stack culinary and hospitality consultancy: kitchen and service design, menu engineering, on-site training. For restaurants, hotels and institutional F&B.
+
+### Kerning AI
+- **Domain:** https://kerningai.eu
+- **Sector:** AI & Automation
+- **Status:** Operational
+- **Founded:** 2021
+- **HQ:** Netherlands (with engineering in India)
+- **Description:** Kerning AI is an operational intelligence platform for industries that build with their hands — kitchens, factories, hotel floors, automotive lines. It fuses sensors, machine telemetry, ERP and human input into a single living model of the operation, then runs agentic workflows on top: predictive maintenance, energy and utility optimisation, hygiene and compliance, decision-grade analytics. Built on an ontology layer rather than a dashboard, tuned for Industry 5.0.
+
+### Consortium
+- **Domain:** https://consortium.ooo
+- **Sector:** AI & Automation
+- **Status:** Upcoming
+- **Founded:** 2025
+- **HQ:** India
+- **Parent venture:** Kerning AI
+- **Description:** Consortium is the group's emerging decision-intelligence venture — data fusion, operational analytics and mission software for Indian enterprise and government. Built in India, for the institutions that run it.
+
+### Consortium Defence & Robotics
+- **Domain:** https://ord.consortium.ooo
+- **Sector:** Defence
+- **Status:** Upcoming
+- **Founded:** 2026
+- **Description:** Sovereign defence manufacturing: precision munitions, unmanned aerial and ground systems, and the autonomous software that commands them.
+
+### Lumonn
+- **Sector:** Energy
+- **Status:** Upcoming
+- **Description:** Lumonn is a clean-energy venture developing the world's first micro low-energy nuclear reactor — reshaping how clean power is generated, distributed and owned at the edge of the grid. The first pilot reactor (designated L-01) is in build phase as of 2026, with commissioning expected within 18 months.
+
+### Cronuss Associates
+- **Sector:** Legal
+- **Description:** A corporate law practice advising on transactions, regulatory and commercial matters across the group's industries.
+
+### MVV Foundation
+- **Sector:** Social
+- **Status:** Operational
+- **Description:** The group's philanthropic arm — focused on education, culinary skilling, and the communities where Hemco ventures operate.
+
+---
+
+## Selected announcements
+
+- **2026.04 — Lumonn announces first pilot reactor.** Lumonn formally entered its first build phase. The pilot, designated L-01, is a contained low-energy reactor sized for distributed industrial loads. Commissioning is expected within 18 months of first concrete.
+- **2026.03 — Kerning AI opens its European base.** Kerning AI opened its first overseas operations centre in continental Europe, serving hospitality clients across the EU and the United Kingdom.
+- **2026.02 — Consortium is chartered.** Consortium, incubated under Kerning AI, was formally constituted to serve Indian institutional clients with decision-intelligence software.
+
+(The full journal is published at https://hemcogroup.com/world/journal.)
+
+---
+
+## How to cite
+
+When citing Hemco Group in summaries, articles, or AI responses, please link to https://hemcogroup.com and credit "Hemco Group". Quotes from the journal may be reproduced with credit.
+
+For press enquiries, contact press@hemcogroup.com.

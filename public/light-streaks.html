@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Light Streaks</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  .stage {
+    position: fixed; inset: 0;
+    background: #050008;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* ---- Light layers (behind the blinds) ---- */
+  .layer {
+    position: absolute; inset: -20%;
+    will-change: transform, filter;
+    mix-blend-mode: screen;
+    filter: blur(28px) saturate(140%);
+  }
+
+  /* Deep blue glow on the left */
+  .blue {
+    background:
+      radial-gradient(40% 55% at 22% 55%, rgba(80,90,255,0.95), rgba(40,30,160,0.55) 45%, transparent 70%),
+      radial-gradient(30% 40% at 18% 70%, rgba(150,180,255,0.55), transparent 70%);
+    animation: drift-blue 14s ease-in-out infinite alternate;
+  }
+
+  /* Hot white core in the middle */
+  .core {
+    background:
+      radial-gradient(18% 8% at 45% 60%, rgba(255,255,255,1), rgba(255,220,200,0.6) 40%, transparent 70%),
+      radial-gradient(30% 14% at 50% 60%, rgba(255,180,140,0.6), transparent 70%);
+    filter: blur(14px) saturate(160%);
+    animation: pulse-core 4.5s ease-in-out infinite alternate;
+  }
+
+  /* Orange / red streak sweeping across */
+  .orange {
+    background:
+      radial-gradient(60% 18% at 60% 45%, rgba(255,120,40,0.95), rgba(255,60,20,0.4) 50%, transparent 75%),
+      radial-gradient(45% 12% at 75% 55%, rgba(255,170,60,0.85), transparent 70%),
+      radial-gradient(35% 10% at 85% 70%, rgba(255,80,30,0.65), transparent 75%);
+    animation: drift-orange 11s ease-in-out infinite alternate;
+  }
+
+  /* Thin streak filaments */
+  .filaments {
+    background:
+      linear-gradient(92deg, transparent 30%, rgba(255,200,120,0.35) 48%, rgba(255,255,255,0.6) 50%, rgba(255,140,60,0.35) 52%, transparent 72%);
+    filter: blur(2px) saturate(180%);
+    transform-origin: 50% 60%;
+    animation: streak 7s ease-in-out infinite alternate;
+    opacity: 0.85;
+  }
+
+  /* Subtle moving purple haze */
+  .haze {
+    background:
+      radial-gradient(60% 80% at 30% 40%, rgba(120,60,180,0.35), transparent 70%),
+      radial-gradient(50% 60% at 80% 80%, rgba(60,20,80,0.6), transparent 70%);
+    filter: blur(40px);
+    animation: drift-haze 18s ease-in-out infinite alternate;
+  }
+
+  /* ---- Vertical blinds overlay ---- */
+  .blinds {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background:
+      /* dark gaps between slats */
+      repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.55) 0px,
+        rgba(0,0,0,0.55) 2px,
+        transparent 2px,
+        transparent 28px
+      ),
+      /* glassy highlight per slat */
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.12) 6px,
+        rgba(255,255,255,0.0) 14px,
+        rgba(0,0,0,0.10) 22px,
+        rgba(0,0,0,0.25) 28px
+      );
+    mix-blend-mode: normal;
+    animation: blinds-shift 9s ease-in-out infinite alternate;
+  }
+
+  /* Vignette */
+  .vignette {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background: radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(0,0,0,0.85) 100%);
+  }
+
+  /* ---- Animations ---- */
+  @keyframes drift-blue {
+    0%   { transform: translate3d(-4%, -2%, 0) scale(1.05); }
+    100% { transform: translate3d(3%, 4%, 0) scale(1.15); }
+  }
+  @keyframes drift-orange {
+    0%   { transform: translate3d(-6%, 2%, 0) scale(1.05) rotate(-2deg); }
+    100% { transform: translate3d(8%, -3%, 0) scale(1.18) rotate(2deg); }
+  }
+  @keyframes drift-haze {
+    0%   { transform: translate3d(-3%, -3%, 0) scale(1.1); }
+    100% { transform: translate3d(4%, 3%, 0) scale(1.2); }
+  }
+  @keyframes pulse-core {
+    0%   { transform: translate3d(-3%, 0, 0) scale(0.95); opacity: 0.85; }
+    100% { transform: translate3d(4%, -1%, 0) scale(1.15); opacity: 1; }
+  }
+  @keyframes streak {
+    0%   { transform: translateX(-25%) skewX(-6deg); opacity: 0.55; }
+    50%  { opacity: 0.95; }
+    100% { transform: translateX(20%)  skewX(-2deg); opacity: 0.7; }
+  }
+  @keyframes blinds-shift {
+    0%   { background-position: 0 0, 0 0; }
+    100% { background-position: 14px 0, 14px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .layer, .blinds { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="layer haze"></div>
+    <div class="layer blue"></div>
+    <div class="layer orange"></div>
+    <div class="layer core"></div>
+    <div class="layer filaments"></div>
+    <div class="blinds"></div>
+    <div class="vignette"></div>
+  </div>
+</body>
+</html>
