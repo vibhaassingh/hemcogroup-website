@@ -84,6 +84,14 @@ export const imagery = {
     alt: "Lady Justice statue beside a contract handshake — Cronuss Associates",
     caption: "Cronuss Associates",
   },
+  // IndiaBridg — a legislative chamber in session. The regulatory and
+  // government ecosystem the firm bridges, rendered as institutional
+  // gravitas rather than photography of the firm itself.
+  indiabridg: {
+    src: u("1529107386315-e1a2ed48a620"),
+    alt: "A legislative chamber in session — IndiaBridg's government interface",
+    caption: "Government interface",
+  },
   // MVV Foundation — students in uniform, focused on their work.
   // The brief in one frame: returning what we've learned to the city
   // that taught us, through education and culinary skilling.

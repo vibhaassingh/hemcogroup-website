@@ -13,19 +13,19 @@ import { ScrollProgress } from "@/components/ui/scroll-progress";
 export const metadata: Metadata = {
   title: "Our story",
   description:
-    "Twenty-eight years from a single workshop in India to a house of eleven brands across seven sectors. The history of Hemco Group, founded in 1998.",
+    "Twenty-eight years from a single workshop in India to a house of twelve brands across seven sectors. The history of Hemco Group, founded in 1998.",
   alternates: { canonical: "/world/story" },
   openGraph: {
     title: "Our story · Hemco Group",
     description:
-      "Twenty-eight years from a single workshop in India to a house of eleven brands across seven sectors.",
+      "Twenty-eight years from a single workshop in India to a house of twelve brands across seven sectors.",
     url: "/world/story",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: "Our story · Hemco Group",
-    description: "From a single workshop in India to a house of eleven brands.",
+    description: "From a single workshop in India to a house of twelve brands.",
   },
 };
 
@@ -90,7 +90,7 @@ const eras = [
   {
     numeral: "V",
     range: "2026 →",
-    title: "Eleven brands, seven sectors.",
+    title: "Twelve brands, seven sectors.",
     body: "The house, today: a culinary works, a design atelier, an intelligence stack, a hospitality consultancy, a sovereign portfolio, a chambers practice, and a foundation. Twenty-eight years compounding — and still inside walking distance, mostly, of the workshop floor we started on.",
     foundedNote: "MVV Foundation returns the practice to the city",
     image: "/brand/mvv-hero.jpg",
@@ -100,7 +100,7 @@ const eras = [
 ];
 
 const stats = [
-  { to: 11, label: "Operating brands" },
+  { to: 12, label: "Operating brands" },
   { to: 7, label: "Sectors" },
   { to: 28, label: "Years compounding" },
 ];
@@ -185,7 +185,7 @@ export default function StoryPage() {
               style={{ color: "rgba(255,255,255,0.92)" }}
             >
               Twenty-eight years from a single workshop in India to a house
-              of eleven brands across seven sectors — written in our own
+              of twelve brands across seven sectors — written in our own
               words, in five eras.
             </p>
           </Reveal>
@@ -218,7 +218,7 @@ export default function StoryPage() {
               className="body-sans"
               style={{ color: "var(--color-ink-soft)" }}
             >
-              The answer is the rest of this page. Five eras, eleven brands,
+              The answer is the rest of this page. Five eras, twelve brands,
               one through-line: the conviction that an industrial group is
               measured not by what it announces, but by what it still ships
               twenty years on. The works remain the spine; the rest of the

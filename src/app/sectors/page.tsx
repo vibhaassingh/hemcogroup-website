@@ -14,18 +14,18 @@ import { imagery } from "@/content/imagery";
 export const metadata: Metadata = {
   title: "Sectors",
   description:
-    "Seven sectors, eleven operating brands. Hemco Group's house of industries spans culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.",
+    "Seven sectors, twelve operating brands. Hemco Group's house of industries spans culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.",
   alternates: { canonical: "/sectors" },
   openGraph: {
     title: "Sectors · Hemco Group",
-    description: "Seven sectors, eleven brands. The shape of Hemco's house of industries.",
+    description: "Seven sectors, twelve brands. The shape of Hemco's house of industries.",
     url: "/sectors",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Sectors · Hemco Group",
-    description: "Seven sectors, eleven brands. The shape of Hemco's house of industries.",
+    description: "Seven sectors, twelve brands. The shape of Hemco's house of industries.",
   },
 };
 
@@ -65,7 +65,7 @@ export default function SectorsIndex() {
                   Seven sectors.
                   <br />
                   <span className="display-italic opacity-50">
-                    Eleven brands.
+                    Twelve brands.
                   </span>
                 </h1>
               </Reveal>

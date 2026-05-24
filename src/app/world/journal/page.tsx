@@ -6,7 +6,7 @@ import { journal } from "@/content/journal";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Notes from the works, in our own words. Announcements, essays and dispatches from Hemco Group and its eleven operating brands.",
+    "Notes from the works, in our own words. Announcements, essays and dispatches from Hemco Group and its twelve operating brands.",
   alternates: { canonical: "/world/journal" },
   openGraph: {
     title: "Journal · Hemco Group",

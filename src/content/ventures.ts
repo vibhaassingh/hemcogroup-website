@@ -199,6 +199,23 @@ export const ventures: Venture[] = [
     imagery: "cronuss",
   },
   {
+    slug: "indiabridg",
+    name: "IndiaBridg",
+    wordmark: "IndiaBridg",
+    tagline: "Regulatory clarity. Government engagement. No shortcuts.",
+    positioning: "Corporate liaisoning, regulatory advisory and India market-entry.",
+    description:
+      "A New Delhi advisory firm helping Indian and international businesses engage with government, regulators and public institutions through lawful, documented, compliance-first processes — regulatory approvals, government relations, public policy, FDI and India entry, procurement and state incentives.",
+    sector: "Legal",
+    status: "Operational",
+    founded: "2026",
+    hq: "New Delhi",
+    domain: "indiabridg.com",
+    accent: "#b9975b",
+    accentSoft: "#d9c39a",
+    imagery: "indiabridg",
+  },
+  {
     slug: "mvv-foundation",
     name: "MVV Foundation",
     wordmark: "MVV",

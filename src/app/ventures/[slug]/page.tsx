@@ -544,13 +544,13 @@ export default async function VenturePage({
                   }}
                 />
 
-                {/* Edition header — № 01 of the eleven-venture set */}
+                {/* Edition header — № 01 of the twelve-venture set */}
                 <div className="flex items-baseline justify-between mb-5">
                   <p
                     className="caption data"
                     style={{ color: identity.accent, letterSpacing: "0.18em" }}
                   >
-                    № 01 / 11
+                    № 01 / 12
                   </p>
                   <p
                     className="caption"

@@ -85,11 +85,11 @@ export const sectors: Record<SectorSlug, SectorEntry> = {
     slug: "chambers",
     name: "Chambers",
     ordinal: "VI",
-    ethos: "Counsel for builders — written advice as standard.",
+    ethos: "Counsel and clearances — written advice as standard.",
     thesis:
-      "The house's law practice, set up to serve the way an industrial group actually operates. Senior partner-led counsel on corporate transactions, regulatory matters and commercial contracts, with a small number of selected external clients in similar shape. No RFP pitches; no juniors-on-juniors; senior counsel reachable on the phone.",
+      "The house's counsel practice, set up to serve the way an industrial group actually operates. Two firms sit here: a corporate law practice for transactions, regulatory and commercial matters, and a New Delhi liaisoning firm that bridges business and government through documented, compliance-first engagement. No RFP pitches; no juniors-on-juniors; senior counsel reachable on the phone.",
     hero: "cronuss",
-    ventureSlugs: ["cronuss-associates"],
+    ventureSlugs: ["cronuss-associates", "indiabridg"],
   },
   foundation: {
     slug: "foundation",

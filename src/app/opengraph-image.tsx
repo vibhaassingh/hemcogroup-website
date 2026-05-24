@@ -85,7 +85,7 @@ export default async function OGImage() {
             textTransform: "uppercase",
           }}
         >
-          <span>Eleven brands · Seven sectors</span>
+          <span>Twelve brands · Seven sectors</span>
           <span>hemcogroup.com</span>
         </div>
       </div>

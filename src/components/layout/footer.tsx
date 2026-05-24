@@ -55,7 +55,7 @@ export function Footer() {
               className="measure mt-9 lede"
               style={{ color: "var(--color-mist)" }}
             >
-              A privately held industrial group from India. Eleven
+              A privately held industrial group from India. Twelve
               brands across seven sectors. A house of industries, built in
               India.
             </p>

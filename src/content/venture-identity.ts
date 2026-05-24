@@ -904,6 +904,105 @@ export const ventureIdentity: Record<string, VentureIdentity> = {
   },
 
   /* ────────────────────────────────────────────────────────────────────── */
+  indiabridg: {
+    // Navy-dominant with muted-gold punctuation — IndiaBridg's own
+    // spine (private-bank / heritage-law-firm register), distinct from
+    // Cronuss's cooler ink. Gold is the accent; deep navy grounds it.
+    bodyTone: "ink",
+    accent: "#b9975b",
+    accentSoft: "#d9c39a",
+    accentDeep: "#0b1f3a",
+    heroOverlay:
+      "linear-gradient(180deg, rgba(11,31,58,0.30) 0%, rgba(11,31,58,0.55) 50%, rgba(6,12,26,0.92) 92%, #060c1a 100%), radial-gradient(60% 60% at 50% 28%, rgba(185,151,91,0.12) 0%, transparent 75%)",
+    heroAlign: "bottom",
+    heroEyebrow: "Liaisoning · Regulatory advisory · New Delhi · Est. 2026",
+    outcomeLine:
+      "A structured, auditable bridge between business and government — built for boards, investors and compliance teams.",
+    services: [
+      {
+        label: "Regulatory approvals & licences",
+        detail:
+          "End-to-end mapping, documentation and submission coordination across central and state regulators.",
+      },
+      {
+        label: "Government relations",
+        detail:
+          "Structured, documented engagement with ministries, regulators and public institutions — every meeting on the record.",
+      },
+      {
+        label: "Public policy advisory",
+        detail:
+          "Tracking, interpreting and responding to policy, circulars and consultation papers, with written representations.",
+      },
+      {
+        label: "FDI & India entry",
+        detail:
+          "Sector route mapping, BO/LO/PO coordination and investor onboarding for inbound businesses.",
+      },
+      {
+        label: "Procurement & incentives",
+        detail:
+          "GeM and e-procurement bid readiness, plus state selection and industrial-incentive evaluation.",
+      },
+      {
+        label: "Compliance-first protocols",
+        detail:
+          "Anti-bribery, KYC, audit trail and governance frameworks for sensitive government interfaces.",
+      },
+    ],
+    approach:
+      "IndiaBridg is the house's corporate liaisoning and regulatory advisory firm, set up in New Delhi to do one thing precisely: help companies engage with government, regulators and public institutions the right way — informed, documented, compliant and commercially focused. It sits in Chambers alongside Cronuss because the disciplines compound: legal counsel writes the contract; IndiaBridg runs the regulatory interface that lets the deal happen.",
+    approachContinued:
+      "Every mandate is scoped in writing, run through KYC, conflict and compliance review, and executed under a protocol the client's compliance team can audit. The firm does not promise approvals, political access or shortcuts. It gives boards and global compliance teams what they actually need — a structured, auditable bridge between business and government, run from the centre of India's policy ecosystem with direct proximity to ministries, regulators, embassies and chambers.",
+    motto: "Regulatory clarity. Government engagement. No shortcuts.",
+    pillars: [
+      {
+        eyebrow: "01 · Authorised",
+        title: "Every interaction, sanctioned.",
+        body: "No engagement begins without a written mandate, KYC and a conflict and compliance review. The client always knows — and can prove — what we are doing on their behalf.",
+      },
+      {
+        eyebrow: "02 · Documented",
+        title: "A matter file on every mandate.",
+        body: "Stakeholder meetings, submissions and representations are recorded and filed. The work is reportable to a board or a regulator without rework.",
+      },
+      {
+        eyebrow: "03 · No shortcuts",
+        title: "The bridge, never the backdoor.",
+        body: "No bribery, no facilitation payments, no guaranteed outcomes, no off-record access. The boundaries are the product — they are why a general counsel can forward our name without a caveat.",
+      },
+    ],
+    values: {
+      sectionEyebrow: "What we will never do",
+      sectionTitle: "The boundaries are the brand.",
+      intro:
+        "Ethical engagement is not a policy bolted onto IndiaBridg — it is the operating system. These are the lines the firm does not cross, stated plainly so a compliance team can hold us to them.",
+      items: [
+        {
+          label: "No bribery, in any form",
+          body: "Including facilitation payments and any cash handling for government matters.",
+        },
+        {
+          label: "No guaranteed outcomes",
+          body: "We never promise approvals, licences or political access. We map the pathway and run it properly.",
+        },
+        {
+          label: "No off-record engagement",
+          body: "No backdoor meetings, no undocumented stakeholder contact. Every interface is logged.",
+        },
+        {
+          label: "No fabricated documentation",
+          body: "Submissions are accurate and complete. We withdraw before we misrepresent.",
+        },
+        {
+          label: "No tender manipulation",
+          body: "No specification influence, no bid rigging. Procurement work is disciplined and arm's-length.",
+        },
+      ],
+    },
+  },
+
+  /* ────────────────────────────────────────────────────────────────────── */
   "mvv-foundation": {
     bodyTone: "warm-ivory",
     accent: "#2e5a3a",

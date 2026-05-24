@@ -51,7 +51,7 @@ const chapters = [
     number: "I",
     href: "/world/story",
     title: "Our story",
-    lede: "Twenty-eight years from a single workshop floor in India to a house of eleven ventures across four continents. The thesis hasn't changed: build the works, ship the works, and stay close to the work.",
+    lede: "Twenty-eight years from a single workshop floor in India to a house of twelve ventures across four continents. The thesis hasn't changed: build the works, ship the works, and stay close to the work.",
     image: imagery.hemco,
     side: "left" as const,
   },
