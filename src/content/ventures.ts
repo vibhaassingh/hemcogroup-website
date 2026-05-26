@@ -30,6 +30,14 @@ export interface Venture {
   accent: string;
   accentSoft: string;
   parent?: string;
+  /** Connected ventures (slugs) — explicit brand-family / spun-out links. */
+  related?: string[];
+  /** Regions / cities the venture operates in or is building toward. */
+  geography?: string[];
+  /** Structured proof points — what exists now — for the venture page + map. */
+  proof?: { label: string; value: string }[];
+  /** ISO date (YYYY-MM-DD) of the last meaningful content change. */
+  updatedAt?: string;
   imagery: ImageryKey;
   featured?: boolean;
 }
@@ -49,6 +57,12 @@ export const ventures: Venture[] = [
     founded: "1998",
     accent: "#0d47f1",
     accentSoft: "#3b6bf5",
+    proof: [
+      { label: "Core output", value: "Commercial kitchen systems" },
+      { label: "Footprint", value: "Four continents" },
+      { label: "Capability", value: "Design · build · service" },
+    ],
+    updatedAt: "2026-05-26",
     imagery: "hemco",
     featured: true,
   },
@@ -83,6 +97,11 @@ export const ventures: Venture[] = [
     domain: "kerningai.eu",
     accent: "#1a1a1a",
     accentSoft: "#3a3a3a",
+    proof: [
+      { label: "Core output", value: "Industrial decision systems" },
+      { label: "Focus", value: "Industry 5.0 platforms" },
+    ],
+    updatedAt: "2026-05-26",
     imagery: "kerningAI",
     featured: true,
   },
@@ -134,6 +153,11 @@ export const ventures: Venture[] = [
     domain: "keystonne.in",
     accent: "#b85c2e",
     accentSoft: "#d4794a",
+    proof: [
+      { label: "Core output", value: "India's hospitality marketplace" },
+      { label: "Catalogue", value: "Kitchen & front-of-house supply" },
+    ],
+    updatedAt: "2026-05-26",
     imagery: "keystonne",
     featured: true,
   },

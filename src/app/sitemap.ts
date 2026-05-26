@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const ventureRoutes: MetadataRoute.Sitemap = ventures.map((v) => ({
     url: `${SITE_URL}/ventures/${v.slug}`,
-    lastModified: SITE_UPDATED,
+    lastModified: v.updatedAt ? new Date(v.updatedAt) : SITE_UPDATED,
     changeFrequency: "monthly",
     priority: v.featured ? 0.9 : 0.7,
   }));

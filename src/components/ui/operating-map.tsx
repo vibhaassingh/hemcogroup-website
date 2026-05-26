@@ -253,7 +253,7 @@ export function OperatingMap() {
                   onMouseEnter={() => setActiveSlug(v.slug)}
                   onFocus={() => setActiveSlug(v.slug)}
                   aria-label={`${v.name} — ${n.sectorName}, ${statusLabel[v.status]}`}
-                  style={{ cursor: "pointer", outline: "none" }}
+                  style={{ cursor: "pointer" }}
                 >
                   <motion.g
                     initial={reduce ? false : { opacity: 0 }}

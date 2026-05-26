@@ -20,6 +20,7 @@ Built with **Next.js 16** (App Router, React 19), **TypeScript**, **Tailwind CSS
 | `sectors.ts` | The 7 `SectorEntry` records + `ventureSlugs` mapping and the `venturesInSector` / `sectorOfVenture` / `sectorOrder` helpers. |
 | `site-facts.ts` | Derived headline facts: `BRAND_COUNT`, `SECTOR_COUNT`, `yearsCompounding()`, plus `toRoman()` / `numberWord()` / `numberWordCap()`. **Use these instead of hardcoding counts.** |
 | `venture-identity.ts` | Per-venture identity (hero copy, services, pillars, accents) for the venture detail pages. |
+| `brand-theme.ts` | Declarative per-brand theme tokens (tone / material / motion + accent). Venture pages emit `data-brand-tone` from it; the per-brand `.X-page` CSS blocks are migrating onto this token layer. |
 | `imagery.ts` | Image registry (`u()` Unsplash helper + local `/brand/*` assets). |
 | `footprint.ts` | Geographic locations (lat/lon) for the world map. |
 | `journal.ts` | Journal / dispatch entries. |

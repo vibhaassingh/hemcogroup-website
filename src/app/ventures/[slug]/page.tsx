@@ -22,6 +22,7 @@ import { LumonnMaskedBracket } from "@/components/ui/lumonn-masked-bracket";
 import { ventures, venturesBySlug } from "@/content/ventures";
 import { imagery } from "@/content/imagery";
 import { sectorOfVenture, venturesInSector, sectors } from "@/content/sectors";
+import { brandTheme } from "@/content/brand-theme";
 import {
   ventureIdentity,
   defaultIdentity,
@@ -77,6 +78,8 @@ export default async function VenturePage({
     { label: "Founded", value: venture.founded ?? "—" },
     { label: "Domain", value: venture.domain ?? "In development" },
     { label: "Headquartered", value: venture.hq ?? "India" },
+    // Bespoke proof points ("what exists now"), when the venture supplies them.
+    ...(venture.proof ?? []),
   ];
 
   const peers = sector
@@ -158,6 +161,8 @@ export default async function VenturePage({
   return (
     <div
       style={accentStyle}
+      data-brand={venture.slug}
+      data-brand-tone={brandTheme(venture.slug).tone}
       className={
         isKerningStudio
           ? "kerning-page relative"
