@@ -8,6 +8,7 @@ import { MagneticLink } from "@/components/ui/magnetic-link";
 import { NewsCard } from "@/components/ui/news-card";
 import { Section, GoldRule } from "@/components/ui/section";
 import { ToneBridge } from "@/components/ui/tone-bridge";
+import { OperatingMap } from "@/components/ui/operating-map";
 import { ventures } from "@/content/ventures";
 import { imagery } from "@/content/imagery";
 import { journal } from "@/content/journal";
@@ -138,6 +139,27 @@ export default function Home() {
         </div>
         <ScrollHint label="Discover" tone="light" />
       </CinematicHero>
+
+      {/* The operating map — interactive, registry-driven view of the group.
+          Sectors fan radially off a central hub; all thirteen ventures sit as
+          nodes within their sector; brand families are drawn as crossing arcs. */}
+      <Section tone="forest" pad="xl">
+        <div className="mb-12 max-w-3xl md:mb-16">
+          <Reveal>
+            <p className="eyebrow mb-6" style={{ color: "var(--color-gold-300)" }}>
+              The operating map
+            </p>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h2 className="display text-[clamp(2.25rem,5vw,4.5rem)] leading-[0.98] tracking-[-0.015em] text-[color:var(--color-bone)]">
+              The whole house,
+              <br />
+              <span className="display-italic opacity-50">in one view.</span>
+            </h2>
+          </Reveal>
+        </div>
+        <OperatingMap />
+      </Section>
 
       {/* Sectors — Apple-style product grid.
           Single restrained header, then 7 sector cards + 1 "all sectors" CTA
