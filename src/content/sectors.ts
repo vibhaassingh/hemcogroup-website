@@ -75,11 +75,11 @@ export const sectors: Record<SectorSlug, SectorEntry> = {
     slug: "sovereign",
     name: "Sovereign",
     ordinal: "V",
-    ethos: "Decade-horizon ventures in clean energy and autonomous defence.",
+    ethos: "Decade-horizon ventures in clean energy, mobility and autonomous defence.",
     thesis:
-      "The ventures the house builds for India's strategic autonomy. A first-of-its-kind micro low-energy reactor reshaping how clean power is generated and owned at the edge of the grid. A sovereign defence practice in precision munitions and autonomous platforms. These take longer, cost more, and matter most.",
+      "The ventures the house builds for India's strategic autonomy. A first-of-its-kind micro low-energy reactor reshaping how clean power is generated and owned at the edge of the grid. A national EV-charging network unifying every operator into one app for the country's electric transition. A sovereign defence practice in precision munitions and autonomous platforms. These take longer, cost more, and matter most.",
     hero: "lumonn",
-    ventureSlugs: ["lumonn", "consortium-defence-robotics"],
+    ventureSlugs: ["lumonn", "voltverse", "consortium-defence-robotics"],
   },
   chambers: {
     slug: "chambers",

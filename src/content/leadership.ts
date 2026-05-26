@@ -15,7 +15,7 @@ export const leadership: LeaderEntry[] = [
     name: "—",
     role: "Chairman",
     initials: "—",
-    bio: "Founder of Hemco Group. Built the original works in India in 1998 and shaped the compounding operating model that now spans twelve brands.",
+    bio: "Founder of Hemco Group. Built the original works in India in 1998 and shaped the compounding operating model that now spans thirteen brands.",
     portrait: portraits[0].src,
   },
   {

@@ -6,7 +6,7 @@ import { Section, GoldRule } from "@/components/ui/section";
 export const metadata: Metadata = {
   title: "Investors & Partnerships",
   description:
-    "Hemco Group is a privately held industrial group from India. Investor relations, strategic partnerships, and alliance enquiries for the group and its twelve operating brands.",
+    "Hemco Group is a privately held industrial group from India. Investor relations, strategic partnerships, and alliance enquiries for the group and its thirteen operating brands.",
   alternates: { canonical: "/investors" },
   openGraph: {
     title: "Investors & Partnerships · Hemco Group",

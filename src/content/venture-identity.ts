@@ -1003,6 +1003,76 @@ export const ventureIdentity: Record<string, VentureIdentity> = {
   },
 
   /* ────────────────────────────────────────────────────────────────────── */
+  voltverse: {
+    // Electric green on near-black — the charging-app-at-night register,
+    // distinct from Lumonn's cobalt within the Sovereign sector.
+    bodyTone: "ink",
+    accent: "#2fae66",
+    accentSoft: "#7fd6a0",
+    accentDeep: "#0c2418",
+    heroOverlay:
+      "linear-gradient(180deg, rgba(8,20,14,0.30) 0%, rgba(8,20,14,0.55) 50%, rgba(4,12,8,0.92) 92%, #040c08 100%), radial-gradient(60% 60% at 50% 30%, rgba(47,174,102,0.14) 0%, transparent 75%)",
+    heroAlign: "bottom",
+    heroEyebrow: "EV charging · Aggregator · India",
+    outcomeLine:
+      "Every charge point operator in India, unified into one app, one card and one map — so a driver never thinks about which network they're on.",
+    services: [
+      {
+        label: "Discover & map",
+        detail:
+          "A live map of public charging across the country — every operator, every connector, filtered by speed, socket and availability.",
+      },
+      {
+        label: "One-tap payments",
+        detail:
+          "Pay any network through a single UPI/Razorpay wallet. One top-up, one statement, GST-compliant invoices on every session.",
+      },
+      {
+        label: "Journey planner",
+        detail:
+          "Route planning that thinks in charge, not just distance — Eco, Normal and Sport modes that place stops where the car actually needs them.",
+      },
+      {
+        label: "Roaming across CPOs",
+        detail:
+          "Start a session on Tata Power, Statiq, ChargeZone, Jio-bp or Ather Grid from the same account — no per-operator app sprawl.",
+      },
+      {
+        label: "Fleet accounts",
+        detail:
+          "Pooled wallets, role-based access and consolidated billing for fleets running electric at scale.",
+      },
+      {
+        label: "Highway charging plazas",
+        detail:
+          "Voltverse-operated charging plazas on national and state expressways — built with NHAI and state authorities for the long-haul corridors.",
+      },
+    ],
+    approach:
+      "Voltverse is the group's EV-charging aggregator — the layer that turns India's fragmented charging landscape into one network a driver can actually use. Today an EV owner juggles a dozen operator apps, a dozen wallets and a dozen logins. Voltverse collapses that into a single surface: one app, one card, one map, one bill — across every charge point operator in the country. The model is borrowed from what Octopus Electroverse proved in the UK, and rebuilt natively for India.",
+    approachContinued:
+      "Native means UPI and Razorpay rather than card rails, CCS2 and Bharat AC/DC connectors rather than European standards, phone-OTP identity, GST-compliant invoicing, and a journey planner tuned to Indian highways and the realities of the grid. Beyond the app, Voltverse operates its own charging plazas on national and state expressways in partnership with NHAI and state authorities — owning the corridors that long-distance electric travel depends on. Built in India, for the country's electric transition.",
+    motto: "Every charger. One app.",
+    pillars: [
+      {
+        eyebrow: "01 · One network",
+        title: "Every operator, one map.",
+        body: "A single live map across every Indian charge point operator — discover, filter and navigate without leaving the app or learning a new one for each network.",
+      },
+      {
+        eyebrow: "02 · One payment",
+        title: "One wallet, every charger.",
+        body: "UPI-native top-ups, one balance, one GST-compliant statement. Start a session on any network and pay the same way every time.",
+      },
+      {
+        eyebrow: "03 · One account",
+        title: "Driver, fleet, corridor.",
+        body: "The same identity from a single driver to a fleet to a Voltverse-operated highway plaza — roaming, billing and access that scale with the journey.",
+      },
+    ],
+  },
+
+  /* ────────────────────────────────────────────────────────────────────── */
   "mvv-foundation": {
     bodyTone: "warm-ivory",
     accent: "#2e5a3a",

@@ -7,18 +7,18 @@ import { sectorOfVenture } from "@/content/sectors";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Build with Hemco Group across twelve operating brands and seven sectors. Open roles, the working culture, and how to apply at hemco.ooo, kerningai.eu, studio.kerning.ooo and more.",
+    "Build with Hemco Group across thirteen operating brands and seven sectors. Open roles, the working culture, and how to apply at hemco.ooo, kerningai.eu, studio.kerning.ooo and more.",
   alternates: { canonical: "/careers" },
   openGraph: {
     title: "Careers · Hemco Group",
-    description: "Build with us, across twelve brands.",
+    description: "Build with us, across thirteen brands.",
     url: "/careers",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Careers · Hemco Group",
-    description: "Build with us, across twelve brands.",
+    description: "Build with us, across thirteen brands.",
   },
 };
 
@@ -35,7 +35,7 @@ export default function CareersPage() {
           <h1 className="display max-w-[20ch] text-[clamp(2.5rem,6.4vw,5.75rem)] leading-[0.96]">
             Build with us,{" "}
             <span className="display-italic opacity-60">
-              across twelve brands.
+              across thirteen brands.
             </span>
           </h1>
           <Reveal delay={0.2}>

@@ -92,6 +92,14 @@ export const imagery = {
     alt: "A legislative chamber in session — IndiaBridg's government interface",
     caption: "Government interface",
   },
+  // Voltverse — the live product's charging map, night theme: every
+  // Indian charge-point operator as one network of glowing pins across
+  // the country. Sourced from the Voltverse map surface.
+  voltverse: {
+    src: "/brand/voltverse-map.jpg",
+    alt: "Voltverse charging map — every charge point operator across India in one view",
+    caption: "Charging network",
+  },
   // MVV Foundation — students in uniform, focused on their work.
   // The brief in one frame: returning what we've learned to the city
   // that taught us, through education and culinary skilling.

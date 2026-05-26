@@ -450,7 +450,7 @@ export function Nav() {
                         letterSpacing: "0.20em",
                       }}
                     >
-                      Twelve brands · One house
+                      Thirteen brands · One house
                     </p>
                     <Link
                       href="/sectors"

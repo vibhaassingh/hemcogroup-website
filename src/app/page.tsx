@@ -14,7 +14,7 @@ import { journal } from "@/content/journal";
 import { sectorOrder, sectors } from "@/content/sectors";
 
 const stats = [
-  { to: 12, label: "Operating brands" },
+  { to: 13, label: "Operating brands" },
   { to: 7, label: "Sectors" },
   { to: 28, label: "Years compounding" },
   { to: 1998, label: "Established", noFormat: true },
@@ -30,7 +30,7 @@ const faqSchema = {
       name: "What is Hemco Group?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Hemco Group is a privately held industrial holding company from India, founded in 1998. It operates twelve brands across seven sectors — culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.",
+        text: "Hemco Group is a privately held industrial holding company from India, founded in 1998. It operates thirteen brands across seven sectors — culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.",
       },
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       name: "What brands does Hemco Group operate?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Hemco Group operates twelve brands: Hemco Kitchens, Keystonne, Kerning Studio, Kerning Architecture & Design, Kerning Hospitality, Kerning AI, Consortium, Consortium Defence & Robotics, Lumonn, Cronuss Associates, IndiaBridg, and MVV Foundation.",
+        text: "Hemco Group operates thirteen brands: Hemco Kitchens, Keystonne, Kerning Studio, Kerning Architecture & Design, Kerning Hospitality, Kerning AI, Consortium, Consortium Defence & Robotics, Lumonn, Cronuss Associates, IndiaBridg, Voltverse, and MVV Foundation.",
       },
     },
     {
@@ -114,7 +114,7 @@ export default function Home() {
               <div className="glass-light glass-sheen fluted fluted-soft fluted-glint rounded-[6px] p-6 md:p-7 max-w-md">
                 <span aria-hidden className="fluted-glint__streak" />
                 <p className="text-[15px] leading-[1.65] text-white/90">
-                  Twelve brands. Seven sectors. One operating philosophy:
+                  Thirteen brands. Seven sectors. One operating philosophy:
                   own what you build, and build what serves the works.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -329,7 +329,7 @@ export default function Home() {
                     className="text-[14px] leading-[1.55] mb-6 max-w-[28ch]"
                     style={{ color: "rgba(255,255,255,0.78)" }}
                   >
-                    The full lineup — seven sectors, twelve brands, one house.
+                    The full lineup — seven sectors, thirteen brands, one house.
                   </p>
                   <span
                     className="caption inline-flex items-center gap-2"

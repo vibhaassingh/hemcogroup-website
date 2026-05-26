@@ -216,6 +216,22 @@ export const ventures: Venture[] = [
     imagery: "indiabridg",
   },
   {
+    slug: "voltverse",
+    name: "Voltverse",
+    wordmark: "Voltverse",
+    tagline: "Every charger. One app.",
+    positioning: "India's EV-charging aggregator — one app for every charge point operator.",
+    description:
+      "An India-first EV-charging aggregator — a single app, card and map to discover, start and pay for public charging across every Indian charge point operator (Tata Power, Statiq, ChargeZone, Jio-bp, Ather Grid and more). Localised for India: UPI payments, CCS2 and Bharat connectors, phone-OTP identity, GST-compliant invoicing, and a journey planner that routes by charge.",
+    sector: "Energy",
+    status: "Upcoming",
+    founded: "2026",
+    domain: null,
+    accent: "#2fae66",
+    accentSoft: "#7fd6a0",
+    imagery: "voltverse",
+  },
+  {
     slug: "mvv-foundation",
     name: "MVV Foundation",
     wordmark: "MVV",
