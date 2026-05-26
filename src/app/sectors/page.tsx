@@ -109,7 +109,7 @@ export default function SectorsIndex() {
                   <dl className="grid grid-cols-3 gap-4">
                     {[
                       { k: "VII", v: "Sectors" },
-                      { k: "XI", v: "Brands" },
+                      { k: "XIII", v: "Brands" },
                       { k: "XXVIII", v: "Years" },
                     ].map((row) => (
                       <div key={row.k} className="flex flex-col">

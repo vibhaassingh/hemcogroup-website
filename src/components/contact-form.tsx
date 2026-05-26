@@ -22,8 +22,6 @@ interface SubmissionRecord {
   message: string;
 }
 
-const STORE_KEY = "hemco.contact.submissions.v1";
-
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -55,18 +53,6 @@ export function ContactForm() {
       routing,
       message: message.trim(),
     };
-
-    // Best-effort local copy so a connection error doesn't lose the
-    // sender's note before we get a chance to retry.
-    try {
-      const existing = JSON.parse(
-        localStorage.getItem(STORE_KEY) || "[]",
-      ) as SubmissionRecord[];
-      existing.push(record);
-      localStorage.setItem(STORE_KEY, JSON.stringify(existing));
-    } catch {
-      /* localStorage may be unavailable */
-    }
 
     try {
       const res = await fetch("/api/contact", {
