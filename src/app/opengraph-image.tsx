@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { BRAND_COUNT, SECTOR_COUNT, numberWordCap } from "@/content/site-facts";
 
 export const runtime = "edge";
 export const alt = "Hemco Group — A house of industries, built in India";
@@ -85,7 +86,7 @@ export default async function OGImage() {
             textTransform: "uppercase",
           }}
         >
-          <span>Thirteen brands · Seven sectors</span>
+          <span>{`${numberWordCap(BRAND_COUNT)} brands · ${numberWordCap(SECTOR_COUNT)} sectors`}</span>
           <span>hemcogroup.com</span>
         </div>
       </div>

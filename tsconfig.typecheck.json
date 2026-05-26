@@ -1,0 +1,11 @@
+{
+  "//": "Type-checks source only. The base tsconfig includes Next's generated",
+  "//2": ".next/(dev/)types globs, which standalone `tsc` can't parse; `next",
+  "//3": "build` validates those route/validator types itself.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".next", "out", "dist"]
+}

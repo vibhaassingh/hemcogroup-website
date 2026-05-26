@@ -6,6 +6,7 @@ import {
   useReducedMotion,
   useScroll,
   useTransform,
+  type MotionValue,
 } from "motion/react";
 import { useRef, type ReactNode } from "react";
 
@@ -15,6 +16,58 @@ export interface Step {
   title: string;
   body: string;
   image: { src: string; alt: string };
+}
+
+/**
+ * One cross-fading image in the sticky column. Extracted into its own
+ * component so each useTransform sits at the top level of a component
+ * (satisfies react-hooks/rules-of-hooks) instead of inside a .map callback.
+ */
+function StickyImage({
+  step,
+  index,
+  total,
+  scrollYProgress,
+}: {
+  step: Step;
+  index: number;
+  total: number;
+  scrollYProgress: MotionValue<number>;
+}) {
+  const start = index / total;
+  const peak = (index + 0.5) / total;
+  const end = (index + 1) / total;
+  const opacity = useTransform(
+    scrollYProgress,
+    [
+      Math.max(0, start - 0.05),
+      Math.max(0, start + 0.02),
+      peak,
+      Math.min(1, end - 0.02),
+      Math.min(1, end + 0.05),
+    ],
+    index === 0
+      ? [1, 1, 1, 1, 0]
+      : index === total - 1
+        ? [0, 1, 1, 1, 1]
+        : [0, 1, 1, 1, 0],
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [start, peak, end],
+    [1.05, 1, 1.05],
+  );
+  return (
+    <motion.div style={{ opacity, scale }} className="absolute inset-0">
+      <Image
+        src={step.image.src}
+        alt={step.image.alt}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        className="object-cover"
+      />
+    </motion.div>
+  );
 }
 
 /**
@@ -109,46 +162,15 @@ function StickyStoryAnimated({
             <div className="md:col-span-6">
               <div className="md:sticky md:top-32">
                 <div className="relative aspect-[5/4] overflow-hidden rounded-[14px] bg-bone-2">
-                  {steps.map((s, i) => {
-                    const start = i / steps.length;
-                    const peak = (i + 0.5) / steps.length;
-                    const end = (i + 1) / steps.length;
-                    const opacity = useTransform(
-                      scrollYProgress,
-                      [
-                        Math.max(0, start - 0.05),
-                        Math.max(0, start + 0.02),
-                        peak,
-                        Math.min(1, end - 0.02),
-                        Math.min(1, end + 0.05),
-                      ],
-                      i === 0
-                        ? [1, 1, 1, 1, 0]
-                        : i === steps.length - 1
-                        ? [0, 1, 1, 1, 1]
-                        : [0, 1, 1, 1, 0],
-                    );
-                    const scale = useTransform(
-                      scrollYProgress,
-                      [start, peak, end],
-                      [1.05, 1, 1.05],
-                    );
-                    return (
-                      <motion.div
-                        key={s.index}
-                        style={{ opacity, scale }}
-                        className="absolute inset-0"
-                      >
-                        <Image
-                          src={s.image.src}
-                          alt={s.image.alt}
-                          fill
-                          sizes="(min-width: 768px) 50vw, 100vw"
-                          className="object-cover"
-                        />
-                      </motion.div>
-                    );
-                  })}
+                  {steps.map((s, i) => (
+                    <StickyImage
+                      key={s.index}
+                      step={s}
+                      index={i}
+                      total={steps.length}
+                      scrollYProgress={scrollYProgress}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

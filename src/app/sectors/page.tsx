@@ -10,6 +10,13 @@ import {
   venturesInSector,
 } from "@/content/sectors";
 import { imagery } from "@/content/imagery";
+import {
+  BRAND_COUNT,
+  SECTOR_COUNT,
+  yearsCompounding,
+  toRoman,
+  numberWordCap,
+} from "@/content/site-facts";
 
 export const metadata: Metadata = {
   title: "Sectors",
@@ -62,10 +69,10 @@ export default function SectorsIndex() {
               </Reveal>
               <Reveal delay={0.05}>
                 <h1 className="display text-[clamp(3rem,8vw,7.5rem)] leading-[0.94] tracking-[-0.018em] mb-10">
-                  Seven sectors.
+                  {numberWordCap(SECTOR_COUNT)} sectors.
                   <br />
                   <span className="display-italic opacity-50">
-                    Thirteen brands.
+                    {numberWordCap(BRAND_COUNT)} brands.
                   </span>
                 </h1>
               </Reveal>
@@ -108,9 +115,9 @@ export default function SectorsIndex() {
                   </p>
                   <dl className="grid grid-cols-3 gap-4">
                     {[
-                      { k: "VII", v: "Sectors" },
-                      { k: "XIII", v: "Brands" },
-                      { k: "XXVIII", v: "Years" },
+                      { k: toRoman(SECTOR_COUNT), v: "Sectors" },
+                      { k: toRoman(BRAND_COUNT), v: "Brands" },
+                      { k: toRoman(yearsCompounding()), v: "Years" },
                     ].map((row) => (
                       <div key={row.k} className="flex flex-col">
                         <dt

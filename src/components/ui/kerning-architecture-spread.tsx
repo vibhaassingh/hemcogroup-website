@@ -341,7 +341,7 @@ export function KerningArchitectureSpread() {
               className="body-sans text-[15px]"
               style={{ color: "rgba(58,51,32,0.80)" }}
             >
-              The drawing above is not a project — it is the studio's
+              The drawing above is not a project — it is the studio&apos;s
               shorthand for how we think. A room with a kitchen at one end,
               a table at the other, daylight from above, and the section cut
               that proves all three are in tension with each other.

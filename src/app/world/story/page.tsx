@@ -9,6 +9,7 @@ import { MaskReveal } from "@/components/ui/mask-reveal";
 import { CountUp } from "@/components/ui/count-up";
 import { MagneticLink } from "@/components/ui/magnetic-link";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { BRAND_COUNT, SECTOR_COUNT, yearsCompounding } from "@/content/site-facts";
 
 export const metadata: Metadata = {
   title: "Our story",
@@ -100,9 +101,9 @@ const eras = [
 ];
 
 const stats = [
-  { to: 13, label: "Operating brands" },
-  { to: 7, label: "Sectors" },
-  { to: 28, label: "Years compounding" },
+  { to: BRAND_COUNT, label: "Operating brands" },
+  { to: SECTOR_COUNT, label: "Sectors" },
+  { to: yearsCompounding(), label: "Years compounding" },
 ];
 
 const principles = [

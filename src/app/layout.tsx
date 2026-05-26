@@ -8,6 +8,13 @@ import { BrandRibbon } from "@/components/layout/brand-ribbon";
 import { CursorOrb } from "@/components/ui/cursor-orb";
 import { LoaderCurtain } from "@/components/ui/loader-curtain";
 import { ventures } from "@/content/ventures";
+import {
+  BRAND_COUNT,
+  SECTOR_COUNT,
+  yearsCompounding,
+  numberWord,
+  numberWordCap,
+} from "@/content/site-facts";
 
 const SITE_URL = "https://hemcogroup.com";
 const SITE_NAME = "Hemco Group";
@@ -41,8 +48,7 @@ export const metadata: Metadata = {
     default: "Hemco Group — A house of industries, built in India",
     template: "%s · Hemco Group",
   },
-  description:
-    "Hemco Group is a privately held industrial group from India, founded in 1998. Thirteen operating brands across culinary, design, intelligence, hospitality, sovereign, legal and philanthropic sectors — including Hemco Kitchens, Kerning AI, Keystonne, Consortium, Lumonn, Cronuss Associates and MVV Foundation.",
+  description: `Hemco Group is a privately held industrial group from India, founded in 1998. ${numberWordCap(BRAND_COUNT)} operating brands across culinary, design, intelligence, hospitality, sovereign, legal and philanthropic sectors — including Hemco Kitchens, Kerning AI, Keystonne, Consortium, Lumonn, Cronuss Associates and MVV Foundation.`,
   applicationName: "Hemco Group",
   authors: [{ name: "Hemco Group", url: "https://hemcogroup.com" }],
   creator: "Hemco Group",
@@ -69,16 +75,14 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Hemco Group",
     title: "Hemco Group — A house of industries, built in India",
-    description:
-      "A privately held industrial group from India. Thirteen brands, seven sectors, twenty-eight years.",
+    description: `A privately held industrial group from India. ${numberWordCap(BRAND_COUNT)} brands, ${numberWord(SECTOR_COUNT)} sectors, ${numberWord(yearsCompounding())} years.`,
     url: "https://hemcogroup.com",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
     title: "Hemco Group — A house of industries",
-    description:
-      "Thirteen brands across seven sectors. Privately held, built in India since 1998.",
+    description: `${numberWordCap(BRAND_COUNT)} brands across ${numberWord(SECTOR_COUNT)} sectors. Privately held, built in India since 1998.`,
   },
   robots: {
     index: true,
@@ -118,8 +122,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/brand/logo.svg`,
   image: `${SITE_URL}/brand/hemco-hero.jpg`,
-  description:
-    "Hemco Group is a privately held industrial group from India, founded in 1998. Thirteen operating brands across seven sectors — culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.",
+  description: `Hemco Group is a privately held industrial group from India, founded in 1998. ${numberWordCap(BRAND_COUNT)} operating brands across ${numberWord(SECTOR_COUNT)} sectors — culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social.`,
   foundingDate: "1998",
   foundingLocation: {
     "@type": "Place",

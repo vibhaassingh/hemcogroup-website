@@ -12,11 +12,17 @@ import { ventures } from "@/content/ventures";
 import { imagery } from "@/content/imagery";
 import { journal } from "@/content/journal";
 import { sectorOrder, sectors } from "@/content/sectors";
+import {
+  BRAND_COUNT,
+  SECTOR_COUNT,
+  yearsCompounding,
+  numberWordCap,
+} from "@/content/site-facts";
 
 const stats = [
-  { to: 13, label: "Operating brands" },
-  { to: 7, label: "Sectors" },
-  { to: 28, label: "Years compounding" },
+  { to: BRAND_COUNT, label: "Operating brands" },
+  { to: SECTOR_COUNT, label: "Sectors" },
+  { to: yearsCompounding(), label: "Years compounding" },
   { to: 1998, label: "Established", noFormat: true },
 ];
 
@@ -114,8 +120,9 @@ export default function Home() {
               <div className="glass-light glass-sheen fluted fluted-soft fluted-glint rounded-[6px] p-6 md:p-7 max-w-md">
                 <span aria-hidden className="fluted-glint__streak" />
                 <p className="text-[15px] leading-[1.65] text-white/90">
-                  Thirteen brands. Seven sectors. One operating philosophy:
-                  own what you build, and build what serves the works.
+                  {numberWordCap(BRAND_COUNT)} brands. {numberWordCap(SECTOR_COUNT)}{" "}
+                  sectors. One operating philosophy: own what you build, and
+                  build what serves the works.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <MagneticLink href="/sectors" className="btn btn-on-photo">
