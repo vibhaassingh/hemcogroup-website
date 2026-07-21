@@ -31,6 +31,7 @@
 - [Hemco Group home](https://hemcogroup.com/)
 - [Sectors overview](https://hemcogroup.com/sectors)
 - [Our story](https://hemcogroup.com/world/story)
+- [Leadership](https://hemcogroup.com/leadership)
 - [Journal (announcements & insights)](https://hemcogroup.com/world/journal)
 - [Investors](https://hemcogroup.com/investors)
 - [Careers](https://hemcogroup.com/careers)
@@ -38,7 +39,8 @@
 
 ## Quick answers
 
-- **Who founded Hemco Group?** Hemco Group was founded in 1998 in India and is privately held.
+- **Who founded Hemco Group?** Hemco Group was founded in 1998 in India by Vishal Singh, its Chairman, and is privately held.
+- **Who leads Hemco Group?** Vishal Singh (Chairman) and Vibhaas Singh (Vice Chairman). See https://hemcogroup.com/leadership.
 - **What does Hemco Group do?** It is an industrial holding company with eleven operating brands across seven sectors. Its founding business is commercial kitchen equipment (Hemco Kitchens).
 - **Where is Hemco Group based?** India. Kerning AI maintains a European base in the Netherlands.
 - **How many brands does Hemco Group operate?** Eleven, across culinary, design, AI & automation, hospitality, defence, energy, architecture, legal and social sectors.

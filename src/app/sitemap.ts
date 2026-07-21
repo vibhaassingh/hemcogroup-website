@@ -11,16 +11,61 @@ const SITE_URL = "https://hemcogroup.com";
 const SITE_UPDATED = new Date("2026-05-26");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${SITE_URL}/sectors`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/world`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${SITE_URL}/world/story`, lastModified: SITE_UPDATED, changeFrequency: "yearly", priority: 0.7 },
-    { url: `${SITE_URL}/world/journal`, lastModified: SITE_UPDATED, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${SITE_URL}/careers`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${SITE_URL}/investors`, lastModified: SITE_UPDATED, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${SITE_URL}/contact`, lastModified: SITE_UPDATED, changeFrequency: "yearly", priority: 0.5 },
+    {
+      url: `${SITE_URL}/`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
+    {
+      url: `${SITE_URL}/sectors`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/world`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/world/story`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/world/journal`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/leadership`,
+      lastModified: new Date("2026-07-21"),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/careers`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/investors`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/contact`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
   ];
 
   const sectorRoutes: MetadataRoute.Sitemap = sectorOrder

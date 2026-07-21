@@ -1,5 +1,3 @@
-import { portraits } from "./imagery";
-
 export interface LeaderEntry {
   slug: string;
   name: string;
@@ -7,39 +5,30 @@ export interface LeaderEntry {
   initials: string;
   bio: string;
   portrait: string;
+  alt: string;
+  /** CSS object-position for the 3:4 crop — tuned per photograph. */
+  objectPosition: string;
 }
 
 export const leadership: LeaderEntry[] = [
   {
-    slug: "chairman",
-    name: "—",
+    slug: "vishal-singh",
+    name: "Vishal Singh",
     role: "Chairman",
-    initials: "—",
-    bio: "Founder of Hemco Group. Built the original works in India in 1998 and shaped the compounding operating model that now spans thirteen brands.",
-    portrait: portraits[0].src,
+    initials: "VS",
+    bio: "Founded the group on a workshop floor in India in 1998, when Hemco Kitchens was the whole house. The operating model he set that year — own what you build, fund it from the works — still governs every venture that carries the name.",
+    portrait: "/leadership/vishal-singh.jpg",
+    alt: "Vishal Singh, Chairman of Hemco Group",
+    objectPosition: "50% 18%",
   },
   {
-    slug: "managing-director",
-    name: "—",
-    role: "Managing Director",
-    initials: "—",
-    bio: "Leads day-to-day operations across the group's industrial and service ventures.",
-    portrait: portraits[1].src,
-  },
-  {
-    slug: "ventures",
-    name: "—",
-    role: "Director, Ventures",
-    initials: "—",
-    bio: "Stewards the sovereign book — Lumonn, Consortium, and the group's defence and robotics practice.",
-    portrait: portraits[2].src,
-  },
-  {
-    slug: "design",
-    name: "—",
-    role: "Director, Design & Brand",
-    initials: "—",
-    bio: "Oversees Kerning Studio and the group's identity, from architecture to packaging.",
-    portrait: portraits[3].src,
+    slug: "vibhaas-singh",
+    name: "Vibhaas Singh",
+    role: "Vice Chairman",
+    initials: "VBS",
+    bio: "The architect of the group's second act. Everything the house builds in technology, design, intelligence and defence — Kerning Studio, Kerning AI, Consortium, Consortium Defence & Robotics, Kerning Architecture & Design, Voltverse — began as his brainchild, shaped by a simple conviction: the works should make their own tools.",
+    portrait: "/leadership/vibhaas-singh.jpg",
+    alt: "Vibhaas Singh, Vice Chairman of Hemco Group",
+    objectPosition: "50% 12%",
   },
 ];

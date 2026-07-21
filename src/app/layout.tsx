@@ -136,6 +136,20 @@ const organizationSchema = {
     addressCountry: "IN",
   },
   email: "hello@hemcogroup.com",
+  founder: {
+    "@type": "Person",
+    name: "Vishal Singh",
+    jobTitle: "Chairman",
+    url: `${SITE_URL}/leadership`,
+  },
+  employee: [
+    {
+      "@type": "Person",
+      name: "Vibhaas Singh",
+      jobTitle: "Vice Chairman",
+      url: `${SITE_URL}/leadership`,
+    },
+  ],
   numberOfEmployees: { "@type": "QuantitativeValue", minValue: 100 },
   sameAs: [
     "https://www.wikidata.org/wiki/Q139691420",
@@ -160,7 +174,8 @@ const websiteSchema = {
   "@id": `${SITE_URL}/#website`,
   url: SITE_URL,
   name: SITE_NAME,
-  description: "The official site of Hemco Group — a privately held Indian industrial group.",
+  description:
+    "The official site of Hemco Group — a privately held Indian industrial group.",
   publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: "en-IN",
   potentialAction: {
@@ -191,7 +206,9 @@ export default function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
         <script
           type="application/ld+json"

@@ -12,6 +12,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 const corporateLinks = [
   { href: "/world", label: "World of Hemco" },
+  { href: "/leadership", label: "Leadership" },
   { href: "/careers", label: "Careers" },
   { href: "/investors", label: "Investors" },
 ];
@@ -38,7 +39,7 @@ export function Nav() {
       // bounding rect spans the probe line. Innermost (last match) wins
       // because nested data-tone wrappers should override the outer.
       const sections = document.querySelectorAll<HTMLElement>(
-        "main [data-tone], main[data-tone]"
+        "main [data-tone], main[data-tone]",
       );
       let active: Tone = "ivory";
       sections.forEach((s) => {
@@ -119,8 +120,8 @@ export function Nav() {
           background: !scrolled
             ? "transparent"
             : lightSurface
-            ? "linear-gradient(180deg, color-mix(in srgb, var(--color-ivory) 80%, transparent) 0%, color-mix(in srgb, var(--color-ivory) 60%, transparent) 100%)"
-            : "linear-gradient(180deg, color-mix(in srgb, var(--color-forest-900) 55%, transparent) 0%, color-mix(in srgb, var(--color-forest-900) 38%, transparent) 100%)",
+              ? "linear-gradient(180deg, color-mix(in srgb, var(--color-ivory) 80%, transparent) 0%, color-mix(in srgb, var(--color-ivory) 60%, transparent) 100%)"
+              : "linear-gradient(180deg, color-mix(in srgb, var(--color-forest-900) 55%, transparent) 0%, color-mix(in srgb, var(--color-forest-900) 38%, transparent) 100%)",
           backdropFilter: scrolled ? "blur(24px) saturate(180%)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(24px) saturate(180%)" : "none",
           borderBottom: scrolled
@@ -129,8 +130,8 @@ export function Nav() {
           boxShadow: !scrolled
             ? "none"
             : lightSurface
-            ? "0 14px 38px color-mix(in srgb, var(--color-ink) 8%, transparent)"
-            : "inset 0 1px 0 rgba(255,255,255,0.10), 0 18px 50px color-mix(in srgb, var(--color-forest-900) 28%, transparent)",
+              ? "0 14px 38px color-mix(in srgb, var(--color-ink) 8%, transparent)"
+              : "inset 0 1px 0 rgba(255,255,255,0.10), 0 18px 50px color-mix(in srgb, var(--color-forest-900) 28%, transparent)",
         }}
         onMouseLeave={scheduleClose}
       >
@@ -155,6 +156,13 @@ export function Nav() {
               className={navLink}
             >
               World of Hemco
+            </Link>
+            <Link
+              href="/leadership"
+              onMouseEnter={scheduleClose}
+              className={navLink}
+            >
+              Leadership
             </Link>
             <Link
               href="/careers"
@@ -481,7 +489,10 @@ export function Nav() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease }}
             className="fixed inset-0 z-[60] flex flex-col"
-            style={{ background: "var(--color-forest-900)", color: "var(--color-mist)" }}
+            style={{
+              background: "var(--color-forest-900)",
+              color: "var(--color-mist)",
+            }}
             data-tone="forest"
           >
             <div className="flex items-center justify-between px-6 py-5 md:px-10">
@@ -530,31 +541,37 @@ export function Nav() {
               ))}
               <div
                 className="mt-10 pt-8"
-                style={{ borderTop: "1px solid color-mix(in srgb, var(--color-gold-500) 28%, transparent)" }}
+                style={{
+                  borderTop:
+                    "1px solid color-mix(in srgb, var(--color-gold-500) 28%, transparent)",
+                }}
               >
-                {corporateLinks.concat({ href: "/contact", label: "Contact" }).map((l, i) => (
-                  <motion.div
-                    key={l.href}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 + i * 0.04, ease }}
-                  >
-                    <Link
-                      href={l.href}
-                      onClick={() => setOpen(false)}
-                      className="block py-2 text-[1.125rem]"
+                {corporateLinks
+                  .concat({ href: "/contact", label: "Contact" })
+                  .map((l, i) => (
+                    <motion.div
+                      key={l.href}
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.6,
+                        delay: 0.4 + i * 0.04,
+                        ease,
+                      }}
                     >
-                      {l.label}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={l.href}
+                        onClick={() => setOpen(false)}
+                        className="block py-2 text-[1.125rem]"
+                      >
+                        {l.label}
+                      </Link>
+                    </motion.div>
+                  ))}
               </div>
             </nav>
             <div className="px-6 pb-10 md:px-10">
-              <p
-                className="eyebrow"
-                style={{ color: "var(--color-gold-500)" }}
-              >
+              <p className="eyebrow" style={{ color: "var(--color-gold-500)" }}>
                 Hemco Group · India · Since 1998
               </p>
             </div>

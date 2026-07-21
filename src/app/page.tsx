@@ -88,10 +88,7 @@ export default function Home() {
         <div className="grid gap-10 md:grid-cols-12 md:gap-12 items-end">
           <div className="md:col-span-8">
             <Reveal>
-              <p
-                className="caption"
-                style={{ color: "var(--color-gold-300)" }}
-              >
+              <p className="caption" style={{ color: "var(--color-gold-300)" }}>
                 <span
                   className="inline-block h-px w-10 mr-3 align-middle"
                   style={{ background: "var(--color-gold-500)" }}
@@ -100,9 +97,19 @@ export default function Home() {
               </p>
             </Reveal>
             <h1 className="display mt-8 text-[clamp(2.75rem,8vw,8.5rem)] text-white leading-[0.94]">
-              <MaskReveal as="span" split="char" text="A house of" delay={0.15} />
+              <MaskReveal
+                as="span"
+                split="char"
+                text="A house of"
+                delay={0.15}
+              />
               <br />
-              <MaskReveal as="span" split="char" text="industries," delay={0.25} />
+              <MaskReveal
+                as="span"
+                split="char"
+                text="industries,"
+                delay={0.25}
+              />
               <br />
               <MaskReveal
                 as="span"
@@ -121,15 +128,19 @@ export default function Home() {
               <div className="glass-light glass-sheen fluted fluted-soft fluted-glint rounded-[6px] p-6 md:p-7 max-w-md">
                 <span aria-hidden className="fluted-glint__streak" />
                 <p className="text-[15px] leading-[1.65] text-white/90">
-                  {numberWordCap(BRAND_COUNT)} brands. {numberWordCap(SECTOR_COUNT)}{" "}
-                  sectors. One operating philosophy: own what you build, and
-                  build what serves the works.
+                  {numberWordCap(BRAND_COUNT)} brands.{" "}
+                  {numberWordCap(SECTOR_COUNT)} sectors. One operating
+                  philosophy: own what you build, and build what serves the
+                  works.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <MagneticLink href="/sectors" className="btn btn-on-photo">
                     The sectors
                   </MagneticLink>
-                  <MagneticLink href="/world/story" className="btn btn-on-photo-ghost">
+                  <MagneticLink
+                    href="/world/story"
+                    className="btn btn-on-photo-ghost"
+                  >
                     Our story
                   </MagneticLink>
                 </div>
@@ -146,7 +157,10 @@ export default function Home() {
       <Section tone="forest" pad="xl">
         <div className="mb-12 max-w-3xl md:mb-16">
           <Reveal>
-            <p className="eyebrow mb-6" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-6"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               The operating map
             </p>
           </Reveal>
@@ -188,9 +202,8 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="lede max-w-2xl" style={{ opacity: 0.7 }}>
-              Culinary. Atelier. Intelligence. Hospitality. Sovereign.
-              Chambers. Foundation. Each is a discipline the others compound
-              on.
+              Culinary. Atelier. Intelligence. Hospitality. Sovereign. Chambers.
+              Foundation. Each is a discipline the others compound on.
             </p>
           </Reveal>
         </div>
@@ -213,7 +226,9 @@ export default function Home() {
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.045]"
-                    style={{ filter: "saturate(0.88) contrast(1.04) brightness(0.88)" }}
+                    style={{
+                      filter: "saturate(0.88) contrast(1.04) brightness(0.88)",
+                    }}
                   />
                   {/* Two-stop scrim: a soft uniform tint covering the whole
                       card so bright imagery (kitchens, sky, sun-orange)
@@ -388,10 +403,7 @@ export default function Home() {
       <Section tone="forest" pad="xl">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-3">
-            <p
-              className="caption"
-              style={{ color: "var(--color-gold-500)" }}
-            >
+            <p className="caption" style={{ color: "var(--color-gold-500)" }}>
               Manifesto · 00
             </p>
           </div>
@@ -400,12 +412,11 @@ export default function Home() {
               className="display-tight text-[clamp(1.5rem,2.6vw,2.5rem)] leading-[1.25]"
               style={{ color: "var(--color-mist)" }}
             >
-              We started on a workshop floor in India and never quite left.
-              The kitchens we built in 1998 still ship; the design studio we
-              set up to brand them still runs; the AI we wrote to keep them
-              efficient is now its own brand. Every part of the group is
-              here because the works asked for it — and because we like to
-              make our own tools.
+              We started on a workshop floor in India and never quite left. The
+              kitchens we built in 1998 still ship; the design studio we set up
+              to brand them still runs; the AI we wrote to keep them efficient
+              is now its own brand. Every part of the group is here because the
+              works asked for it — and because we like to make our own tools.
             </p>
             <GoldRule className="mt-14 w-24" variant="solid" />
             <p
@@ -421,10 +432,7 @@ export default function Home() {
       {/* By the numbers — flows directly out of the manifesto on the same
           forest canvas, so no bridge between them. */}
       <Section tone="forest" pad="lg">
-        <p
-          className="eyebrow mb-12"
-          style={{ color: "var(--color-gold-500)" }}
-        >
+        <p className="eyebrow mb-12" style={{ color: "var(--color-gold-500)" }}>
           By the numbers
         </p>
         <GoldRule className="mb-16 w-full" variant="tone" />
@@ -440,15 +448,42 @@ export default function Home() {
               >
                 {s.noFormat ? <span>{s.to}</span> : <CountUp to={s.to} />}
               </span>
-              <span
-                className="caption"
-                style={{ color: "var(--color-mist)" }}
-              >
+              <span className="caption" style={{ color: "var(--color-mist)" }}>
                 {s.label}
               </span>
             </StaggerItem>
           ))}
         </StaggerGroup>
+      </Section>
+
+      {/* Leadership — a quiet one-line band that hands off to /leadership,
+          continuing the forest run so the tone rhythm stays untouched. */}
+      <Section tone="forest" pad="lg" id="leadership" className="scroll-mt-28">
+        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+          <div>
+            <p
+              className="eyebrow mb-5"
+              style={{ color: "var(--color-gold-500)" }}
+            >
+              Leadership
+            </p>
+            <h2
+              className="display text-[clamp(2.25rem,4.6vw,4rem)]"
+              style={{ color: "var(--color-mist)" }}
+            >
+              One house,{" "}
+              <span
+                className="display-italic"
+                style={{ color: "var(--color-gold-300)" }}
+              >
+                two chairs.
+              </span>
+            </h2>
+          </div>
+          <MagneticLink href="/leadership" className="btn btn-secondary">
+            Meet the leadership
+          </MagneticLink>
+        </div>
       </Section>
 
       <ToneBridge from="forest" to="ivory" />
@@ -461,7 +496,9 @@ export default function Home() {
             <h2 className="display text-[clamp(2.25rem,4.6vw,4rem)]">
               Recent notes,
               <br />
-              <span className="display-italic opacity-60">in our own words.</span>
+              <span className="display-italic opacity-60">
+                in our own words.
+              </span>
             </h2>
           </div>
           <MagneticLink href="/world/journal" className="btn btn-secondary">
@@ -505,8 +542,8 @@ export default function Home() {
               className="measure body-sans"
               style={{ color: "var(--color-mist)" }}
             >
-              Whether you&apos;re a partner, a future colleague, or a customer
-              — start a conversation. We&apos;ll route you to the right desk.
+              Whether you&apos;re a partner, a future colleague, or a customer —
+              start a conversation. We&apos;ll route you to the right desk.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <MagneticLink href="/contact" className="btn btn-gold">

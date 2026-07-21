@@ -11,6 +11,7 @@ const worldLinks = [
 ];
 
 const corpLinks = [
+  { href: "/leadership", label: "Leadership" },
   { href: "/careers", label: "Careers" },
   { href: "/investors", label: "Investors" },
   { href: "/contact", label: "Contact" },
@@ -41,7 +42,10 @@ export function Footer() {
     <footer
       data-tone="forest"
       className="relative"
-      style={{ background: "var(--color-forest-900)", color: "var(--color-mist)" }}
+      style={{
+        background: "var(--color-forest-900)",
+        color: "var(--color-mist)",
+      }}
     >
       <div className="shell pt-28 pb-10 md:pt-36">
         <GoldRule className="mb-16" variant="solid" />
@@ -55,9 +59,8 @@ export function Footer() {
               className="measure mt-9 lede"
               style={{ color: "var(--color-mist)" }}
             >
-              A privately held industrial group from India. Thirteen
-              brands across seven sectors. A house of industries, built in
-              India.
+              A privately held industrial group from India. Thirteen brands
+              across seven sectors. A house of industries, built in India.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <MagneticLink href="/contact" className="btn btn-gold">
@@ -70,7 +73,10 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="eyebrow mb-5" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-5"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               Sectors
             </p>
             <ul className="space-y-3 text-[14px]">
@@ -91,7 +97,10 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <p className="eyebrow mb-5" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-5"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               World of Hemco
             </p>
             <ul className="space-y-3 text-[14px] mb-9">
@@ -106,7 +115,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="eyebrow mb-5" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-5"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               Corporate
             </p>
             <ul className="space-y-3 text-[14px]">
@@ -124,7 +136,10 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="eyebrow mb-5" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-5"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               Headquarters
             </p>
             {/* Use <address> for semantic NAP (Name, Address, Phone) —
@@ -144,7 +159,10 @@ export function Footer() {
                 <span itemProp="addressCountry">India</span>
               </span>
             </address>
-            <p className="eyebrow mb-3 mt-9" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-3 mt-9"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               Direct
             </p>
             <ul className="space-y-2 text-[13px]">
@@ -179,7 +197,10 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-            <p className="eyebrow mb-3 mt-9" style={{ color: "var(--color-gold-300)" }}>
+            <p
+              className="eyebrow mb-3 mt-9"
+              style={{ color: "var(--color-gold-300)" }}
+            >
               Elsewhere
             </p>
             <ul className="space-y-2 text-[13px]">
@@ -206,10 +227,14 @@ export function Footer() {
         <div
           className="mt-20 pt-10"
           style={{
-            borderTop: "1px solid color-mix(in srgb, var(--color-gold-500) 22%, transparent)",
+            borderTop:
+              "1px solid color-mix(in srgb, var(--color-gold-500) 22%, transparent)",
           }}
         >
-          <p className="eyebrow mb-5" style={{ color: "var(--color-gold-300)" }}>
+          <p
+            className="eyebrow mb-5"
+            style={{ color: "var(--color-gold-300)" }}
+          >
             Sister sites · The wider house
           </p>
           <ul className="grid grid-cols-2 gap-x-8 gap-y-3 text-[13px] md:grid-cols-3 lg:grid-cols-4">
@@ -236,7 +261,8 @@ export function Footer() {
         <div
           className="mt-16 flex flex-col items-start justify-between gap-3 pt-7 caption md:flex-row md:items-center"
           style={{
-            borderTop: "1px solid color-mix(in srgb, var(--color-gold-500) 30%, transparent)",
+            borderTop:
+              "1px solid color-mix(in srgb, var(--color-gold-500) 30%, transparent)",
             color: "var(--color-mist-2)",
           }}
         >

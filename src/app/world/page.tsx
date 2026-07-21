@@ -94,9 +94,13 @@ export default function WorldHub() {
                 style={{ background: "var(--color-gold-500)" }}
               />
               World of Hemco
-              <span aria-hidden style={{ opacity: 0.55 }}>·</span>
+              <span aria-hidden style={{ opacity: 0.55 }}>
+                ·
+              </span>
               Issue No. 01
-              <span aria-hidden style={{ opacity: 0.55 }}>·</span>
+              <span aria-hidden style={{ opacity: 0.55 }}>
+                ·
+              </span>
               MCMXCVIII
             </p>
           </Reveal>
@@ -119,8 +123,8 @@ export default function WorldHub() {
               className="lede max-w-2xl"
               style={{ color: "rgba(255,255,255,0.92)" }}
             >
-              Three chapters — the story, the journal, and the map. Read
-              in any order. The order doesn&apos;t change the argument.
+              Three chapters — the story, the journal, and the map. Read in any
+              order. The order doesn&apos;t change the argument.
             </p>
           </Reveal>
         </div>
@@ -131,27 +135,27 @@ export default function WorldHub() {
       <Section tone="ivory" pad="xl">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p
-              className="caption"
-              style={{ color: "var(--color-gold-500)" }}
-            >
+            <p className="caption" style={{ color: "var(--color-gold-500)" }}>
               Contents
             </p>
             <GoldRule className="mt-3 w-12" variant="solid" />
             <p
               className="caption mt-7"
-              style={{ color: "var(--color-ink-soft)", letterSpacing: "0.18em" }}
+              style={{
+                color: "var(--color-ink-soft)",
+                letterSpacing: "0.18em",
+              }}
             >
               Three chapters · One house
             </p>
           </div>
           <div className="md:col-span-7 md:col-start-6">
             <p className="display-tight text-[clamp(1.6rem,3vw,2.4rem)] leading-[1.22]">
-              Most companies write {" "}
+              Most companies write{" "}
               <span className="display-italic opacity-70">about</span>{" "}
-              themselves. We&apos;d rather you read what we ship, hear from
-              the people who ship it, and see where the works actually
-              touch the ground. This is that.
+              themselves. We&apos;d rather you read what we ship, hear from the
+              people who ship it, and see where the works actually touch the
+              ground. This is that.
             </p>
           </div>
         </div>
@@ -253,12 +257,15 @@ export default function WorldHub() {
                 className="display-italic text-[clamp(1.4rem,2.8vw,2.1rem)] leading-[1.32]"
                 style={{ color: "var(--color-ink-soft)" }}
               >
-                &ldquo;The works remain the spine of the group. The rest of
-                the map is where it ships, sells, and stays in touch.&rdquo;
+                &ldquo;The works remain the spine of the group. The rest of the
+                map is where it ships, sells, and stays in touch.&rdquo;
               </p>
               <p
                 className="caption mt-7"
-                style={{ color: "var(--color-gold-500)", letterSpacing: "0.32em" }}
+                style={{
+                  color: "var(--color-gold-500)",
+                  letterSpacing: "0.32em",
+                }}
               >
                 — From the founder&apos;s note
               </p>
@@ -276,7 +283,10 @@ export default function WorldHub() {
           <div className="md:col-span-5">
             <p
               className="caption"
-              style={{ color: "var(--color-gold-300)", letterSpacing: "0.22em" }}
+              style={{
+                color: "var(--color-gold-300)",
+                letterSpacing: "0.22em",
+              }}
             >
               Chapter III
             </p>
@@ -297,17 +307,24 @@ export default function WorldHub() {
           </div>
           <div className="md:col-span-6 md:col-start-7 md:pt-8">
             <p className="lede mb-6" style={{ color: "var(--color-mist)" }}>
-              Hemco is headquartered in India and operates across ten cities
-              on four continents. The works remain the spine of the group;
-              the rest of the map is where it ships, sells and partners.
+              Hemco is headquartered in India and operates across ten cities on
+              four continents. The works remain the spine of the group; the rest
+              of the map is where it ships, sells and partners.
             </p>
             <p
               className="body-sans"
               style={{ color: "rgba(240,236,224,0.78)" }}
             >
-              Use the footprint to find the office or the shipping address
-              that matters. For everything else, the leadership chapter has
-              the names and the email.
+              Use the footprint to find the office or the shipping address that
+              matters. For everything else, the{" "}
+              <Link
+                href="/leadership"
+                className="underline underline-offset-4 hover:opacity-80 transition-opacity"
+                style={{ color: "var(--color-gold-300)" }}
+              >
+                leadership page
+              </Link>{" "}
+              has the names and the email.
             </p>
           </div>
         </div>
@@ -331,8 +348,8 @@ export default function WorldHub() {
             className="display-italic mt-5 text-[clamp(1.25rem,2vw,1.65rem)]"
             style={{ color: "rgba(240,236,224,0.85)" }}
           >
-            For specifications, partnerships, or to commission a project —
-            write to us.
+            For specifications, partnerships, or to commission a project — write
+            to us.
           </p>
           <a
             className="display mt-7 inline-block text-[clamp(1.25rem,2.4vw,1.75rem)] hover:opacity-80 transition-opacity"

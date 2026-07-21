@@ -152,14 +152,3 @@ export const craftFilm = {
   poster: u("1759411364558-38a9e2b04f76"),
   caption: "Documentary loop, the works",
 };
-
-/**
- * Leadership portrait placeholders — to be commissioned in B&W.
- * Treated with `filter: grayscale(100%)` until real shoots land.
- */
-export const portraits = [
-  { src: u("1519085360753-af0119f7cbe7"), alt: "Portrait — placeholder" },
-  { src: u("1586232902955-df204f34b36e"), alt: "Portrait — placeholder" },
-  { src: u("1622020920816-cd528763211a"), alt: "Portrait — placeholder" },
-  { src: u("1580684518721-3d7c2af77e5a"), alt: "Portrait — placeholder" },
-] as const;
