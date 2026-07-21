@@ -11,8 +11,12 @@ export function CursorOrb() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const fine = window.matchMedia(
+      "(hover: hover) and (pointer: fine)",
+    ).matches;
     if (reduce || !fine) return;
 
     const el = ref.current;
@@ -30,7 +34,9 @@ export function CursorOrb() {
       const t = e.target;
       const link =
         t instanceof Element
-          ? t.closest("a, button, [role='button'], input, label, [data-cursor='link']")
+          ? t.closest(
+              "a, button, [role='button'], input, label, [data-cursor='link']",
+            )
           : null;
       el.classList.toggle("cursor-orb--link", !!link);
     };

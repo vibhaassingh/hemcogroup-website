@@ -21,7 +21,9 @@ export function LumonnMaskedBracket() {
     const el = ref.current;
     if (!el) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       el.style.setProperty("--core-x", "50%");
       el.style.setProperty("--core-y", "55%");
@@ -45,8 +47,8 @@ export function LumonnMaskedBracket() {
     const tick = () => {
       const tx = inside ? mx : 0.5;
       const ty = inside ? my : 0.55;
-      cx += (tx - cx) * 0.10;
-      cy += (ty - cy) * 0.10;
+      cx += (tx - cx) * 0.1;
+      cy += (ty - cy) * 0.1;
       el.style.setProperty("--core-x", `${cx * 100}%`);
       el.style.setProperty("--core-y", `${cy * 100}%`);
       raf = requestAnimationFrame(tick);

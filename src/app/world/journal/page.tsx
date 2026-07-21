@@ -52,9 +52,7 @@ export default function JournalIndex() {
               {featured.title}
             </h2>
             <p className="lede max-w-3xl opacity-80">{featured.dek}</p>
-            <span
-              className="caption mt-6 inline-flex items-center gap-2 group-hover:text-[color:var(--color-gold-500)] transition-colors"
-            >
+            <span className="caption mt-6 inline-flex items-center gap-2 group-hover:text-[color:var(--color-gold-500)] transition-colors">
               Read note <span aria-hidden>→</span>
             </span>
           </Link>

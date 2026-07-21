@@ -60,7 +60,8 @@ export default async function SectorPage({
 
   // Adjacent sectors for the prev/next pager (cyclical).
   const idx = sectorOrder.indexOf(sec.slug);
-  const prevSlug = sectorOrder[(idx - 1 + sectorOrder.length) % sectorOrder.length];
+  const prevSlug =
+    sectorOrder[(idx - 1 + sectorOrder.length) % sectorOrder.length];
   const nextSlug = sectorOrder[(idx + 1) % sectorOrder.length];
   const prev = sectors[prevSlug];
   const next = sectors[nextSlug];
@@ -85,7 +86,12 @@ export default async function SectorPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Hemco Group", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Sectors", item: `${SITE_URL}/sectors` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Sectors",
+        item: `${SITE_URL}/sectors`,
+      },
       { "@type": "ListItem", position: 3, name: sec.name, item: sectorUrl },
     ],
   };
@@ -137,10 +143,15 @@ export default async function SectorPage({
                 className="caption mb-7 flex items-center gap-3"
                 style={{ color: "rgba(255,255,255,0.78)" }}
               >
-                <Link href="/sectors" className="hover:text-white transition-colors">
+                <Link
+                  href="/sectors"
+                  className="hover:text-white transition-colors"
+                >
                   Sectors
                 </Link>
-                <span aria-hidden style={{ opacity: 0.5 }}>/</span>
+                <span aria-hidden style={{ opacity: 0.5 }}>
+                  /
+                </span>
                 <span style={{ color: "var(--color-gold-300)" }}>
                   Sector {sec.ordinal} of VII
                 </span>
@@ -217,7 +228,10 @@ export default async function SectorPage({
             <Reveal>
               <p
                 className="caption mb-5"
-                style={{ color: "var(--color-gold-500)", letterSpacing: "0.24em" }}
+                style={{
+                  color: "var(--color-gold-500)",
+                  letterSpacing: "0.24em",
+                }}
               >
                 The thesis
               </p>
@@ -257,7 +271,10 @@ export default async function SectorPage({
           <Reveal>
             <p
               className="caption mb-4"
-              style={{ color: "var(--color-gold-500)", letterSpacing: "0.24em" }}
+              style={{
+                color: "var(--color-gold-500)",
+                letterSpacing: "0.24em",
+              }}
             >
               The lineup
             </p>
@@ -265,7 +282,9 @@ export default async function SectorPage({
               className="display text-[clamp(2.25rem,4.4vw,4rem)] leading-[1.0] tracking-[-0.012em]"
               style={{ color: "var(--color-mist)" }}
             >
-              {ventures.length === 1 ? "One brand," : `${ventures.length} brands,`}
+              {ventures.length === 1
+                ? "One brand,"
+                : `${ventures.length} brands,`}
               <br />
               <span
                 className="display-italic"
@@ -282,15 +301,13 @@ export default async function SectorPage({
             const img = imagery[v.imagery];
             const reverse = i % 2 === 1;
             return (
-              <div key={v.slug} className="grid gap-6 md:gap-8 md:grid-cols-12 items-stretch">
+              <div
+                key={v.slug}
+                className="grid gap-6 md:gap-8 md:grid-cols-12 items-stretch"
+              >
                 {/* IMAGE */}
-                <div
-                  className={`md:col-span-7 ${reverse ? "md:order-2" : ""}`}
-                >
-                  <Link
-                    href={`/ventures/${v.slug}`}
-                    className="group block"
-                  >
+                <div className={`md:col-span-7 ${reverse ? "md:order-2" : ""}`}>
+                  <Link href={`/ventures/${v.slug}`} className="group block">
                     <div
                       className="relative aspect-[5/4] md:aspect-[16/11] overflow-hidden rounded-[20px] md:rounded-[24px]"
                       style={{ background: "var(--color-ivory-3)" }}
@@ -325,7 +342,9 @@ export default async function SectorPage({
                 </div>
 
                 {/* INFO PLATE */}
-                <div className={`md:col-span-5 flex ${reverse ? "md:order-1" : ""}`}>
+                <div
+                  className={`md:col-span-5 flex ${reverse ? "md:order-1" : ""}`}
+                >
                   <div
                     className="fluted fluted-soft fluted-glint relative rounded-[20px] md:rounded-[24px] overflow-hidden p-7 md:p-9 flex flex-col w-full"
                     style={{
@@ -386,7 +405,8 @@ export default async function SectorPage({
                       {v.description}
                     </p>
 
-                    <div className="mt-8 pt-6 flex items-center justify-between"
+                    <div
+                      className="mt-8 pt-6 flex items-center justify-between"
                       style={{
                         borderTop: "1px solid rgba(255,255,255,0.16)",
                       }}
@@ -457,8 +477,7 @@ export default async function SectorPage({
             <p
               className="caption mb-4 inline-flex items-center gap-2"
               style={{
-                color:
-                  "color-mix(in srgb, var(--color-ink) 50%, transparent)",
+                color: "color-mix(in srgb, var(--color-ink) 50%, transparent)",
                 letterSpacing: "0.22em",
               }}
             >
@@ -476,8 +495,7 @@ export default async function SectorPage({
             <p
               className="text-[14px] leading-[1.5]"
               style={{
-                color:
-                  "color-mix(in srgb, var(--color-ink) 60%, transparent)",
+                color: "color-mix(in srgb, var(--color-ink) 60%, transparent)",
               }}
             >
               {prev.ethos}
@@ -498,8 +516,7 @@ export default async function SectorPage({
             <p
               className="caption mb-4 inline-flex items-center gap-2"
               style={{
-                color:
-                  "color-mix(in srgb, var(--color-ink) 50%, transparent)",
+                color: "color-mix(in srgb, var(--color-ink) 50%, transparent)",
                 letterSpacing: "0.22em",
               }}
             >
@@ -517,8 +534,7 @@ export default async function SectorPage({
             <p
               className="text-[14px] leading-[1.5]"
               style={{
-                color:
-                  "color-mix(in srgb, var(--color-ink) 60%, transparent)",
+                color: "color-mix(in srgb, var(--color-ink) 60%, transparent)",
               }}
             >
               {next.ethos}
@@ -541,7 +557,10 @@ export default async function SectorPage({
               Continue browsing
             </h2>
           </div>
-          <Link href="/sectors" className="btn btn-secondary hidden md:inline-flex">
+          <Link
+            href="/sectors"
+            className="btn btn-secondary hidden md:inline-flex"
+          >
             All sectors
           </Link>
         </div>
@@ -567,7 +586,9 @@ export default async function SectorPage({
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                   className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
-                  style={{ filter: "saturate(0.88) contrast(1.04) brightness(0.85)" }}
+                  style={{
+                    filter: "saturate(0.88) contrast(1.04) brightness(0.85)",
+                  }}
                 />
                 <div
                   aria-hidden

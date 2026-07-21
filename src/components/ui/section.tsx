@@ -33,11 +33,7 @@ export function Section({
       data-tone={tone}
       className={`relative overflow-hidden ${padMap[pad]} ${className}`}
     >
-      {bleed ? (
-        children
-      ) : (
-        <div className="shell relative">{children}</div>
-      )}
+      {bleed ? children : <div className="shell relative">{children}</div>}
     </section>
   );
 }
@@ -108,8 +104,8 @@ export function GoldRule({
     variant === "solid"
       ? "gold-rule-solid"
       : variant === "tone"
-      ? "tone-rule"
-      : "gold-rule";
+        ? "tone-rule"
+        : "gold-rule";
   return (
     <motion.div
       role="separator"

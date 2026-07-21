@@ -20,7 +20,9 @@ export function KerningMaskedMark() {
     const el = ref.current;
     if (!el) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       el.style.setProperty("--bloom-x", "50%");
       el.style.setProperty("--bloom-y", "55%");
@@ -49,8 +51,8 @@ export function KerningMaskedMark() {
       // viewport area; otherwise ease toward the cursor.
       const tx = inside ? mx : 0.5;
       const ty = inside ? my : 0.55;
-      cx += (tx - cx) * 0.10;
-      cy += (ty - cy) * 0.10;
+      cx += (tx - cx) * 0.1;
+      cy += (ty - cy) * 0.1;
       el.style.setProperty("--bloom-x", `${cx * 100}%`);
       el.style.setProperty("--bloom-y", `${cy * 100}%`);
       raf = requestAnimationFrame(tick);

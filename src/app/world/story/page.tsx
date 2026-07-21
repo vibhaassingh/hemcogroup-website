@@ -9,7 +9,11 @@ import { MaskReveal } from "@/components/ui/mask-reveal";
 import { CountUp } from "@/components/ui/count-up";
 import { MagneticLink } from "@/components/ui/magnetic-link";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
-import { BRAND_COUNT, SECTOR_COUNT, yearsCompounding } from "@/content/site-facts";
+import {
+  BRAND_COUNT,
+  SECTOR_COUNT,
+  yearsCompounding,
+} from "@/content/site-facts";
 
 export const metadata: Metadata = {
   title: "Our story",
@@ -26,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Our story · Hemco Group",
-    description: "From a single workshop in India to a house of thirteen brands.",
+    description:
+      "From a single workshop in India to a house of thirteen brands.",
   },
 };
 
@@ -160,9 +165,13 @@ export default function StoryPage() {
                 style={{ background: "var(--color-gold-500)" }}
               />
               Our story
-              <span aria-hidden style={{ opacity: 0.55 }}>·</span>
+              <span aria-hidden style={{ opacity: 0.55 }}>
+                ·
+              </span>
               MCMXCVIII — MMXXVI
-              <span aria-hidden style={{ opacity: 0.55 }}>·</span>
+              <span aria-hidden style={{ opacity: 0.55 }}>
+                ·
+              </span>
               India
             </p>
           </Reveal>
@@ -185,9 +194,9 @@ export default function StoryPage() {
               className="lede max-w-2xl"
               style={{ color: "rgba(255,255,255,0.92)" }}
             >
-              Twenty-eight years from a single workshop in India to a house
-              of thirteen brands across seven sectors — written in our own
-              words, in five eras.
+              Twenty-eight years from a single workshop in India to a house of
+              thirteen brands across seven sectors — written in our own words,
+              in five eras.
             </p>
           </Reveal>
         </div>
@@ -201,7 +210,10 @@ export default function StoryPage() {
             <GoldRule className="mt-3 w-12" variant="solid" />
             <p
               className="caption mt-7"
-              style={{ color: "var(--color-ink-soft)", letterSpacing: "0.18em" }}
+              style={{
+                color: "var(--color-ink-soft)",
+                letterSpacing: "0.18em",
+              }}
             >
               Standfirst — the founding question, in one paragraph.
             </p>
@@ -211,19 +223,16 @@ export default function StoryPage() {
               Hemco began in 1998 in a single workshop in India — stainless
               fabrication, refrigeration, and the people who made them. Every
               venture in the house today still traces back to a question that
-              workshop asked of itself: how do you build the thing that
-              powers the kitchen, instead of buying it from someone who
-              builds it for everyone?
+              workshop asked of itself: how do you build the thing that powers
+              the kitchen, instead of buying it from someone who builds it for
+              everyone?
             </p>
-            <p
-              className="body-sans"
-              style={{ color: "var(--color-ink-soft)" }}
-            >
+            <p className="body-sans" style={{ color: "var(--color-ink-soft)" }}>
               The answer is the rest of this page. Five eras, thirteen brands,
               one through-line: the conviction that an industrial group is
               measured not by what it announces, but by what it still ships
-              twenty years on. The works remain the spine; the rest of the
-              house is what the works decided it needed.
+              twenty years on. The works remain the spine; the rest of the house
+              is what the works decided it needed.
             </p>
           </div>
         </div>
@@ -273,8 +282,8 @@ export default function StoryPage() {
             className="display-italic text-[clamp(1.6rem,3.4vw,2.5rem)] leading-[1.28]"
             style={{ color: "var(--color-mist)" }}
           >
-            &ldquo;A house of industries is judged not by what it announces,
-            but by what it still ships, twenty years on.&rdquo;
+            &ldquo;A house of industries is judged not by what it announces, but
+            by what it still ships, twenty years on.&rdquo;
           </p>
           <p
             className="caption mt-9"
@@ -377,8 +386,8 @@ export default function StoryPage() {
         <div className="max-w-4xl mx-auto text-center">
           <GoldRule className="mb-9 mx-auto w-16" variant="solid" />
           <p className="display-italic text-[clamp(1.6rem,3.4vw,2.5rem)] leading-[1.28]">
-            &ldquo;The works remain the spine. The rest of the house is what
-            the works decided it needed.&rdquo;
+            &ldquo;The works remain the spine. The rest of the house is what the
+            works decided it needed.&rdquo;
           </p>
           <p
             className="caption mt-9"
@@ -405,14 +414,11 @@ export default function StoryPage() {
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 md:pt-6">
-            <p
-              className="lede"
-              style={{ color: "var(--color-ink-soft)" }}
-            >
+            <p className="lede" style={{ color: "var(--color-ink-soft)" }}>
               Five operating rules — written down once, applied across every
               brand in the house. They are not values; they are the working
-              contract under which the house decides what to build, what to
-              say, and what to ship.
+              contract under which the house decides what to build, what to say,
+              and what to ship.
             </p>
           </div>
         </div>
@@ -485,9 +491,9 @@ export default function StoryPage() {
             >
               The MVV Foundation is the philanthropic arm of the group —
               culinary skilling for cooks from underserved communities,
-              scholarship support and school partnerships in the towns
-              where Hemco operates, and community kitchens designed and
-              supplied at cost by the works.
+              scholarship support and school partnerships in the towns where
+              Hemco operates, and community kitchens designed and supplied at
+              cost by the works.
             </p>
             <MagneticLink
               href="/ventures/mvv-foundation"

@@ -5,12 +5,7 @@ import next from "eslint-config-next";
 // structure error translating the legacy "next/typescript" subconfig).
 const eslintConfig = [
   {
-    ignores: [
-      ".next/**",
-      "node_modules/**",
-      "public/**",
-      "next-env.d.ts",
-    ],
+    ignores: [".next/**", "node_modules/**", "public/**", "next-env.d.ts"],
   },
   ...next,
   // React Compiler advisory rules (eslint-plugin-react-hooks v6) flag many

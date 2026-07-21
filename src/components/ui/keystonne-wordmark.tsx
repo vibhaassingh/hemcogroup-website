@@ -131,7 +131,9 @@ export function KeystonneWordmark({
   style?: CSSProperties;
 }) {
   if (!withText) {
-    return <KeystonneMonogram size={height} title={title} className={className} />;
+    return (
+      <KeystonneMonogram size={height} title={title} className={className} />
+    );
   }
 
   // Monogram + KEYSTONNE text — optically aligned on a shared baseline.

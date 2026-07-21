@@ -35,7 +35,9 @@ export function BrandRibbon() {
       setDismissed(true);
       return;
     }
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       setShown(true);
       return;
@@ -49,7 +51,10 @@ export function BrandRibbon() {
   useEffect(() => {
     const el = document.documentElement;
     if (shown && !dismissed) {
-      el.style.setProperty("--brand-ribbon-h", "var(--brand-ribbon-actual-h, 44px)");
+      el.style.setProperty(
+        "--brand-ribbon-h",
+        "var(--brand-ribbon-actual-h, 44px)",
+      );
     } else {
       el.style.setProperty("--brand-ribbon-h", "0px");
     }
@@ -163,7 +168,8 @@ export function BrandRibbon() {
           className="brand-ribbon-advisory"
           style={{
             margin: 0,
-            color: "color-mix(in srgb, var(--color-ink, #1a1a1a) 78%, transparent)",
+            color:
+              "color-mix(in srgb, var(--color-ink, #1a1a1a) 78%, transparent)",
             flex: "0 1 auto",
             textAlign: "right",
             display: "inline-flex",
@@ -257,7 +263,8 @@ export function BrandRibbon() {
               right: "4px",
               top: "50%",
               transform: "translateY(-50%)",
-              color: "color-mix(in srgb, var(--color-ink, #1a1a1a) 60%, transparent)",
+              color:
+                "color-mix(in srgb, var(--color-ink, #1a1a1a) 60%, transparent)",
               pointerEvents: "none",
             }}
           >
@@ -297,7 +304,8 @@ export function BrandRibbon() {
             fontWeight: 500,
             letterSpacing: "0.04em",
             cursor: canContinue ? "pointer" : "not-allowed",
-            transition: "background 240ms, border-color 240ms, color 240ms, box-shadow 240ms",
+            transition:
+              "background 240ms, border-color 240ms, color 240ms, box-shadow 240ms",
             flexShrink: 0,
             boxShadow: canContinue
               ? "0 4px 12px -6px rgba(11,11,12,0.4), inset 0 1px 0 rgba(255,255,255,0.15)"

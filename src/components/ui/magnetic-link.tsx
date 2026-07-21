@@ -7,11 +7,7 @@ import {
   useSpring,
 } from "motion/react";
 import Link from "next/link";
-import {
-  type AnchorHTMLAttributes,
-  type MouseEvent,
-  useRef,
-} from "react";
+import { type AnchorHTMLAttributes, type MouseEvent, useRef } from "react";
 
 /**
  * Subtle "magnetic" hover — element is pulled ~8px toward the cursor while

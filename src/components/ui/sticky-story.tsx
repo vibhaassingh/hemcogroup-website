@@ -128,7 +128,9 @@ export function StickyStory({
     );
   }
 
-  return <StickyStoryAnimated eyebrow={eyebrow} heading={heading} steps={steps} />;
+  return (
+    <StickyStoryAnimated eyebrow={eyebrow} heading={heading} steps={steps} />
+  );
 }
 
 function StickyStoryAnimated({

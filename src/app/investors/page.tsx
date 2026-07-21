@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Investors & Partnerships · Hemco Group",
-    description: "A privately held operating house. Strategic partnerships and alliance enquiries.",
+    description:
+      "A privately held operating house. Strategic partnerships and alliance enquiries.",
   },
 };
 
@@ -38,8 +39,8 @@ export default function InvestorsPage() {
             <p className="lede measure-wide mt-10 opacity-80">
               Hemco Group is closely held and funds growth from internal
               accruals. We do, selectively, explore strategic capital, joint
-              ventures, and distribution partnerships across specific
-              brands — particularly Kerning AI, Keystonne, and Lumonn.
+              ventures, and distribution partnerships across specific brands —
+              particularly Kerning AI, Keystonne, and Lumonn.
             </p>
           </Reveal>
           <GoldRule className="mt-16 w-24" variant="solid" />
@@ -59,10 +60,10 @@ export default function InvestorsPage() {
           <div className="md:col-span-8">
             <div className="measure-wide space-y-7 body-sans opacity-85">
               <p>
-                Conversations begin in person, in India or wherever the
-                venture in question is based. We move slowly on capital
-                decisions and quickly on operational ones — and we expect
-                partners to do the same.
+                Conversations begin in person, in India or wherever the venture
+                in question is based. We move slowly on capital decisions and
+                quickly on operational ones — and we expect partners to do the
+                same.
               </p>
               <p>
                 We do not, as a rule, discuss specific transactions in public.

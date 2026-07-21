@@ -128,7 +128,9 @@ export function SectorOrbit() {
               <p className="display text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[0.98]">
                 {activeSector.name}
               </p>
-              <p className="lede mt-3 max-w-md opacity-90">{activeSector.ethos}</p>
+              <p className="lede mt-3 max-w-md opacity-90">
+                {activeSector.ethos}
+              </p>
             </div>
           </div>
         </div>
@@ -174,10 +176,7 @@ export function SectorOrbit() {
       </div>
 
       <div className="mt-10 text-center">
-        <Link
-          href={`/sectors/${activeSector.slug}`}
-          className="btn btn-gold"
-        >
+        <Link href={`/sectors/${activeSector.slug}`} className="btn btn-gold">
           Enter {activeSector.name}
         </Link>
       </div>

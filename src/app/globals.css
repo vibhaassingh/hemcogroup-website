@@ -62,9 +62,13 @@
   --color-mute-600: #57503e;
   --color-mute-800: #2d2718;
 
-  --font-sans: var(--font-inter), system-ui, -apple-system, "Helvetica Neue", sans-serif;
-  --font-serif: var(--font-fraunces), "GT Super Display", "Romana", "Times New Roman", serif;
-  --font-mono: var(--font-mono-geist), ui-monospace, "SF Mono", "Geist Mono", "iA Writer Mono S", Menlo, monospace;
+  --font-sans:
+    var(--font-inter), system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-serif:
+    var(--font-fraunces), "GT Super Display", "Romana", "Times New Roman", serif;
+  --font-mono:
+    var(--font-mono-geist), ui-monospace, "SF Mono", "Geist Mono",
+    "iA Writer Mono S", Menlo, monospace;
 
   --tracking-display: -0.02em;
   --tracking-display-tight: -0.03em;
@@ -80,14 +84,19 @@
   --section-pad-y: clamp(6rem, 12vh, 12.5rem);
 }
 
-:root { color-scheme: light; --brand-ribbon-h: 0px; }
+:root {
+  color-scheme: light;
+  --brand-ribbon-h: 0px;
+}
 
 /* Brand selector — Apple-style country picker.
    The bar's height is set on <html> at runtime by the component so the
    fixed nav can shift down by exactly the right amount. */
 @media (max-width: 720px) {
   /* Narrow viewports: the bar wraps to two rows, so its height grows. */
-  :root { --brand-ribbon-actual-h: 64px; }
+  :root {
+    --brand-ribbon-actual-h: 64px;
+  }
   [data-brand-ribbon] .brand-ribbon-inner {
     height: auto !important;
     min-height: 64px;
@@ -101,7 +110,8 @@
   }
 }
 
-html, body {
+html,
+body {
   background: var(--color-ivory);
   color: var(--color-ink);
   font-family: var(--font-sans);
@@ -114,7 +124,9 @@ html, body {
   font-feature-settings: "ss01", "cv11";
 }
 
-body { overscroll-behavior-y: none; }
+body {
+  overscroll-behavior-y: none;
+}
 
 ::selection {
   background: var(--color-gold-500);
@@ -142,8 +154,8 @@ body { overscroll-behavior-y: none; }
   background: var(--color-forest-900);
   color: #fff;
   --tone-fg: #fff;
-  --tone-fg-mute: rgba(255,255,255,0.78);
-  --tone-rule: rgba(255,255,255,0.42);
+  --tone-fg-mute: rgba(255, 255, 255, 0.78);
+  --tone-rule: rgba(255, 255, 255, 0.42);
 }
 [data-tone="warm-ivory"] {
   background: #f0e8d4;
@@ -157,7 +169,7 @@ body { overscroll-behavior-y: none; }
   background: #0a0a0c;
   color: #f0ece0;
   --tone-fg: #f0ece0;
-  --tone-fg-mute: rgba(240,236,224,0.72);
+  --tone-fg-mute: rgba(240, 236, 224, 0.72);
   --tone-rule: color-mix(in srgb, var(--color-gold-500) 32%, transparent);
   --tone-bg: #0a0a0c;
 }
@@ -174,8 +186,8 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: #000;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.72);
-  --tone-rule: rgba(255,255,255,0.18);
+  --tone-fg-mute: rgba(255, 255, 255, 0.72);
+  --tone-rule: rgba(255, 255, 255, 0.18);
 }
 .kerning-page [data-tone="ink"],
 .kerning-page [data-tone="ivory"],
@@ -185,12 +197,15 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: transparent;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.70);
-  --tone-rule: rgba(255,255,255,0.18);
+  --tone-fg-mute: rgba(255, 255, 255, 0.7);
+  --tone-rule: rgba(255, 255, 255, 0.18);
 }
 /* Push every section's content above the fixed ambient layer so the
    bloom stays on the canvas, not over the type. */
-.kerning-page section { position: relative; z-index: 1; }
+.kerning-page section {
+  position: relative;
+  z-index: 1;
+}
 
 /* Black-bleed bridge — applied to the section that immediately follows
    the masked-mark section, so the two read as one continuous black
@@ -214,14 +229,22 @@ body { overscroll-behavior-y: none; }
    panel — quiet glass over a calm machine, not a flashy SaaS. */
 .kerning-ai-page {
   background:
-    radial-gradient(80% 60% at 80% 0%, rgba(80,160,220,0.10) 0%, transparent 60%),
-    radial-gradient(70% 60% at 0% 100%, rgba(140,200,255,0.07) 0%, transparent 60%),
+    radial-gradient(
+      80% 60% at 80% 0%,
+      rgba(80, 160, 220, 0.1) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      70% 60% at 0% 100%,
+      rgba(140, 200, 255, 0.07) 0%,
+      transparent 60%
+    ),
     linear-gradient(180deg, #07090e 0%, #0a0d14 50%, #06080c 100%);
   color: #ffffff;
   --tone-bg: #07090e;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.72);
-  --tone-rule: rgba(140,200,255,0.22);
+  --tone-fg-mute: rgba(255, 255, 255, 0.72);
+  --tone-rule: rgba(140, 200, 255, 0.22);
 }
 .kerning-ai-page [data-tone="ink"],
 .kerning-ai-page [data-tone="ivory"],
@@ -231,10 +254,13 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: transparent;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.72);
-  --tone-rule: rgba(140,200,255,0.22);
+  --tone-fg-mute: rgba(255, 255, 255, 0.72);
+  --tone-rule: rgba(140, 200, 255, 0.22);
 }
-.kerning-ai-page section { position: relative; z-index: 1; }
+.kerning-ai-page section {
+  position: relative;
+  z-index: 1;
+}
 
 /* Fluted-glass cards on the pillar triptych — each pillar reads as a
    slab of ribbed glass over the dark canvas. Used by Kerning AI and
@@ -244,15 +270,18 @@ body { overscroll-behavior-y: none; }
   position: relative;
   padding: clamp(1.6rem, 2.4vw, 2.4rem);
   border-radius: 4px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   backdrop-filter: blur(14px) saturate(1.05);
   -webkit-backdrop-filter: blur(14px) saturate(1.05);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.06),
-    inset 0 -1px 0 rgba(0,0,0,0.4),
-    0 24px 48px -28px rgba(0,0,0,0.7);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 24px 48px -28px rgba(0, 0, 0, 0.7);
   overflow: hidden;
 }
 .kai-pillar::before {
@@ -261,13 +290,29 @@ body { overscroll-behavior-y: none; }
   inset: 0;
   pointer-events: none;
   background:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 7px),
-    radial-gradient(60% 70% at 50% 0%, rgba(180,220,255,0.10) 0%, transparent 70%),
-    linear-gradient(135deg, transparent 30%, rgba(180,220,255,0.05) 50%, transparent 70%);
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 0 1px,
+      transparent 1px 7px
+    ),
+    radial-gradient(
+      60% 70% at 50% 0%,
+      rgba(180, 220, 255, 0.1) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 30%,
+      rgba(180, 220, 255, 0.05) 50%,
+      transparent 70%
+    );
   mix-blend-mode: screen;
   opacity: 0.95;
 }
-.kai-pillar > * { position: relative; z-index: 1; }
+.kai-pillar > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* Fluted-glass plate around the spec imprint aside — premium picture
    frame for the venture's spec table. */
@@ -275,11 +320,17 @@ body { overscroll-behavior-y: none; }
   position: relative;
   padding: 1.75rem 1.5rem 1.5rem;
   border-radius: 4px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
-  border: 1px solid rgba(255,255,255,0.07);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(14px) saturate(1.05);
   -webkit-backdrop-filter: blur(14px) saturate(1.05);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 16px 36px -24px rgba(0,0,0,0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 16px 36px -24px rgba(0, 0, 0, 0.6);
   overflow: hidden;
 }
 .kai-spec::before {
@@ -287,10 +338,17 @@ body { overscroll-behavior-y: none; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.055) 0 1px, transparent 1px 8px);
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.055) 0 1px,
+    transparent 1px 8px
+  );
   mix-blend-mode: screen;
 }
-.kai-spec > * { position: relative; z-index: 1; }
+.kai-spec > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* ── Consortium theme override ─────────────────────────────────────
    Decision-intelligence canvas — deep slate with warm bronze under-
@@ -299,14 +357,22 @@ body { overscroll-behavior-y: none; }
    Kerning AI's instrument-panel cyan. */
 .consortium-page {
   background:
-    radial-gradient(80% 60% at 80% 0%, rgba(176,158,124,0.10) 0%, transparent 60%),
-    radial-gradient(70% 60% at 0% 100%, rgba(138,122,94,0.07) 0%, transparent 60%),
+    radial-gradient(
+      80% 60% at 80% 0%,
+      rgba(176, 158, 124, 0.1) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      70% 60% at 0% 100%,
+      rgba(138, 122, 94, 0.07) 0%,
+      transparent 60%
+    ),
     linear-gradient(180deg, #0a0907 0%, #0d0c0a 50%, #07060a 100%);
   color: #ffffff;
   --tone-bg: #0a0907;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.72);
-  --tone-rule: rgba(176,158,124,0.22);
+  --tone-fg-mute: rgba(255, 255, 255, 0.72);
+  --tone-rule: rgba(176, 158, 124, 0.22);
 }
 .consortium-page [data-tone="ink"],
 .consortium-page [data-tone="ivory"],
@@ -316,10 +382,13 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: transparent;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.72);
-  --tone-rule: rgba(176,158,124,0.22);
+  --tone-fg-mute: rgba(255, 255, 255, 0.72);
+  --tone-rule: rgba(176, 158, 124, 0.22);
 }
-.consortium-page section { position: relative; z-index: 1; }
+.consortium-page section {
+  position: relative;
+  z-index: 1;
+}
 
 /* Slate-bleed bridge — applied to the section that follows the
    consortium-masked-diamond beat so the two read as one continuous
@@ -343,14 +412,22 @@ body { overscroll-behavior-y: none; }
    measured, lit from below. */
 .lumonn-page {
   background:
-    radial-gradient(70% 55% at 50% 100%, rgba(58,120,255,0.16) 0%, transparent 60%),
-    radial-gradient(60% 50% at 0% 0%, rgba(58,120,255,0.06) 0%, transparent 60%),
+    radial-gradient(
+      70% 55% at 50% 100%,
+      rgba(58, 120, 255, 0.16) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      60% 50% at 0% 0%,
+      rgba(58, 120, 255, 0.06) 0%,
+      transparent 60%
+    ),
     linear-gradient(180deg, #050818 0%, #07091a 50%, #03050f 100%);
   color: #ffffff;
   --tone-bg: #050818;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.74);
-  --tone-rule: rgba(122,166,255,0.24);
+  --tone-fg-mute: rgba(255, 255, 255, 0.74);
+  --tone-rule: rgba(122, 166, 255, 0.24);
 }
 .lumonn-page [data-tone="ink"],
 .lumonn-page [data-tone="ivory"],
@@ -360,10 +437,13 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: transparent;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.74);
-  --tone-rule: rgba(122,166,255,0.24);
+  --tone-fg-mute: rgba(255, 255, 255, 0.74);
+  --tone-rule: rgba(122, 166, 255, 0.24);
 }
-.lumonn-page section { position: relative; z-index: 1; }
+.lumonn-page section {
+  position: relative;
+  z-index: 1;
+}
 
 /* Ink-bleed bridge — applied to the section that follows the lumonn-
    masked-bracket beat so the two read as one continuous deep-blue
@@ -395,10 +475,21 @@ body { overscroll-behavior-y: none; }
   z-index: 0;
   pointer-events: none;
   background:
-    repeating-linear-gradient(45deg, rgba(122,110,62,0.025) 0 1px, transparent 1px 6px),
-    repeating-linear-gradient(-45deg, rgba(122,110,62,0.018) 0 1px, transparent 1px 8px);
+    repeating-linear-gradient(
+      45deg,
+      rgba(122, 110, 62, 0.025) 0 1px,
+      transparent 1px 6px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(122, 110, 62, 0.018) 0 1px,
+      transparent 1px 8px
+    );
 }
-.kerning-arch-page > * { position: relative; z-index: 1; }
+.kerning-arch-page > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* ── Keystonne theme override ──────────────────────────────────────
    Midnight-blue stone canvas with white text, echoing the brand book's
@@ -410,8 +501,8 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: #06090f;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.72);
-  --tone-rule: rgba(124,156,196,0.28);
+  --tone-fg-mute: rgba(255, 255, 255, 0.72);
+  --tone-rule: rgba(124, 156, 196, 0.28);
 }
 .keystonne-page [data-tone="ink"],
 .keystonne-page [data-tone="ivory"],
@@ -421,10 +512,13 @@ body { overscroll-behavior-y: none; }
   color: #ffffff;
   --tone-bg: transparent;
   --tone-fg: #ffffff;
-  --tone-fg-mute: rgba(255,255,255,0.70);
-  --tone-rule: rgba(124,156,196,0.22);
+  --tone-fg-mute: rgba(255, 255, 255, 0.7);
+  --tone-rule: rgba(124, 156, 196, 0.22);
 }
-.keystonne-page section { position: relative; z-index: 1; }
+.keystonne-page section {
+  position: relative;
+  z-index: 1;
+}
 
 /* Stone-bleed bridge — used on the section that immediately follows
    the stone-mark slab section, so the two read as one continuous
@@ -486,10 +580,14 @@ body { overscroll-behavior-y: none; }
   border-radius: inherit;
   z-index: 1;
   background-image:
-    radial-gradient(80% 60% at 30% 0%, rgba(255, 255, 255, 0.16) 0%, transparent 65%),
+    radial-gradient(
+      80% 60% at 30% 0%,
+      rgba(255, 255, 255, 0.16) 0%,
+      transparent 65%
+    ),
     linear-gradient(
       115deg,
-      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.1) 0%,
       transparent 22%,
       rgba(255, 255, 255, 0.05) 55%,
       transparent 78%,
@@ -498,7 +596,7 @@ body { overscroll-behavior-y: none; }
     repeating-linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.085) 0px,
-      rgba(255, 255, 255, 0.00) 4px,
+      rgba(255, 255, 255, 0) 4px,
       rgba(255, 255, 255, 0.085) 9px,
       rgba(255, 255, 255, 0.025) 14px
     );
@@ -516,14 +614,22 @@ body { overscroll-behavior-y: none; }
     inset 0 1px 0 rgba(255, 255, 255, 0.16),
     inset 0 -1px 0 rgba(0, 0, 0, 0.18);
 }
-.fluted-soft::before { opacity: 0.55; }
-.fluted-strong::before { opacity: 1; }
+.fluted-soft::before {
+  opacity: 0.55;
+}
+.fluted-strong::before {
+  opacity: 1;
+}
 .fluted-tight::before {
   background-image:
-    radial-gradient(80% 60% at 30% 0%, rgba(255, 255, 255, 0.16) 0%, transparent 65%),
+    radial-gradient(
+      80% 60% at 30% 0%,
+      rgba(255, 255, 255, 0.16) 0%,
+      transparent 65%
+    ),
     linear-gradient(
       115deg,
-      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.1) 0%,
       transparent 22%,
       rgba(255, 255, 255, 0.05) 55%,
       transparent 78%,
@@ -532,17 +638,21 @@ body { overscroll-behavior-y: none; }
     repeating-linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.11) 0px,
-      rgba(255, 255, 255, 0.00) 2.5px,
+      rgba(255, 255, 255, 0) 2.5px,
       rgba(255, 255, 255, 0.11) 5.5px,
       rgba(255, 255, 255, 0.03) 8px
     );
 }
 .fluted-wide::before {
   background-image:
-    radial-gradient(80% 60% at 30% 0%, rgba(255, 255, 255, 0.16) 0%, transparent 65%),
+    radial-gradient(
+      80% 60% at 30% 0%,
+      rgba(255, 255, 255, 0.16) 0%,
+      transparent 65%
+    ),
     linear-gradient(
       115deg,
-      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.1) 0%,
       transparent 22%,
       rgba(255, 255, 255, 0.05) 55%,
       transparent 78%,
@@ -551,7 +661,7 @@ body { overscroll-behavior-y: none; }
     repeating-linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.07) 0px,
-      rgba(255, 255, 255, 0.00) 7px,
+      rgba(255, 255, 255, 0) 7px,
       rgba(255, 255, 255, 0.07) 14px,
       rgba(255, 255, 255, 0.02) 22px
     );
@@ -581,7 +691,7 @@ body { overscroll-behavior-y: none; }
   background-image: repeating-linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.045) 0px,
-    rgba(255, 255, 255, 0.000) 6px,
+    rgba(255, 255, 255, 0) 6px,
     rgba(255, 255, 255, 0.045) 13px,
     rgba(255, 255, 255, 0.012) 20px
   );
@@ -615,7 +725,8 @@ body { overscroll-behavior-y: none; }
   mix-blend-mode: screen;
   transform: translateX(0);
   opacity: 0;
-  transition: transform 1100ms cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    transform 1100ms cubic-bezier(0.16, 1, 0.3, 1),
     opacity 1100ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .fluted-glint:hover > .fluted-glint__streak,
@@ -685,18 +796,32 @@ body { overscroll-behavior-y: none; }
   font-feature-settings: "tnum";
   letter-spacing: 0;
 }
-.mono { font-family: var(--font-mono); font-feature-settings: "tnum"; }
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum";
+}
 
-.measure { max-width: 38rem; }
-.measure-wide { max-width: 46rem; }
-.measure-narrow { max-width: 30rem; }
+.measure {
+  max-width: 38rem;
+}
+.measure-wide {
+  max-width: 46rem;
+}
+.measure-narrow {
+  max-width: 30rem;
+}
 
 /* ── Rules / dividers ──────────────────────────────────────────── */
 .gold-rule {
   display: block;
   height: 1px;
   width: 100%;
-  background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold-500),
+    transparent
+  );
   opacity: 0.7;
 }
 .gold-rule-solid {
@@ -706,11 +831,19 @@ body { overscroll-behavior-y: none; }
 }
 .tone-rule {
   height: 1px;
-  background: var(--tone-rule, color-mix(in srgb, var(--color-ink) 16%, transparent));
+  background: var(
+    --tone-rule,
+    color-mix(in srgb, var(--color-ink) 16%, transparent)
+  );
 }
 .hairline {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-bone-4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-bone-4),
+    transparent
+  );
   opacity: 0.5;
 }
 
@@ -722,16 +855,28 @@ body { overscroll-behavior-y: none; }
   padding-left: var(--shell-pad-x);
   padding-right: var(--shell-pad-x);
 }
-.section-pad { padding-top: var(--section-pad-y); padding-bottom: var(--section-pad-y); }
-.section-pad-lg { padding-top: clamp(8rem, 16vh, 16rem); padding-bottom: clamp(8rem, 16vh, 16rem); }
+.section-pad {
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+}
+.section-pad-lg {
+  padding-top: clamp(8rem, 16vh, 16rem);
+  padding-bottom: clamp(8rem, 16vh, 16rem);
+}
 
 /* ── Scroll behaviour ──────────────────────────────────────────── */
 /* Native instant scroll — Lenis smooth-scroll has been removed and the
    CSS `scroll-behavior` is forced to `auto !important` so anchor jumps
    and `scrollIntoView` calls land instantly. The page feels snappy and
    direct rather than easing through every wheel tick. */
-html, html:where(*) { scroll-behavior: auto !important; }
-::-webkit-scrollbar { width: 0; height: 0; }
+html,
+html:where(*) {
+  scroll-behavior: auto !important;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 /* ── Links ─────────────────────────────────────────────────────── */
 .rise-underline {
@@ -740,22 +885,36 @@ html, html:where(*) { scroll-behavior: auto !important; }
   background-position: 0 100%;
   transition: background-size 0.55s var(--ease-cinema);
 }
-.rise-underline:hover { background-size: 100% 1px; }
+.rise-underline:hover {
+  background-size: 100% 1px;
+}
 
 .gold-underline {
-  background: linear-gradient(90deg, var(--color-gold-500), var(--color-gold-500)) no-repeat;
+  background: linear-gradient(
+      90deg,
+      var(--color-gold-500),
+      var(--color-gold-500)
+    )
+    no-repeat;
   background-size: 100% 1px;
   background-position: 0 100%;
   padding-bottom: 2px;
 }
 .gold-underline-hover {
-  background: linear-gradient(90deg, var(--color-gold-500), var(--color-gold-500)) no-repeat;
+  background: linear-gradient(
+      90deg,
+      var(--color-gold-500),
+      var(--color-gold-500)
+    )
+    no-repeat;
   background-size: 0% 1px;
   background-position: 0 100%;
   padding-bottom: 2px;
   transition: background-size 0.6s var(--ease-cinema);
 }
-.gold-underline-hover:hover { background-size: 100% 1px; }
+.gold-underline-hover:hover {
+  background-size: 100% 1px;
+}
 
 /* ── Buttons ───────────────────────────────────────────────────── */
 .btn {
@@ -769,10 +928,11 @@ html, html:where(*) { scroll-behavior: auto !important; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   border-radius: 999px;
-  transition: background-color 0.6s var(--ease-cinema),
-              color 0.6s var(--ease-cinema),
-              border-color 0.6s var(--ease-cinema),
-              transform 0.6s var(--ease-cinema);
+  transition:
+    background-color 0.6s var(--ease-cinema),
+    color 0.6s var(--ease-cinema),
+    border-color 0.6s var(--ease-cinema),
+    transform 0.6s var(--ease-cinema);
   white-space: nowrap;
   border: 1px solid transparent;
 }
@@ -799,7 +959,8 @@ html, html:where(*) { scroll-behavior: auto !important; }
 .btn-secondary {
   background: transparent;
   color: var(--tone-fg, var(--color-ink));
-  border: 1px solid color-mix(in srgb, var(--tone-fg, var(--color-ink)) 28%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--tone-fg, var(--color-ink)) 28%, transparent);
 }
 .btn-secondary:hover {
   border-color: var(--color-gold-500);
@@ -807,43 +968,41 @@ html, html:where(*) { scroll-behavior: auto !important; }
 }
 .btn-on-photo {
   color: #fff;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,0.16) 0%,
-      rgba(255,255,255,0.06) 100%
-    );
-  border: 1px solid rgba(255,255,255,0.24);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.24);
   backdrop-filter: blur(22px) saturate(180%);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.36),
-    inset 0 -1px 0 rgba(255,255,255,0.06),
-    0 8px 28px rgba(0,0,0,0.22);
+    inset 0 1px 0 rgba(255, 255, 255, 0.36),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 8px 28px rgba(0, 0, 0, 0.22);
 }
 .btn-on-photo:hover {
-  background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--color-gold-500) 26%, rgba(255,255,255,0.16)) 0%,
-      rgba(255,255,255,0.06) 100%
-    );
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-gold-500) 26%, rgba(255, 255, 255, 0.16)) 0%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
   border-color: var(--color-gold-500);
   color: var(--color-gold-200);
   transform: translateY(-1px);
 }
 .btn-on-photo-ghost {
   color: #fff;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.36);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.36);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 .btn-on-photo-ghost:hover {
   border-color: var(--color-gold-500);
   color: var(--color-gold-300);
-  background: rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.1);
 }
 .btn-ghost {
   background: transparent;
@@ -882,12 +1041,11 @@ html, html:where(*) { scroll-behavior: auto !important; }
 }
 
 .glass {
-  background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--tone-fg, #fff) 12%, transparent) 0%,
-      color-mix(in srgb, var(--tone-fg, #fff) 4%, transparent) 100%
-    );
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--tone-fg, #fff) 12%, transparent) 0%,
+    color-mix(in srgb, var(--tone-fg, #fff) 4%, transparent) 100%
+  );
   border: 1px solid color-mix(in srgb, var(--tone-fg, #fff) 18%, transparent);
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, var(--tone-fg, #fff) 28%, transparent),
@@ -896,13 +1054,12 @@ html, html:where(*) { scroll-behavior: auto !important; }
 }
 
 .glass-light {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.18) 0%,
-      rgba(255, 255, 255, 0.06) 60%,
-      rgba(255, 255, 255, 0.10) 100%
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 60%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.35),
@@ -911,13 +1068,12 @@ html, html:where(*) { scroll-behavior: auto !important; }
 }
 
 .glass-dark {
-  background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--color-forest-900) 14%, transparent) 0%,
-      color-mix(in srgb, var(--color-forest-900) 6%, transparent) 60%,
-      color-mix(in srgb, var(--color-forest-700) 10%, transparent) 100%
-    );
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-forest-900) 14%, transparent) 0%,
+    color-mix(in srgb, var(--color-forest-900) 6%, transparent) 60%,
+    color-mix(in srgb, var(--color-forest-700) 10%, transparent) 100%
+  );
   border: 1px solid color-mix(in srgb, var(--color-forest-900) 14%, transparent);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.55),
@@ -927,12 +1083,11 @@ html, html:where(*) { scroll-behavior: auto !important; }
 
 .glass-pill {
   border-radius: 999px;
-  background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--tone-fg, #fff) 14%, transparent),
-      color-mix(in srgb, var(--tone-fg, #fff) 4%, transparent)
-    );
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--tone-fg, #fff) 14%, transparent),
+    color-mix(in srgb, var(--tone-fg, #fff) 4%, transparent)
+  );
   border: 1px solid color-mix(in srgb, var(--tone-fg, #fff) 22%, transparent);
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, var(--tone-fg, #fff) 32%, transparent),
@@ -941,13 +1096,12 @@ html, html:where(*) { scroll-behavior: auto !important; }
 
 .glass-card {
   border-radius: 4px;
-  background:
-    linear-gradient(
-      150deg,
-      color-mix(in srgb, var(--tone-fg, #fff) 10%, transparent) 0%,
-      color-mix(in srgb, var(--tone-fg, #fff) 3%, transparent) 50%,
-      color-mix(in srgb, var(--color-gold-500) 8%, transparent) 100%
-    );
+  background: linear-gradient(
+    150deg,
+    color-mix(in srgb, var(--tone-fg, #fff) 10%, transparent) 0%,
+    color-mix(in srgb, var(--tone-fg, #fff) 3%, transparent) 50%,
+    color-mix(in srgb, var(--color-gold-500) 8%, transparent) 100%
+  );
   border: 1px solid color-mix(in srgb, var(--tone-fg, #fff) 16%, transparent);
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, var(--tone-fg, #fff) 24%, transparent),
@@ -973,7 +1127,7 @@ html, html:where(*) { scroll-behavior: auto !important; }
     ),
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0) 30%
     );
   mix-blend-mode: screen;
@@ -988,21 +1142,28 @@ html, html:where(*) { scroll-behavior: auto !important; }
 }
 
 @supports not (backdrop-filter: blur(1px)) {
-  .glass, .glass-light, .glass-dark, .glass-pill, .glass-card {
-    background-color: color-mix(in srgb, var(--tone-bg, var(--color-ivory)) 88%, transparent);
+  .glass,
+  .glass-light,
+  .glass-dark,
+  .glass-pill,
+  .glass-card {
+    background-color: color-mix(
+      in srgb,
+      var(--tone-bg, var(--color-ivory)) 88%,
+      transparent
+    );
   }
 }
 
 /* ── Card surface (legacy compatibility, restyled) ─────────────── */
 .card-surface {
   position: relative;
-  background:
-    linear-gradient(
-      150deg,
-      color-mix(in srgb, var(--tone-fg) 9%, transparent) 0%,
-      color-mix(in srgb, var(--tone-fg) 3%, transparent) 60%,
-      color-mix(in srgb, var(--color-gold-500) 8%, transparent) 100%
-    );
+  background: linear-gradient(
+    150deg,
+    color-mix(in srgb, var(--tone-fg) 9%, transparent) 0%,
+    color-mix(in srgb, var(--tone-fg) 3%, transparent) 60%,
+    color-mix(in srgb, var(--color-gold-500) 8%, transparent) 100%
+  );
   border: 1px solid color-mix(in srgb, var(--tone-fg) 14%, transparent);
   border-radius: 4px;
   overflow: hidden;
@@ -1012,10 +1173,11 @@ html, html:where(*) { scroll-behavior: auto !important; }
     inset 0 1px 0 color-mix(in srgb, var(--tone-fg) 22%, transparent),
     inset 0 -1px 0 color-mix(in srgb, var(--tone-fg) 4%, transparent),
     0 14px 44px color-mix(in srgb, var(--color-forest-900) 16%, transparent);
-  transition: border-color 0.7s var(--ease-cinema),
-              transform 0.7s var(--ease-cinema),
-              box-shadow 0.7s var(--ease-cinema),
-              background 0.7s var(--ease-cinema);
+  transition:
+    border-color 0.7s var(--ease-cinema),
+    transform 0.7s var(--ease-cinema),
+    box-shadow 0.7s var(--ease-cinema),
+    background 0.7s var(--ease-cinema);
 }
 .card-surface:hover {
   border-color: color-mix(in srgb, var(--color-gold-500) 60%, transparent);
@@ -1033,7 +1195,9 @@ html, html:where(*) { scroll-behavior: auto !important; }
 }
 .card-image-wrap img,
 .card-image-wrap video {
-  transition: transform 1.6s var(--ease-cinema), filter 1.6s var(--ease-cinema);
+  transition:
+    transform 1.6s var(--ease-cinema),
+    filter 1.6s var(--ease-cinema);
   will-change: transform;
   filter: saturate(0.9) contrast(1.04);
 }
@@ -1045,16 +1209,32 @@ html, html:where(*) { scroll-behavior: auto !important; }
 
 /* ── Marquee ───────────────────────────────────────────────────── */
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 .marquee {
   animation: marquee 70s linear infinite;
   will-change: transform;
 }
 .marquee-mask {
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
 }
 
 /* ── Paper grain (recolored, gentle) ───────────────────────────── */
@@ -1085,7 +1265,8 @@ html, html:where(*) { scroll-behavior: auto !important; }
     pointer-events: none;
     z-index: 90;
     transform: translate(-50%, -50%);
-    transition: transform 0.18s var(--ease-cinema),
+    transition:
+      transform 0.18s var(--ease-cinema),
       width 0.4s var(--ease-cinema),
       height 0.4s var(--ease-cinema),
       opacity 0.3s ease,
@@ -1102,12 +1283,20 @@ html, html:where(*) { scroll-behavior: auto !important; }
 
 /* ── Hero glow (gold) ──────────────────────────────────────────── */
 .hero-glow {
-  background:
-    radial-gradient(ellipse 90% 50% at 50% 70%, color-mix(in srgb, var(--color-gold-500) 22%, transparent), transparent 70%);
+  background: radial-gradient(
+    ellipse 90% 50% at 50% 70%,
+    color-mix(in srgb, var(--color-gold-500) 22%, transparent),
+    transparent 70%
+  );
 }
 .hero-vignette {
-  background:
-    linear-gradient(180deg, rgba(13,40,24,0.05) 0%, rgba(13,40,24,0) 18%, rgba(13,40,24,0) 60%, rgba(13,40,24,0.55) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(13, 40, 24, 0.05) 0%,
+    rgba(13, 40, 24, 0) 18%,
+    rgba(13, 40, 24, 0) 60%,
+    rgba(13, 40, 24, 0.55) 100%
+  );
 }
 
 /* ── Spec table (Rolex-style, mono) ────────────────────────────── */
@@ -1133,8 +1322,12 @@ html, html:where(*) { scroll-behavior: auto !important; }
 
 /* ── Reduced motion ────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.18s !important;
@@ -1144,7 +1337,15 @@ html, html:where(*) { scroll-behavior: auto !important; }
     transform: none !important;
     filter: saturate(0.95) !important;
   }
-  .btn-primary:hover, .btn-on-photo:hover, .btn-gold:hover { transform: none !important; }
-  .marquee { animation: none !important; }
-  .cursor-orb { display: none !important; }
+  .btn-primary:hover,
+  .btn-on-photo:hover,
+  .btn-gold:hover {
+    transform: none !important;
+  }
+  .marquee {
+    animation: none !important;
+  }
+  .cursor-orb {
+    display: none !important;
+  }
 }

@@ -23,10 +23,7 @@ import { ventures, venturesBySlug } from "@/content/ventures";
 import { imagery } from "@/content/imagery";
 import { sectorOfVenture, venturesInSector, sectors } from "@/content/sectors";
 import { brandTheme } from "@/content/brand-theme";
-import {
-  ventureIdentity,
-  defaultIdentity,
-} from "@/content/venture-identity";
+import { ventureIdentity, defaultIdentity } from "@/content/venture-identity";
 
 export function generateStaticParams() {
   return ventures.map((v) => ({ slug: v.slug }));
@@ -93,7 +90,12 @@ export default async function VenturePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Hemco Group", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Sectors", item: `${SITE_URL}/sectors` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Sectors",
+        item: `${SITE_URL}/sectors`,
+      },
       ...(sector
         ? [
             {
@@ -200,10 +202,7 @@ export default async function VenturePage({
         priority
       >
         <Reveal>
-          <p
-            className="caption mb-5"
-            style={{ color: identity.accentSoft }}
-          >
+          <p className="caption mb-5" style={{ color: identity.accentSoft }}>
             <span
               className="inline-block h-px w-10 mr-3 align-middle"
               style={{ background: identity.accent }}
@@ -300,10 +299,7 @@ export default async function VenturePage({
           <Reveal delay={0.1}>
             <h1 className="mb-7 max-w-5xl">
               <span className="sr-only">{venture.name}</span>
-              <LumonnText
-                height={88}
-                style={{ color: "#ffffff" }}
-              />
+              <LumonnText height={88} style={{ color: "#ffffff" }} />
             </h1>
           </Reveal>
         ) : identity.wordmarkComponent === "kerning-ai" ? (
@@ -495,10 +491,7 @@ export default async function VenturePage({
                   isFlutedPremium ? " kai-pillar" : ""
                 }`}
               >
-                <p
-                  className="caption mb-5"
-                  style={{ color: identity.accent }}
-                >
+                <p className="caption mb-5" style={{ color: identity.accent }}>
                   {p.eyebrow}
                 </p>
                 <div
@@ -695,10 +688,7 @@ export default async function VenturePage({
             </div>
           </aside>
           <div className="md:col-span-7 md:col-start-6">
-            <p
-              className="eyebrow mb-4"
-              style={{ color: identity.accent }}
-            >
+            <p className="eyebrow mb-4" style={{ color: identity.accent }}>
               Positioning
             </p>
             <h2
@@ -707,20 +697,14 @@ export default async function VenturePage({
             >
               {venture.positioning}
             </h2>
-            <p
-              className="lede mb-12"
-              style={{ color: "var(--tone-fg-mute)" }}
-            >
+            <p className="lede mb-12" style={{ color: "var(--tone-fg-mute)" }}>
               {venture.description}
             </p>
             <div
               className="h-px w-24 mb-12"
               style={{ background: identity.accent, opacity: 0.7 }}
             />
-            <p
-              className="eyebrow mb-4"
-              style={{ color: identity.accent }}
-            >
+            <p className="eyebrow mb-4" style={{ color: identity.accent }}>
               Approach
             </p>
             <p
@@ -762,10 +746,7 @@ export default async function VenturePage({
         <Section tone={identity.bodyTone} pad="xl">
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
-              <p
-                className="eyebrow mb-4"
-                style={{ color: identity.accent }}
-              >
+              <p className="eyebrow mb-4" style={{ color: identity.accent }}>
                 Capabilities
               </p>
               <div
@@ -844,7 +825,13 @@ export default async function VenturePage({
               opacity: 0.55,
             }}
           />
-          <div className="shell relative" style={{ paddingTop: "clamp(7rem,14vh,11rem)", paddingBottom: "clamp(7rem,14vh,11rem)" }}>
+          <div
+            className="shell relative"
+            style={{
+              paddingTop: "clamp(7rem,14vh,11rem)",
+              paddingBottom: "clamp(7rem,14vh,11rem)",
+            }}
+          >
             <div className="grid gap-14 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-5">
                 <p
@@ -910,21 +897,14 @@ export default async function VenturePage({
         <div
           className="rounded-[6px] p-10 md:p-14 text-center max-w-3xl mx-auto"
           style={{
-            background:
-              "color-mix(in srgb, var(--tone-fg) 5%, transparent)",
+            background: "color-mix(in srgb, var(--tone-fg) 5%, transparent)",
             border: `1px solid color-mix(in srgb, ${identity.accent} 32%, transparent)`,
           }}
         >
-          <p
-            className="eyebrow mb-4"
-            style={{ color: identity.accent }}
-          >
+          <p className="eyebrow mb-4" style={{ color: identity.accent }}>
             Direct
           </p>
-          <p
-            className="lede mb-8"
-            style={{ color: "var(--tone-fg)" }}
-          >
+          <p className="lede mb-8" style={{ color: "var(--tone-fg)" }}>
             For specifications, partnership enquiries, or to commission a
             project — write to us.
           </p>
@@ -943,10 +923,7 @@ export default async function VenturePage({
       {/* Peers / continue */}
       {peers.length > 0 && (
         <Section tone={identity.bodyTone} pad="xl">
-          <p
-            className="eyebrow mb-6"
-            style={{ color: identity.accent }}
-          >
+          <p className="eyebrow mb-6" style={{ color: identity.accent }}>
             {sector ? `Also in ${sector.name}` : "Also in the group"}
           </p>
           <div
@@ -982,10 +959,7 @@ export default async function VenturePage({
                       }}
                     />
                   </div>
-                  <p
-                    className="caption mb-2"
-                    style={{ color: peerId.accent }}
-                  >
+                  <p className="caption mb-2" style={{ color: peerId.accent }}>
                     {v.sector}
                   </p>
                   <h3

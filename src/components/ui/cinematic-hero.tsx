@@ -45,7 +45,11 @@ export function CinematicHero({
   const filter = useMotionTemplate`blur(${blurPx}px)`;
 
   return (
-    <section ref={ref} className="relative h-[110vh]" style={{ position: "relative" }}>
+    <section
+      ref={ref}
+      className="relative h-[110vh]"
+      style={{ position: "relative" }}
+    >
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-night">
         {/* Background — parametric gradient by default; video / poster fallbacks */}
         {gradient ? (

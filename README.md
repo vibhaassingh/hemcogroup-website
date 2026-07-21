@@ -14,16 +14,16 @@ Built with **Next.js 16** (App Router, React 19), **TypeScript**, **Tailwind CSS
 
 ## Content model (`src/content/`)
 
-| File | What it holds |
-| --- | --- |
-| `ventures.ts` | The `Venture[]` registry — the source of truth for every brand (slug, name, sector, status, accent, domain, imagery, `parent`, …). |
-| `sectors.ts` | The 7 `SectorEntry` records + `ventureSlugs` mapping and the `venturesInSector` / `sectorOfVenture` / `sectorOrder` helpers. |
-| `site-facts.ts` | Derived headline facts: `BRAND_COUNT`, `SECTOR_COUNT`, `yearsCompounding()`, plus `toRoman()` / `numberWord()` / `numberWordCap()`. **Use these instead of hardcoding counts.** |
-| `venture-identity.ts` | Per-venture identity (hero copy, services, pillars, accents) for the venture detail pages. |
-| `brand-theme.ts` | Declarative per-brand theme tokens (tone / material / motion + accent). Venture pages emit `data-brand-tone` from it; the per-brand `.X-page` CSS blocks are migrating onto this token layer. |
-| `imagery.ts` | Image registry (`u()` Unsplash helper + local `/brand/*` assets). |
-| `footprint.ts` | Geographic locations (lat/lon) for the world map. |
-| `journal.ts` | Journal / dispatch entries. |
+| File                  | What it holds                                                                                                                                                                                 |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ventures.ts`         | The `Venture[]` registry — the source of truth for every brand (slug, name, sector, status, accent, domain, imagery, `parent`, …).                                                            |
+| `sectors.ts`          | The 7 `SectorEntry` records + `ventureSlugs` mapping and the `venturesInSector` / `sectorOfVenture` / `sectorOrder` helpers.                                                                  |
+| `site-facts.ts`       | Derived headline facts: `BRAND_COUNT`, `SECTOR_COUNT`, `yearsCompounding()`, plus `toRoman()` / `numberWord()` / `numberWordCap()`. **Use these instead of hardcoding counts.**               |
+| `venture-identity.ts` | Per-venture identity (hero copy, services, pillars, accents) for the venture detail pages.                                                                                                    |
+| `brand-theme.ts`      | Declarative per-brand theme tokens (tone / material / motion + accent). Venture pages emit `data-brand-tone` from it; the per-brand `.X-page` CSS blocks are migrating onto this token layer. |
+| `imagery.ts`          | Image registry (`u()` Unsplash helper + local `/brand/*` assets).                                                                                                                             |
+| `footprint.ts`        | Geographic locations (lat/lon) for the world map.                                                                                                                                             |
+| `journal.ts`          | Journal / dispatch entries.                                                                                                                                                                   |
 
 Pages, `generateStaticParams`, sector grids, peer cards and JSON-LD all read from these — there is no per-page duplication of brand data.
 
@@ -36,23 +36,23 @@ npm run dev          # http://localhost:3002
 
 ### Scripts
 
-| Script | Purpose |
-| --- | --- |
-| `npm run dev` | Dev server on port 3002. |
-| `npm run build` | Production build (also type-checks generated route types). |
-| `npm run start` | Serve the production build on 3002. |
-| `npm run lint` | ESLint (flat config, `eslint-config-next`). |
-| `npm run typecheck` | `tsc` over source (`tsconfig.typecheck.json`). |
-| `npm run format` / `format:check` | Prettier write / check. |
+| Script                            | Purpose                                                    |
+| --------------------------------- | ---------------------------------------------------------- |
+| `npm run dev`                     | Dev server on port 3002.                                   |
+| `npm run build`                   | Production build (also type-checks generated route types). |
+| `npm run start`                   | Serve the production build on 3002.                        |
+| `npm run lint`                    | ESLint (flat config, `eslint-config-next`).                |
+| `npm run typecheck`               | `tsc` over source (`tsconfig.typecheck.json`).             |
+| `npm run format` / `format:check` | Prettier write / check.                                    |
 
 ## Environment variables
 
-| Variable | Required | Purpose |
-| --- | --- | --- |
-| `RESEND_API_KEY` | Yes (contact form) | Server-side Resend key used by `POST /api/contact`. |
-| `NEXT_PUBLIC_GSC_TOKEN` | Optional | Google Search Console verification. |
-| `NEXT_PUBLIC_BING_TOKEN` | Optional | Bing site verification. |
-| `NEXT_PUBLIC_GA_ID` | Optional | Google Analytics measurement ID. |
+| Variable                 | Required           | Purpose                                             |
+| ------------------------ | ------------------ | --------------------------------------------------- |
+| `RESEND_API_KEY`         | Yes (contact form) | Server-side Resend key used by `POST /api/contact`. |
+| `NEXT_PUBLIC_GSC_TOKEN`  | Optional           | Google Search Console verification.                 |
+| `NEXT_PUBLIC_BING_TOKEN` | Optional           | Bing site verification.                             |
+| `NEXT_PUBLIC_GA_ID`      | Optional           | Google Analytics measurement ID.                    |
 
 Set these in Vercel (Project → Settings → Environment Variables) and in `.env.local` for local dev.
 

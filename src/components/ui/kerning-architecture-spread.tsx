@@ -32,7 +32,9 @@ export function KerningArchitectureSpread() {
     if (!el) return;
     const svg = el.querySelector<SVGElement>(".arch-svg");
     if (!svg) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       svg.classList.add("is-drawn");
       return;
@@ -52,7 +54,10 @@ export function KerningArchitectureSpread() {
     io.observe(el);
     // Fallback: if the section is already in view at mount, IO can
     // miss the initial entry — kick the animation after a beat anyway.
-    const fallback = window.setTimeout(() => svg.classList.add("is-drawn"), 700);
+    const fallback = window.setTimeout(
+      () => svg.classList.add("is-drawn"),
+      700,
+    );
     return () => {
       io.disconnect();
       window.clearTimeout(fallback);
@@ -112,10 +117,7 @@ export function KerningArchitectureSpread() {
         {/* The drawing itself — a measured section through a room with a
             kitchen on one side, a gathering space on the other, daylight
             from above. Drawn in olive hairlines on the ivory paper. */}
-        <div
-          className="relative w-full"
-          style={{ aspectRatio: "16 / 7.2" }}
-        >
+        <div className="relative w-full" style={{ aspectRatio: "16 / 7.2" }}>
           <svg
             viewBox="0 0 1600 720"
             preserveAspectRatio="xMidYMid meet"
@@ -233,21 +235,66 @@ export function KerningArchitectureSpread() {
               <line x1="1100" y1="500" x2="1100" y2="440" />
               <circle cx="1100" cy="430" r="9" />
               {/* Daylight rays — three diagonal hairlines from the skylight */}
-              <line x1="490" y1="180" x2="430" y2="500" strokeDasharray="3 6" opacity="0.55" />
-              <line x1="540" y1="180" x2="540" y2="500" strokeDasharray="3 6" opacity="0.55" />
-              <line x1="590" y1="180" x2="650" y2="500" strokeDasharray="3 6" opacity="0.55" />
+              <line
+                x1="490"
+                y1="180"
+                x2="430"
+                y2="500"
+                strokeDasharray="3 6"
+                opacity="0.55"
+              />
+              <line
+                x1="540"
+                y1="180"
+                x2="540"
+                y2="500"
+                strokeDasharray="3 6"
+                opacity="0.55"
+              />
+              <line
+                x1="590"
+                y1="180"
+                x2="650"
+                y2="500"
+                strokeDasharray="3 6"
+                opacity="0.55"
+              />
             </g>
 
             {/* Filled regions — drawn after the linework finishes */}
             <g className="fills">
               {/* Ground hatching beneath the floor line */}
-              <rect x="40" y="600" width="1520" height="80" fill="url(#ground-hatch)" />
+              <rect
+                x="40"
+                y="600"
+                width="1520"
+                height="80"
+                fill="url(#ground-hatch)"
+              />
               {/* Wall hatch on the leftmost wall */}
-              <rect x="108" y="120" width="12" height="480" fill="url(#wall-hatch)" />
+              <rect
+                x="108"
+                y="120"
+                width="12"
+                height="480"
+                fill="url(#wall-hatch)"
+              />
               {/* Wall hatch on the rightmost wall */}
-              <rect x="1480" y="240" width="12" height="360" fill="url(#wall-hatch)" />
+              <rect
+                x="1480"
+                y="240"
+                width="12"
+                height="360"
+                fill="url(#wall-hatch)"
+              />
               {/* Internal partition hatch */}
-              <rect x="774" y="240" width="6" height="360" fill="url(#wall-hatch)" />
+              <rect
+                x="774"
+                y="240"
+                width="6"
+                height="360"
+                fill="url(#wall-hatch)"
+              />
             </g>
 
             {/* Dimension lines + labels — comes in last */}
@@ -299,18 +346,59 @@ export function KerningArchitectureSpread() {
                 4800
               </text>
               {/* Annotation callouts — pointer + label for kitchen, bar, skylight */}
-              <g fontSize="12" fontFamily="Geist Mono, ui-monospace, monospace" stroke="none" letterSpacing="2">
-                <line x1="460" y1="540" x2="460" y2="650" stroke="#7a6e3e" strokeWidth="0.7" />
-                <text x="460" y="668" textAnchor="middle">A · KITCHEN</text>
+              <g
+                fontSize="12"
+                fontFamily="Geist Mono, ui-monospace, monospace"
+                stroke="none"
+                letterSpacing="2"
+              >
+                <line
+                  x1="460"
+                  y1="540"
+                  x2="460"
+                  y2="650"
+                  stroke="#7a6e3e"
+                  strokeWidth="0.7"
+                />
+                <text x="460" y="668" textAnchor="middle">
+                  A · KITCHEN
+                </text>
 
-                <line x1="1040" y1="500" x2="1040" y2="650" stroke="#7a6e3e" strokeWidth="0.7" />
-                <text x="1040" y="668" textAnchor="middle">B · DINING</text>
+                <line
+                  x1="1040"
+                  y1="500"
+                  x2="1040"
+                  y2="650"
+                  stroke="#7a6e3e"
+                  strokeWidth="0.7"
+                />
+                <text x="1040" y="668" textAnchor="middle">
+                  B · DINING
+                </text>
 
-                <line x1="540" y1="120" x2="540" y2="42" stroke="#7a6e3e" strokeWidth="0.7" />
-                <text x="540" y="32" textAnchor="middle">C · SKYLIGHT</text>
+                <line
+                  x1="540"
+                  y1="120"
+                  x2="540"
+                  y2="42"
+                  stroke="#7a6e3e"
+                  strokeWidth="0.7"
+                />
+                <text x="540" y="32" textAnchor="middle">
+                  C · SKYLIGHT
+                </text>
 
-                <line x1="1460" y1="430" x2="1380" y2="430" stroke="#7a6e3e" strokeWidth="0.7" />
-                <text x="1372" y="434" textAnchor="end">D · GLAZING</text>
+                <line
+                  x1="1460"
+                  y1="430"
+                  x2="1380"
+                  y2="430"
+                  stroke="#7a6e3e"
+                  strokeWidth="0.7"
+                />
+                <text x="1372" y="434" textAnchor="end">
+                  D · GLAZING
+                </text>
               </g>
             </g>
           </svg>
@@ -331,8 +419,7 @@ export function KerningArchitectureSpread() {
               className="display-tight text-[clamp(1.4rem,2.2vw,1.85rem)] leading-[1.18]"
               style={{ color: "#3a3320" }}
             >
-              KERNING{" "}
-              <span style={{ color: "#a89868" }}>·</span>{" "}
+              KERNING <span style={{ color: "#a89868" }}>·</span>{" "}
               <span className="display-italic">Architecture</span>
             </p>
           </div>
@@ -342,9 +429,9 @@ export function KerningArchitectureSpread() {
               style={{ color: "rgba(58,51,32,0.80)" }}
             >
               The drawing above is not a project — it is the studio&apos;s
-              shorthand for how we think. A room with a kitchen at one end,
-              a table at the other, daylight from above, and the section cut
-              that proves all three are in tension with each other.
+              shorthand for how we think. A room with a kitchen at one end, a
+              table at the other, daylight from above, and the section cut that
+              proves all three are in tension with each other.
             </p>
           </div>
           <div className="md:col-span-2 md:col-start-11 md:text-right">

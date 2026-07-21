@@ -128,7 +128,9 @@ export function KerningWordmark({
   const textWidth = height * textAspect;
 
   if (!withText) {
-    return <KerningMonogram size={height} title={title} className={className} />;
+    return (
+      <KerningMonogram size={height} title={title} className={className} />
+    );
   }
 
   // Render the monogram + a gap + the wordmark text, optically aligned.

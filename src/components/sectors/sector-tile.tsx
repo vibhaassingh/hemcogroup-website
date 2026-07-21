@@ -1,8 +1,5 @@
 import Link from "next/link";
-import {
-  type SectorEntry,
-  venturesInSector,
-} from "@/content/sectors";
+import { type SectorEntry, venturesInSector } from "@/content/sectors";
 import { imagery } from "@/content/imagery";
 import { ImageReveal } from "@/components/ui/image-reveal";
 
@@ -21,8 +18,7 @@ export function SectorTile({ sector }: { sector: SectorEntry }) {
           src: heroImg.src,
           alt: heroImg.alt,
           fill: true,
-          sizes:
-            "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw",
+          sizes: "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw",
           className:
             "object-cover transition-transform duration-[1600ms] group-hover:scale-[1.05]",
           style: { filter: "saturate(0.88) contrast(1.05)" },
@@ -48,9 +44,7 @@ export function SectorTile({ sector }: { sector: SectorEntry }) {
               {sector.name}
             </h3>
             <p className="lede max-w-md opacity-90 mb-5">{sector.ethos}</p>
-            <div
-              className="caption inline-flex items-center gap-2 transition-colors group-hover:text-[color:var(--color-gold-300)]"
-            >
+            <div className="caption inline-flex items-center gap-2 transition-colors group-hover:text-[color:var(--color-gold-300)]">
               Enter sector
               <span aria-hidden>→</span>
             </div>

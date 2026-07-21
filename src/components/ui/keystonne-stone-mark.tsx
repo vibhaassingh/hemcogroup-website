@@ -32,7 +32,9 @@ export function KeystonneStoneMark() {
     const mask = maskRef.current;
     if (!section || !mask) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       section.style.setProperty("--bloom-x", "50%");
       section.style.setProperty("--bloom-y", "45%");
@@ -62,8 +64,12 @@ export function KeystonneStoneMark() {
 
       // Tilt: cursor relative to mask centre, normalised to [-1, 1].
       const maskRect = mask.getBoundingClientRect();
-      const dx = (e.clientX - (maskRect.left + maskRect.width / 2)) / (maskRect.width / 2);
-      const dy = (e.clientY - (maskRect.top + maskRect.height / 2)) / (maskRect.height / 2);
+      const dx =
+        (e.clientX - (maskRect.left + maskRect.width / 2)) /
+        (maskRect.width / 2);
+      const dy =
+        (e.clientY - (maskRect.top + maskRect.height / 2)) /
+        (maskRect.height / 2);
       // Y rotation responds to horizontal cursor offset; X rotation to vertical.
       // Cap to ±9deg so it stays elegant rather than gimballing.
       tiltY = Math.max(-1, Math.min(1, dx)) * 9;
@@ -73,8 +79,8 @@ export function KeystonneStoneMark() {
     const tick = () => {
       const tx = inside ? mx : 0.5;
       const ty = inside ? my : 0.45;
-      cx += (tx - cx) * 0.10;
-      cy += (ty - cy) * 0.10;
+      cx += (tx - cx) * 0.1;
+      cy += (ty - cy) * 0.1;
       cTiltX += (tiltX - cTiltX) * 0.08;
       cTiltY += (tiltY - cTiltY) * 0.08;
       section.style.setProperty("--bloom-x", `${cx * 100}%`);
@@ -146,11 +152,7 @@ export function KeystonneStoneMark() {
         >
           {/* Pulse rings — fired on click, sweep outward and fade. */}
           {pulses.map((id) => (
-            <span
-              key={id}
-              aria-hidden
-              className="keystonne-pulse"
-            />
+            <span key={id} aria-hidden className="keystonne-pulse" />
           ))}
 
           {/* The masked layer itself, also the click target. The radial

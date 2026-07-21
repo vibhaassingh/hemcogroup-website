@@ -66,7 +66,14 @@ const SECTOR_LABELS = sectorOrder.map((s, si) => {
   const p = polar(RL, base);
   const anchor: "start" | "middle" | "end" =
     Math.abs(p.x - CX) < 40 ? "middle" : p.x > CX ? "start" : "end";
-  return { slug: s, name: sectors[s].name, ordinal: sectors[s].ordinal, x: p.x, y: p.y, anchor };
+  return {
+    slug: s,
+    name: sectors[s].name,
+    ordinal: sectors[s].ordinal,
+    x: p.x,
+    y: p.y,
+    anchor,
+  };
 });
 
 // Brand-family + parent edges (derived from existing fields, no new data).
@@ -98,7 +105,8 @@ const ADJ: Record<string, Set<string>> = {};
   };
   NODES.forEach(({ v }) => {
     const fam = familyOf(v.slug);
-    if (fam && FAMILY_ANCHOR[fam] !== v.slug) addEdge(v.slug, FAMILY_ANCHOR[fam]);
+    if (fam && FAMILY_ANCHOR[fam] !== v.slug)
+      addEdge(v.slug, FAMILY_ANCHOR[fam]);
     if (v.parent) addEdge(v.slug, v.parent);
   });
 }
@@ -144,15 +152,29 @@ export function OperatingMap() {
           >
             <defs>
               <radialGradient id="om-hub" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="var(--color-gold-300)" stopOpacity="0.30" />
-                <stop offset="100%" stopColor="var(--color-gold-500)" stopOpacity="0" />
+                <stop
+                  offset="0%"
+                  stopColor="var(--color-gold-300)"
+                  stopOpacity="0.30"
+                />
+                <stop
+                  offset="100%"
+                  stopColor="var(--color-gold-500)"
+                  stopOpacity="0"
+                />
               </radialGradient>
             </defs>
 
             {/* Faint radial spokes: every venture hangs off the centre */}
             <g stroke="var(--color-mist)" strokeOpacity="0.10">
               {NODES.map((n) => (
-                <line key={`spoke-${n.v.slug}`} x1={CX} y1={CY} x2={n.x} y2={n.y} />
+                <line
+                  key={`spoke-${n.v.slug}`}
+                  x1={CX}
+                  y1={CY}
+                  x2={n.x}
+                  y2={n.y}
+                />
               ))}
             </g>
 
@@ -169,11 +191,20 @@ export function OperatingMap() {
                     stroke={lit ? a.v.accentSoft : "var(--color-gold-300)"}
                     strokeWidth={lit ? 1.8 : 1}
                     strokeOpacity={lit ? 0.85 : activeSlug ? 0.12 : 0.22}
-                    style={{ transition: "stroke-opacity .25s, stroke-width .25s, stroke .25s" }}
+                    style={{
+                      transition:
+                        "stroke-opacity .25s, stroke-width .25s, stroke .25s",
+                    }}
                     initial={reduce ? false : { pathLength: 0 }}
                     animate={show ? { pathLength: 1 } : { pathLength: 0 }}
                     transition={
-                      reduce ? { duration: 0 } : { duration: 0.9, delay: 0.15 + i * 0.06, ease: [0.16, 1, 0.3, 1] }
+                      reduce
+                        ? { duration: 0 }
+                        : {
+                            duration: 0.9,
+                            delay: 0.15 + i * 0.06,
+                            ease: [0.16, 1, 0.3, 1],
+                          }
                     }
                   />
                 );
@@ -219,7 +250,11 @@ export function OperatingMap() {
                 y={CY - 6}
                 textAnchor="middle"
                 className="fill-[color:var(--color-gold-300)]"
-                style={{ fontSize: 17, letterSpacing: "0.12em", fontFamily: "var(--font-fraunces, Georgia, serif)" }}
+                style={{
+                  fontSize: 17,
+                  letterSpacing: "0.12em",
+                  fontFamily: "var(--font-fraunces, Georgia, serif)",
+                }}
               >
                 HEMCO
               </text>
@@ -258,7 +293,11 @@ export function OperatingMap() {
                   <motion.g
                     initial={reduce ? false : { opacity: 0 }}
                     animate={show ? { opacity: 1 } : { opacity: 0 }}
-                    transition={reduce ? { duration: 0 } : { duration: 0.5, delay: 0.45 + i * 0.045 }}
+                    transition={
+                      reduce
+                        ? { duration: 0 }
+                        : { duration: 0.5, delay: 0.45 + i * 0.045 }
+                    }
                   >
                     <title>{`${v.name} · ${n.sectorName}`}</title>
                     {/* hit target */}
@@ -267,7 +306,11 @@ export function OperatingMap() {
                       style={{
                         transformBox: "fill-box",
                         transformOrigin: "center",
-                        transform: activeNode ? "scale(1.6)" : dimmed ? "scale(0.85)" : "scale(1)",
+                        transform: activeNode
+                          ? "scale(1.6)"
+                          : dimmed
+                            ? "scale(0.85)"
+                            : "scale(1)",
                         transition: "transform .25s cubic-bezier(.16,1,.3,1)",
                         opacity: dimmed ? 0.35 : 1,
                       }}
@@ -280,14 +323,22 @@ export function OperatingMap() {
                         cx={n.x}
                         cy={n.y}
                         r={8}
-                        fill={operational ? v.accentSoft : "var(--color-forest-900)"}
+                        fill={
+                          operational ? v.accentSoft : "var(--color-forest-900)"
+                        }
                         stroke="var(--color-bone)"
                         strokeOpacity={tbc ? 0.5 : 0.85}
                         strokeWidth={1.25}
                         strokeDasharray={tbc ? "2.5 3" : undefined}
                       />
                       {!operational && (
-                        <circle cx={n.x} cy={n.y} r={3.2} fill={v.accentSoft} fillOpacity={tbc ? 0.7 : 1} />
+                        <circle
+                          cx={n.x}
+                          cy={n.y}
+                          r={3.2}
+                          fill={v.accentSoft}
+                          fillOpacity={tbc ? 0.7 : 1}
+                        />
                       )}
                     </g>
                   </motion.g>
@@ -302,7 +353,11 @@ export function OperatingMap() {
                 y={active.y - 20}
                 textAnchor="middle"
                 className="fill-[color:var(--color-bone)]"
-                style={{ fontSize: 14, fontFamily: "var(--font-fraunces, Georgia, serif)", pointerEvents: "none" }}
+                style={{
+                  fontSize: 14,
+                  fontFamily: "var(--font-fraunces, Georgia, serif)",
+                  pointerEvents: "none",
+                }}
               >
                 {active.v.name}
               </text>
@@ -320,7 +375,10 @@ export function OperatingMap() {
                   className="inline-block h-2.5 w-2.5 rounded-full"
                   style={{ background: active.v.accentSoft }}
                 />
-                <span className="caption" style={{ color: "var(--color-gold-300)" }}>
+                <span
+                  className="caption"
+                  style={{ color: "var(--color-gold-300)" }}
+                >
                   {active.sectorName} · {statusLabel[active.v.status]}
                 </span>
               </div>
@@ -332,13 +390,21 @@ export function OperatingMap() {
               </p>
               <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 text-[13px]">
                 <div>
-                  <dt className="caption" style={{ color: "var(--color-gold-300)" }}>
+                  <dt
+                    className="caption"
+                    style={{ color: "var(--color-gold-300)" }}
+                  >
                     Founded
                   </dt>
-                  <dd className="text-[color:var(--color-bone)]">{active.v.founded ?? "—"}</dd>
+                  <dd className="text-[color:var(--color-bone)]">
+                    {active.v.founded ?? "—"}
+                  </dd>
                 </div>
                 <div>
-                  <dt className="caption" style={{ color: "var(--color-gold-300)" }}>
+                  <dt
+                    className="caption"
+                    style={{ color: "var(--color-gold-300)" }}
+                  >
                     Reach
                   </dt>
                   <dd className="text-[color:var(--color-bone)]">
@@ -366,7 +432,10 @@ export function OperatingMap() {
               </p>
               <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[12px] text-[color:var(--color-mist)]">
                 <li className="flex items-center gap-2">
-                  <span aria-hidden className="inline-block h-2.5 w-2.5 rounded-full bg-[color:var(--color-gold-300)]" />
+                  <span
+                    aria-hidden
+                    className="inline-block h-2.5 w-2.5 rounded-full bg-[color:var(--color-gold-300)]"
+                  />
                   Operational
                 </li>
                 <li className="flex items-center gap-2">

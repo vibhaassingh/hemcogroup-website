@@ -60,7 +60,8 @@ export default async function JournalEntryPage({
   const entryUrl = `${SITE_URL}/world/journal/${entry.slug}`;
   // Journal dates ship as "YYYY.MM" — turn into ISO 8601 for schema.
   const [yy, mm] = entry.date.split(".").map(Number);
-  const isoDate = yy && mm ? new Date(Date.UTC(yy, mm - 1, 1)).toISOString() : undefined;
+  const isoDate =
+    yy && mm ? new Date(Date.UTC(yy, mm - 1, 1)).toISOString() : undefined;
   const articleBody = entry.body.join("\n\n");
 
   const breadcrumbSchema = {
@@ -68,8 +69,18 @@ export default async function JournalEntryPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Hemco Group", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "World", item: `${SITE_URL}/world` },
-      { "@type": "ListItem", position: 3, name: "Journal", item: `${SITE_URL}/world/journal` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "World",
+        item: `${SITE_URL}/world`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Journal",
+        item: `${SITE_URL}/world/journal`,
+      },
       { "@type": "ListItem", position: 4, name: entry.title, item: entryUrl },
     ],
   };
@@ -120,7 +131,8 @@ export default async function JournalEntryPage({
               className="caption mb-9"
               style={{ color: "var(--color-gold-500)" }}
             >
-              {entry.category} · <span className="data opacity-70">{entry.date}</span>
+              {entry.category} ·{" "}
+              <span className="data opacity-70">{entry.date}</span>
             </p>
           </Reveal>
           <h1 className="display max-w-[22ch] text-[clamp(2.5rem,5.8vw,5rem)] leading-[1.0]">
@@ -191,7 +203,10 @@ export default async function JournalEntryPage({
                   "1px solid color-mix(in srgb, var(--color-ink) 18%, transparent)",
               }}
             >
-              <p className="caption mb-2" style={{ color: "var(--color-gold-500)" }}>
+              <p
+                className="caption mb-2"
+                style={{ color: "var(--color-gold-500)" }}
+              >
                 For press
               </p>
               <p className="body-sans opacity-75">

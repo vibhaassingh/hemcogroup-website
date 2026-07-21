@@ -66,10 +66,7 @@ export function HorizontalRail({
         className="sticky top-0 flex items-center overflow-hidden"
         style={{ height: `${trackHeight * 100}vh` }}
       >
-        <motion.div
-          style={{ x }}
-          className="flex gap-6 will-change-transform"
-        >
+        <motion.div style={{ x }} className="flex gap-6 will-change-transform">
           {children}
         </motion.div>
       </div>

@@ -28,10 +28,7 @@ export function NewsCard({
         className="card-surface group flex h-full flex-col p-7 md:p-8"
       >
         <div className="flex items-center justify-between">
-          <span
-            className="caption"
-            style={{ color: "var(--color-gold-500)" }}
-          >
+          <span className="caption" style={{ color: "var(--color-gold-500)" }}>
             {entry.category}
           </span>
           <span className="caption data opacity-60">{entry.date}</span>
@@ -40,9 +37,7 @@ export function NewsCard({
           {entry.title}
         </h3>
         <p className="mt-5 body-sans opacity-75">{entry.dek}</p>
-        <span
-          className="mt-auto pt-8 caption inline-flex items-center gap-2 transition-colors group-hover:text-[color:var(--color-gold-500)]"
-        >
+        <span className="mt-auto pt-8 caption inline-flex items-center gap-2 transition-colors group-hover:text-[color:var(--color-gold-500)]">
           Read note <span aria-hidden>→</span>
         </span>
       </Link>

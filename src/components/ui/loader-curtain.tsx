@@ -186,7 +186,8 @@ export function LoaderCurtain() {
                 <span
                   className="caption data"
                   style={{
-                    color: "color-mix(in srgb, var(--color-ink) 60%, transparent)",
+                    color:
+                      "color-mix(in srgb, var(--color-ink) 60%, transparent)",
                     letterSpacing: "0.28em",
                     fontSize: "10.5px",
                   }}
@@ -196,7 +197,8 @@ export function LoaderCurtain() {
                 <span
                   className="caption data"
                   style={{
-                    color: "color-mix(in srgb, var(--color-ink) 60%, transparent)",
+                    color:
+                      "color-mix(in srgb, var(--color-ink) 60%, transparent)",
                     letterSpacing: "0.28em",
                     fontSize: "10.5px",
                   }}
@@ -281,7 +283,8 @@ export function LoaderCurtain() {
               <motion.p
                 className="display-italic mt-6 text-[clamp(0.95rem,1.4vw,1.2rem)]"
                 style={{
-                  color: "color-mix(in srgb, var(--color-ink) 62%, transparent)",
+                  color:
+                    "color-mix(in srgb, var(--color-ink) 62%, transparent)",
                   letterSpacing: "0.01em",
                 }}
                 initial={{ opacity: 0, y: 8 }}
@@ -326,13 +329,15 @@ export function LoaderCurtain() {
                         "color-mix(in srgb, var(--color-ink) 38%, transparent)",
                     }}
                   >
-                    {" "}/ 100
+                    {" "}
+                    / 100
                   </span>
                 </span>
                 <span
                   className="caption data"
                   style={{
-                    color: "color-mix(in srgb, var(--color-ink) 60%, transparent)",
+                    color:
+                      "color-mix(in srgb, var(--color-ink) 60%, transparent)",
                     letterSpacing: "0.28em",
                     fontSize: "10.5px",
                   }}

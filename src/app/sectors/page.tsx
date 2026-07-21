@@ -4,11 +4,7 @@ import Image from "next/image";
 import { Section, GoldRule } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import { ToneBridge } from "@/components/ui/tone-bridge";
-import {
-  sectorOrder,
-  sectors,
-  venturesInSector,
-} from "@/content/sectors";
+import { sectorOrder, sectors, venturesInSector } from "@/content/sectors";
 import { imagery } from "@/content/imagery";
 import {
   BRAND_COUNT,
@@ -25,14 +21,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sectors" },
   openGraph: {
     title: "Sectors · Hemco Group",
-    description: "Seven sectors, thirteen brands. The shape of Hemco's house of industries.",
+    description:
+      "Seven sectors, thirteen brands. The shape of Hemco's house of industries.",
     url: "/sectors",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Sectors · Hemco Group",
-    description: "Seven sectors, thirteen brands. The shape of Hemco's house of industries.",
+    description:
+      "Seven sectors, thirteen brands. The shape of Hemco's house of industries.",
   },
 };
 
@@ -79,9 +77,8 @@ export default function SectorsIndex() {
               <Reveal delay={0.1}>
                 <p className="lede measure-wide" style={{ opacity: 0.72 }}>
                   Hemco is organised by sector, not by sentiment. Each sector
-                  licenses a discipline the others can compound on — and
-                  each brand within it earns its place on its own balance
-                  sheet.
+                  licenses a discipline the others can compound on — and each
+                  brand within it earns its place on its own balance sheet.
                 </p>
               </Reveal>
             </div>
@@ -172,10 +169,7 @@ export default function SectorsIndex() {
           and a discreet "Enter" link. Sets the visual rhythm for the
           grid below. */}
       <Section tone="ivory" pad="lg">
-        <Link
-          href={`/sectors/${featuredSlug}`}
-          className="group block"
-        >
+        <Link href={`/sectors/${featuredSlug}`} className="group block">
           <div className="grid gap-6 md:grid-cols-12 md:gap-8 items-stretch">
             <div className="md:col-span-7">
               <div
@@ -287,10 +281,13 @@ export default function SectorsIndex() {
                   ))}
                 </ul>
 
-                <div className="mt-10 pt-7" style={{
-                  borderTop:
-                    "1px solid color-mix(in srgb, var(--color-ink) 14%, transparent)",
-                }}>
+                <div
+                  className="mt-10 pt-7"
+                  style={{
+                    borderTop:
+                      "1px solid color-mix(in srgb, var(--color-ink) 14%, transparent)",
+                  }}
+                >
                   <span
                     className="caption inline-flex items-center gap-2 transition-colors group-hover:text-[color:var(--color-gold-500)]"
                     style={{
@@ -365,7 +362,9 @@ export default function SectorsIndex() {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
-                  style={{ filter: "saturate(0.88) contrast(1.04) brightness(0.86)" }}
+                  style={{
+                    filter: "saturate(0.88) contrast(1.04) brightness(0.86)",
+                  }}
                 />
 
                 {/* Two-stop scrim — uniform tint + a stronger bottom-
@@ -511,8 +510,8 @@ export default function SectorsIndex() {
               </span>
             </h2>
             <p className="lede measure-wide" style={{ opacity: 0.72 }}>
-              For partnerships, careers, or a brief on a specific brand —
-              start a conversation with the right desk.
+              For partnerships, careers, or a brief on a specific brand — start
+              a conversation with the right desk.
             </p>
           </div>
           <div className="md:col-span-4 flex flex-wrap items-center gap-3">

@@ -44,9 +44,9 @@ export default function ContactPage() {
           </h1>
           <Reveal delay={0.2}>
             <p className="lede measure-wide mt-10 opacity-80">
-              Hemco Group is headquartered in India. Send a note
-              below — we&apos;ll route it to the right desk inside the group
-              and reply from there.
+              Hemco Group is headquartered in India. Send a note below —
+              we&apos;ll route it to the right desk inside the group and reply
+              from there.
             </p>
           </Reveal>
           <GoldRule className="mt-16 w-24" variant="solid" />
@@ -63,9 +63,7 @@ export default function ContactPage() {
               Headquarters
             </p>
             <p className="display text-[1.5rem] leading-tight">Hemco Group</p>
-            <p className="body-sans mt-2 opacity-75">
-              India
-            </p>
+            <p className="body-sans mt-2 opacity-75">India</p>
             <p
               className="caption mt-10 mb-3"
               style={{ color: "var(--color-gold-500)" }}

@@ -227,7 +227,8 @@ export const ventures: Venture[] = [
     name: "IndiaBridg",
     wordmark: "IndiaBridg",
     tagline: "Regulatory clarity. Government engagement. No shortcuts.",
-    positioning: "Corporate liaisoning, regulatory advisory and India market-entry.",
+    positioning:
+      "Corporate liaisoning, regulatory advisory and India market-entry.",
     description:
       "A New Delhi advisory firm helping Indian and international businesses engage with government, regulators and public institutions through lawful, documented, compliance-first processes — regulatory approvals, government relations, public policy, FDI and India entry, procurement and state incentives.",
     sector: "Legal",
@@ -244,7 +245,8 @@ export const ventures: Venture[] = [
     name: "Voltverse",
     wordmark: "Voltverse",
     tagline: "Every charger. One app.",
-    positioning: "India's EV-charging aggregator — one app for every charge point operator.",
+    positioning:
+      "India's EV-charging aggregator — one app for every charge point operator.",
     description:
       "An India-first EV-charging aggregator — a single app, card and map to discover, start and pay for public charging across every Indian charge point operator (Tata Power, Statiq, ChargeZone, Jio-bp, Ather Grid and more). Localised for India: UPI payments, CCS2 and Bharat connectors, phone-OTP identity, GST-compliant invoicing, and a journey planner that routes by charge.",
     sector: "Energy",

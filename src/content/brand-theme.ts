@@ -56,19 +56,43 @@ const DEFAULT_REGISTER: Register = {
 // Qualitative register per brand. Accents are NOT duplicated here — they come
 // from the venture registry below, so there is one source of truth for colour.
 const REGISTER: Record<string, Register> = {
-  "hemco-kitchens": { tone: "stainless", material: "brushed-steel", motion: "panel-reveal" },
+  "hemco-kitchens": {
+    tone: "stainless",
+    material: "brushed-steel",
+    motion: "panel-reveal",
+  },
   "kerning-studio": { tone: "ink", material: "matte", motion: "settle" },
   "kerning-ai": { tone: "ink", material: "glass-console", motion: "telemetry" },
   "kerning-architecture": { tone: "ivory", material: "paper", motion: "draw" },
-  "kerning-hospitality": { tone: "ivory", material: "fluted-glass", motion: "settle" },
+  "kerning-hospitality": {
+    tone: "ivory",
+    material: "fluted-glass",
+    motion: "settle",
+  },
   consortium: { tone: "bronze", material: "fluted-glass", motion: "settle" },
-  "consortium-defence-robotics": { tone: "bronze", material: "glass-console", motion: "telemetry" },
+  "consortium-defence-robotics": {
+    tone: "bronze",
+    material: "glass-console",
+    motion: "telemetry",
+  },
   lumonn: { tone: "cobalt", material: "fluted-glass", motion: "draw" },
-  keystonne: { tone: "stone", material: "fluted-glass", motion: "panel-reveal" },
+  keystonne: {
+    tone: "stone",
+    material: "fluted-glass",
+    motion: "panel-reveal",
+  },
   voltverse: { tone: "ink", material: "glass-console", motion: "telemetry" },
-  "cronuss-associates": { tone: "ink", material: "fluted-glass", motion: "settle" },
+  "cronuss-associates": {
+    tone: "ink",
+    material: "fluted-glass",
+    motion: "settle",
+  },
   indiabridg: { tone: "ivory", material: "fluted-glass", motion: "settle" },
-  "mvv-foundation": { tone: "forest", material: "fluted-glass", motion: "settle" },
+  "mvv-foundation": {
+    tone: "forest",
+    material: "fluted-glass",
+    motion: "settle",
+  },
 };
 
 export function brandTheme(slug: string): BrandTheme {

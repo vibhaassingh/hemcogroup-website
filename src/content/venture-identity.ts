@@ -498,7 +498,7 @@ export const ventureIdentity: Record<string, VentureIdentity> = {
       {
         label: "Material science",
         detail:
-          "Lattice engineering, hydrogen loading, transition-metal stack design — the physics that turns the brand-book promise of \"endless energy\" into a controlled, repeatable thermal output.",
+          'Lattice engineering, hydrogen loading, transition-metal stack design — the physics that turns the brand-book promise of "endless energy" into a controlled, repeatable thermal output.',
       },
       {
         label: "Pilot programme",
@@ -535,7 +535,7 @@ export const ventureIdentity: Record<string, VentureIdentity> = {
       sectionEyebrow: "What endless means here",
       sectionTitle: "Six commitments of the programme.",
       intro:
-        "Lumonn is a frontier company. These commitments are the contract — what we hold to before there is a product, during the engineering build, and after the first independently-measured module ships. They are how we earn the right to use the word \"endless\" without inverted commas.",
+        'Lumonn is a frontier company. These commitments are the contract — what we hold to before there is a product, during the engineering build, and after the first independently-measured module ships. They are how we earn the right to use the word "endless" without inverted commas.',
       items: [
         {
           label: "Data before press",

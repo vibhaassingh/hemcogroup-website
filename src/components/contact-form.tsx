@@ -114,9 +114,10 @@ export function ContactForm() {
               Thanks — your note is in.
             </h3>
             <p className="measure-wide mt-5 text-[1rem] leading-[1.7] text-ink-2/75">
-              We&apos;ll route this to the {routingLabels[routing].toLowerCase()}{" "}
-              desk and reply from the same address. If something is urgent in
-              the meantime, write directly to{" "}
+              We&apos;ll route this to the{" "}
+              {routingLabels[routing].toLowerCase()} desk and reply from the
+              same address. If something is urgent in the meantime, write
+              directly to{" "}
               <a
                 href="mailto:hello@hemcogroup.com"
                 className="rise-underline text-ink"
@@ -190,10 +191,7 @@ export function ContactForm() {
               </div>
             </div>
             <div>
-              <label
-                htmlFor="message"
-                className="eyebrow block text-ink/65"
-              >
+              <label htmlFor="message" className="eyebrow block text-ink/65">
                 Message
               </label>
               <textarea

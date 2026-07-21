@@ -52,7 +52,10 @@ export function TimelineScrubber({
             initial={{ opacity: 0, scale: reduce ? 1 : 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: reduce ? 0.2 : 0.9, ease: [0.16, 1, 0.3, 1] }}
+            transition={{
+              duration: reduce ? 0.2 : 0.9,
+              ease: [0.16, 1, 0.3, 1],
+            }}
             className="absolute inset-0"
           >
             <Image
@@ -104,8 +107,7 @@ export function TimelineScrubber({
         <div
           className="absolute left-0 right-0 top-1/2 h-px"
           style={{
-            background:
-              "color-mix(in srgb, var(--tone-fg) 22%, transparent)",
+            background: "color-mix(in srgb, var(--tone-fg) 22%, transparent)",
           }}
         />
         <motion.div
@@ -127,14 +129,18 @@ export function TimelineScrubber({
             type="button"
             onClick={() => setActive(i)}
             className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 group"
-            style={{ left: `${(i / Math.max(1, milestones.length - 1)) * 100}%` }}
+            style={{
+              left: `${(i / Math.max(1, milestones.length - 1)) * 100}%`,
+            }}
             aria-label={`${ms.year} — ${ms.title}`}
           >
             <span
               className="block w-2 h-2 rounded-full transition-transform group-hover:scale-150"
               style={{
                 background:
-                  i <= active ? "var(--color-gold-500)" : "color-mix(in srgb, var(--tone-fg) 28%, transparent)",
+                  i <= active
+                    ? "var(--color-gold-500)"
+                    : "color-mix(in srgb, var(--tone-fg) 28%, transparent)",
               }}
             />
             <span
@@ -143,7 +149,9 @@ export function TimelineScrubber({
               }`}
               style={{
                 color:
-                  i === active ? "var(--color-gold-500)" : "var(--tone-fg-mute)",
+                  i === active
+                    ? "var(--color-gold-500)"
+                    : "var(--tone-fg-mute)",
               }}
             >
               {ms.year}

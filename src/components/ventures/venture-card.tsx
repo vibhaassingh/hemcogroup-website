@@ -4,7 +4,13 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import type { Venture } from "@/content/ventures";
 
-export function VentureCard({ venture, index = 0 }: { venture: Venture; index?: number }) {
+export function VentureCard({
+  venture,
+  index = 0,
+}: {
+  venture: Venture;
+  index?: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -61,7 +67,9 @@ export function VentureCard({ venture, index = 0 }: { venture: Venture; index?: 
             )}
           </div>
           <h3 className="display text-2xl leading-tight">{venture.name}</h3>
-          <p className="text-sm leading-relaxed text-ink/65">{venture.tagline}</p>
+          <p className="text-sm leading-relaxed text-ink/65">
+            {venture.tagline}
+          </p>
           <div className="mt-2 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-ink/70 transition-transform duration-500 group-hover:translate-x-1">
             <span>Explore</span>
             <span aria-hidden>→</span>

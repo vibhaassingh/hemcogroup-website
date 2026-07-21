@@ -36,8 +36,10 @@ export function WorldFootprint() {
         style={{
           background:
             "radial-gradient(80% 60% at 50% 110%, rgba(212,168,58,0.10) 0%, rgba(212,168,58,0.03) 40%, transparent 70%), linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%)",
-          border: "1px solid color-mix(in srgb, var(--color-gold-500) 22%, transparent)",
-          boxShadow: "0 30px 80px -40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06)",
+          border:
+            "1px solid color-mix(in srgb, var(--color-gold-500) 22%, transparent)",
+          boxShadow:
+            "0 30px 80px -40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06)",
           backdropFilter: "blur(12px) saturate(1.05)",
           WebkitBackdropFilter: "blur(12px) saturate(1.05)",
         }}
@@ -63,15 +65,39 @@ export function WorldFootprint() {
           <defs>
             {/* Soft gold halo for the pin glow */}
             <radialGradient id="pin-halo" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="var(--color-gold-300)" stopOpacity="0.55" />
-              <stop offset="55%" stopColor="var(--color-gold-500)" stopOpacity="0.18" />
-              <stop offset="100%" stopColor="var(--color-gold-500)" stopOpacity="0" />
+              <stop
+                offset="0%"
+                stopColor="var(--color-gold-300)"
+                stopOpacity="0.55"
+              />
+              <stop
+                offset="55%"
+                stopColor="var(--color-gold-500)"
+                stopOpacity="0.18"
+              />
+              <stop
+                offset="100%"
+                stopColor="var(--color-gold-500)"
+                stopOpacity="0"
+              />
             </radialGradient>
             {/* Active-state ring glow — brighter, larger */}
             <radialGradient id="pin-halo-active" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="var(--color-gold-200)" stopOpacity="0.85" />
-              <stop offset="50%" stopColor="var(--color-gold-300)" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="var(--color-gold-500)" stopOpacity="0" />
+              <stop
+                offset="0%"
+                stopColor="var(--color-gold-200)"
+                stopOpacity="0.85"
+              />
+              <stop
+                offset="50%"
+                stopColor="var(--color-gold-300)"
+                stopOpacity="0.45"
+              />
+              <stop
+                offset="100%"
+                stopColor="var(--color-gold-500)"
+                stopOpacity="0"
+              />
             </radialGradient>
             {/* Soft drop shadow for the land silhouette */}
             <filter id="land-soften" x="-2%" y="-2%" width="104%" height="104%">
@@ -159,7 +185,9 @@ export function WorldFootprint() {
                         Larger and brighter when active. */}
                     <circle
                       r={isActive ? 22 : 12}
-                      fill={isActive ? "url(#pin-halo-active)" : "url(#pin-halo)"}
+                      fill={
+                        isActive ? "url(#pin-halo-active)" : "url(#pin-halo)"
+                      }
                       style={{ transition: "r 400ms var(--ease-cinema)" }}
                     />
 
@@ -222,14 +250,14 @@ export function WorldFootprint() {
           >
             {footprint.length} locations · {countContinents()} continents
           </p>
-          <p
-            className="caption"
-            style={{ color: "var(--tone-fg-mute)" }}
-          >
+          <p className="caption" style={{ color: "var(--tone-fg-mute)" }}>
             {active !== null ? (
               <span style={{ color: "var(--color-gold-300)" }}>
                 {footprint[active].country} ·{" "}
-                <span className="display-italic" style={{ fontStyle: "italic" }}>
+                <span
+                  className="display-italic"
+                  style={{ fontStyle: "italic" }}
+                >
                   {footprint[active].city}
                 </span>
               </span>
@@ -264,10 +292,7 @@ export function WorldFootprint() {
               {p.code}
             </span>
             <span className="text-[15px]" style={{ lineHeight: 1.35 }}>
-              <span
-                className="block"
-                style={{ color: "var(--color-mist)" }}
-              >
+              <span className="block" style={{ color: "var(--color-mist)" }}>
                 {p.country}
               </span>
               <span
@@ -314,7 +339,8 @@ function countContinents(): number {
       continents.add("North America");
     else if (l.lon >= -90 && l.lon <= -30 && l.lat < 15)
       continents.add("South America");
-    else if (l.lon >= -20 && l.lon <= 55 && l.lat < 35) continents.add("Africa");
+    else if (l.lon >= -20 && l.lon <= 55 && l.lat < 35)
+      continents.add("Africa");
     else if (l.lon >= 110 && l.lon <= 180 && l.lat < -10)
       continents.add("Oceania");
   }

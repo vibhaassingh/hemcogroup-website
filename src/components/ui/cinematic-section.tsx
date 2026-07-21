@@ -48,15 +48,23 @@ export function CinematicSection({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], parallax ? ["-8%", "8%"] : ["0%", "0%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], parallax ? [1.08, 1] : [1, 1]);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    parallax ? ["-8%", "8%"] : ["0%", "0%"],
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    parallax ? [1.08, 1] : [1, 1],
+  );
 
   const alignCls =
     align === "top"
       ? "items-start pt-32"
       : align === "bottom"
-      ? "items-end pb-24"
-      : "items-center";
+        ? "items-end pb-24"
+        : "items-center";
 
   return (
     <section
@@ -102,7 +110,10 @@ export function CinematicSection({
             className={`absolute inset-0 ${overlay === "vignette" ? "hero-vignette" : ""}`}
             style={
               overlay === "dim"
-                ? { background: "linear-gradient(180deg, rgba(13,40,24,0.35), rgba(13,40,24,0.65))" }
+                ? {
+                    background:
+                      "linear-gradient(180deg, rgba(13,40,24,0.35), rgba(13,40,24,0.65))",
+                  }
                 : undefined
             }
           />

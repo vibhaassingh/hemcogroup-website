@@ -24,7 +24,9 @@ export function ConsortiumMaskedDiamond() {
     const el = ref.current;
     if (!el) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       el.style.setProperty("--ember-x", "50%");
       el.style.setProperty("--ember-y", "55%");
@@ -48,8 +50,8 @@ export function ConsortiumMaskedDiamond() {
     const tick = () => {
       const tx = inside ? mx : 0.5;
       const ty = inside ? my : 0.55;
-      cx += (tx - cx) * 0.10;
-      cy += (ty - cy) * 0.10;
+      cx += (tx - cx) * 0.1;
+      cy += (ty - cy) * 0.1;
       el.style.setProperty("--ember-x", `${cx * 100}%`);
       el.style.setProperty("--ember-y", `${cy * 100}%`);
       raf = requestAnimationFrame(tick);

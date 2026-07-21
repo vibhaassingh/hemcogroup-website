@@ -1,6 +1,12 @@
 export type Spec = { label: string; value: string };
 
-export function SpecTable({ specs, className = "" }: { specs: Spec[]; className?: string }) {
+export function SpecTable({
+  specs,
+  className = "",
+}: {
+  specs: Spec[];
+  className?: string;
+}) {
   return (
     <dl className={className}>
       {specs.map((s) => (

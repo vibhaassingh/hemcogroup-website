@@ -6,11 +6,7 @@ import {
   useReducedMotion,
   type Variants,
 } from "motion/react";
-import {
-  type CSSProperties,
-  type ReactNode,
-  useRef,
-} from "react";
+import { type CSSProperties, type ReactNode, useRef } from "react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 

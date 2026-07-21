@@ -41,9 +41,9 @@ export default function CareersPage() {
           <Reveal delay={0.2}>
             <p className="lede measure-wide mt-10 opacity-80">
               We hire across engineering, design, operations, research and
-              craft. Roles open across Hemco Group brands — write to us
-              even if you don&apos;t see the exact fit. Our hiring landscape
-              moves quickly.
+              craft. Roles open across Hemco Group brands — write to us even if
+              you don&apos;t see the exact fit. Our hiring landscape moves
+              quickly.
             </p>
           </Reveal>
           <GoldRule className="mt-16 w-24" variant="solid" />

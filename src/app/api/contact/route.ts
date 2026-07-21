@@ -72,7 +72,11 @@ export async function POST(req: Request) {
 
   // Field-level validation. Mirrors what the client checks, with stricter
   // server-side checks for length / shape so the form can't be bypassed.
-  if (!isString(body.name) || !isString(body.email) || !isString(body.message)) {
+  if (
+    !isString(body.name) ||
+    !isString(body.email) ||
+    !isString(body.message)
+  ) {
     return NextResponse.json(
       { ok: false, error: "Name, email, and message are required." },
       { status: 400 },

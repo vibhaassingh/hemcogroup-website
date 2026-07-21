@@ -127,11 +127,7 @@ const FRAG = /* glsl */ `
  * a static CSS gradient under prefers-reduced-motion or when WebGL isn't
  * available.
  */
-export function ParametricGradient({
-  className,
-}: {
-  className?: string;
-}) {
+export function ParametricGradient({ className }: { className?: string }) {
   const reduce = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -194,10 +190,7 @@ export function ParametricGradient({
         const resize = () => {
           const r = container.getBoundingClientRect();
           renderer.setSize(r.width || 1, r.height || 1);
-          program.uniforms.uResolution.value.set(
-            r.width || 1,
-            r.height || 1,
-          );
+          program.uniforms.uResolution.value.set(r.width || 1, r.height || 1);
         };
         resize();
         const ro = new ResizeObserver(resize);
@@ -219,10 +212,7 @@ export function ParametricGradient({
         };
         const onScroll = () => {
           const r = container.getBoundingClientRect();
-          const v = Math.max(
-            0,
-            Math.min(1, 1 - r.bottom / window.innerHeight),
-          );
+          const v = Math.max(0, Math.min(1, 1 - r.bottom / window.innerHeight));
           program.uniforms.uScroll.value = v;
         };
 
@@ -240,8 +230,7 @@ export function ParametricGradient({
           current.y += (target.y - current.y) * 0.08;
           current.infl += (target.infl - current.infl) * 0.04;
 
-          program.uniforms.uTime.value =
-            (performance.now() - start) / 1000;
+          program.uniforms.uTime.value = (performance.now() - start) / 1000;
           program.uniforms.uMouse.value.set(current.x, current.y);
           program.uniforms.uMouseInfluence.value = current.infl;
           renderer.render({ scene: mesh });
