@@ -60,6 +60,8 @@ Set these in Vercel (Project → Settings → Environment Variables) and in `.en
 
 `src/components/contact-form.tsx` posts to `src/app/api/contact/route.ts`, which validates + HTML-escapes input and sends via Resend. The recipient and verified sender are configured in the route. Submissions are **not** persisted client-side.
 
+Spam is filtered before anything is emailed (`src/lib/spam-guard.ts`): a hidden honeypot field, a minimum time the form must have been open, a check for random mixed-case strings, and a per-address rate limit (in memory per server instance, so best-effort). Rejections are logged as `[contact] rejected:` with the reason, address and user agent. Run the guard's tests with `npm test` (needs Node 22.18+, which runs the TypeScript source directly).
+
 ## Imagery
 
 Real brand assets live in `public/brand/`. The `u()` helper in `imagery.ts` is an Unsplash fallback for ventures without a bespoke asset. Keep raster heroes downscaled (≤1600px wide, ~q82) so they stay under Vercel's per-file limits.

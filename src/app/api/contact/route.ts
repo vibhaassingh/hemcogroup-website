@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { checkSubmission, createRateLimiter } from "@/lib/spam-guard";
 
 /**
  * Contact-form delivery endpoint.
@@ -13,6 +14,11 @@ import { Resend } from "resend";
  * on Resend; until the group's domain is verified, we use Resend's
  * `onboarding@resend.dev` as the FROM. Update `FROM_ADDRESS` once
  * `hemcogroup.com` (or another preferred sender domain) is verified.
+ *
+ * Spam: the form also sends `website` (a hidden honeypot that must stay
+ * empty) and `elapsedMs` (how long the form was open). Those, a
+ * random-string check and a per-address rate limit run before anything
+ * is emailed — see `src/lib/spam-guard.ts`.
  */
 
 const TO_ADDRESS = "vibhaas.singh@kerning.ooo";
@@ -37,7 +43,26 @@ interface SubmissionPayload {
   organisation?: unknown;
   routing?: unknown;
   message?: unknown;
+  website?: unknown;
+  elapsedMs?: unknown;
 }
+
+// Five enquiries per address every ten minutes. Held in memory per server
+// instance, so it blunts a burst rather than enforcing a global cap.
+const allowRequest = createRateLimiter(5, 10 * 60 * 1000);
+
+const clientAddress = (req: Request) =>
+  req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+
+// Rejections are logged without the submitted fields, so there is a trace
+// of what was blocked and from where, but no enquiry content in the logs.
+const logRejected = (reason: string, req: Request) => {
+  console.warn("[contact] rejected:", {
+    reason,
+    ip: clientAddress(req),
+    userAgent: req.headers.get("user-agent") ?? "",
+  });
+};
 
 const isString = (v: unknown): v is string =>
   typeof v === "string" && v.trim().length > 0;
@@ -57,6 +82,17 @@ export async function POST(req: Request) {
     return NextResponse.json(
       { ok: false, error: "Email service is not configured." },
       { status: 500 },
+    );
+  }
+
+  if (!allowRequest(clientAddress(req))) {
+    logRejected("rate-limit", req);
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Too many messages from this connection. Please try later.",
+      },
+      { status: 429 },
     );
   }
 
@@ -97,6 +133,30 @@ export async function POST(req: Request) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return NextResponse.json(
       { ok: false, error: "That email doesn't look right." },
+      { status: 400 },
+    );
+  }
+
+  const spam = checkSubmission({
+    honeypot: body.website,
+    elapsedMs: body.elapsedMs,
+    name,
+    message,
+  });
+  if (spam) {
+    logRejected(spam, req);
+    // A filled honeypot is always a bot: answer as if it worked, so the
+    // bot has nothing to adapt to. The other two could be a real person,
+    // so they get an error they can act on.
+    if (spam === "honeypot") return NextResponse.json({ ok: true });
+    return NextResponse.json(
+      {
+        ok: false,
+        error:
+          spam === "too-fast"
+            ? "That was quick — please wait a few seconds and send again."
+            : "We couldn't read that message. Please write directly to hello@hemcogroup.com.",
+      },
       { status: 400 },
     );
   }
