@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 type Routing = "general" | "careers" | "press" | "corporate" | "foundation";
@@ -30,6 +30,13 @@ export function ContactForm() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "sent">("idle");
   const [error, setError] = useState<string | null>(null);
+  // Spam signals read by /api/contact: a hidden field people never fill,
+  // and how long the form has been open.
+  const [website, setWebsite] = useState("");
+  const openedAt = useRef(0);
+  useEffect(() => {
+    openedAt.current = Date.now();
+  }, []);
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -64,6 +71,8 @@ export function ContactForm() {
           organisation: record.organisation,
           routing: record.routing,
           message: record.message,
+          website,
+          elapsedMs: Date.now() - openedAt.current,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
@@ -93,6 +102,8 @@ export function ContactForm() {
     setOrganisation("");
     setRouting("general");
     setMessage("");
+    setWebsite("");
+    openedAt.current = Date.now();
     setStatus("idle");
     setError(null);
   };
@@ -145,6 +156,24 @@ export function ContactForm() {
             noValidate
             className="grid gap-7"
           >
+            {/* Honeypot: off-screen, skipped by keyboard and screen readers.
+                Anything typed here marks the submission as a bot. */}
+            <div
+              aria-hidden="true"
+              className="absolute -left-[9999px] h-px w-px overflow-hidden"
+            >
+              <label>
+                Leave this field empty
+                <input
+                  type="text"
+                  name="website"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </label>
+            </div>
             <div className="grid gap-7 md:grid-cols-2 md:gap-8">
               <Field
                 label="Your name"
